@@ -3,7 +3,7 @@ public class App {
     enum Numbers { a, b, c, d, e };
     // static String[] names = {"Bernard", "Christina"};
     public static void main(String[] args) throws Exception {
-        Numbers[] numbers = Numbers.values();
+        // Numbers[] numbers = Numbers.values();
         Color[] color = Color.values();
 
         System.out.println(Color.RED.getColorAsInt());
