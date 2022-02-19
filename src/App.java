@@ -11,7 +11,7 @@ public class App {
         Color.convertIntToColor(10);
         System.out.println("Available Colors: ");
         for(Color colors: color){
-            System.out.println(Color.convertIntToColor(colors.getColorAsInt()) + " " + colors.getColorAsInt());
+            System.out.println(Color.convertIntToColor(colors.getColorAsInt()) + ": " + colors.getColorAsInt());
         }
     }
 
