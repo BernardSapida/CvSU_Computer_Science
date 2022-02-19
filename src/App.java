@@ -1,11 +1,11 @@
 public class App {
     static int num = 5;
     enum Numbers { a, b, c, d, e };
-    // static String[] names = {"Bernard", "Christina"};
+    static String[] names = {"Bernard", "Sapida", "John", "David"};
     public static void main(String[] args) throws Exception {
         // Numbers[] numbers = Numbers.values();
         Color[] color = Color.values();
-        System.out.println("Hello, Bernard Sapida!");
+        System.out.println("Hello, " + names[0]);
         System.out.println(Color.RED.getColorAsInt());
         Color.convertIntToColor(10);
         for(Color colors: color){
