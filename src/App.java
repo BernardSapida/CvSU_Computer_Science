@@ -1,15 +1,17 @@
+/*
+    Author: Bernard Sapida
+*/
 public class App {
     static int num = 5;
     enum Numbers { a, b, c, d, e };
-    static String[] names = {"Bernard", "Sapida", "John", "David"};
+    static String[] names = {"Bernard", "Sapida"};
     public static void main(String[] args) throws Exception {
         // Numbers[] numbers = Numbers.values();
         Color[] color = Color.values();
-        System.out.println("Hello, " + names[0]);
-        System.out.println(Color.RED.getColorAsInt());
         Color.convertIntToColor(10);
+        System.out.println("Available Colors: ");
         for(Color colors: color){
-            System.out.println(colors);
+            System.out.println(Color.convertIntToColor(colors.getColorAsInt()) + " " + colors.getColorAsInt());
         }
     }
 
