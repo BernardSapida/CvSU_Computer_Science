@@ -5,7 +5,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         // Numbers[] numbers = Numbers.values();
         Color[] color = Color.values();
-        System.out.println("Hello World!");
+        System.out.println("Hello, Bernard Sapida!");
         System.out.println(Color.RED.getColorAsInt());
         Color.convertIntToColor(10);
         for(Color colors: color){
