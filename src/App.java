@@ -6,7 +6,7 @@ public class App {
         Numbers[] numbers_name = Numbers.values();
         Colors[] colors = Colors.values();
         for(int i = 0; i < colors.length; i++){
-            System.out.println(colors[i].getColorAsInteger() + ": " + numbers_name[i] + " ("+colors[i]+")");
+            System.out.println(colors[i].getColorAsInteger() + ": " + numbers_name[i] + " ("+colors[i]+"!)");
         }
     }
     public static enum Numbers { One, Two, Three, Four, Five }
