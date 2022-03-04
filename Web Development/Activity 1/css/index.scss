@@ -161,13 +161,14 @@ body {
             }
         }
     }
+    
     & .show {
         display: block;
         animation: fadeIn 350ms ease forwards;
     }
 
     & .personal_banner {
-        max-height: 768px;
+        min-height: 768px;
         height: 100%;
 
         & .banner {
@@ -282,7 +283,7 @@ body {
     }
 
     & .self_introduction {
-        padding: 30px 0 0 0;
+        margin-top: -80px;
         &_paragraph {
             padding: 40px 20px;
             text-align: justify;
@@ -291,7 +292,7 @@ body {
     }
 
     & section {
-        margin: 75px 90px;
+        margin: 50px 90px;
     }
 
     & hr {

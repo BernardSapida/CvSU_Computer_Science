@@ -169,6 +169,271 @@ body {
         margin: 75px 90px;
     }
 
+    & .skills {
+        margin-bottom: -100px;
+        min-height: 768px;
+        height: 100%;
+        text-align: justify;
+        line-height: 34px;
+
+        &_image {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            height: 670px;
+            width: auto;
+            display: flex;
+            z-index: -1;
+        }
+
+        &_banner {
+            margin: 40px 0;
+            display: flex;
+            justify-content: space-between;
+
+            &_language {
+                width: 550px;
+
+                &_record {
+                    // background-color: red;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &_name p {
+                        padding: 10px 30px;
+                        font-size: 24px;
+                    }
+
+                    &_percentage {
+                        position: relative;
+                        height: 20px;
+                        width: 360px;
+                        border-radius: 10px;
+                    }
+
+                    & .html {
+                        background-color: var(--light);
+                        overflow: hidden;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0px;
+                            left: 0;
+                            height: 120%;
+                            background-color: #F8581E;
+                            animation: loadHtml 750ms ease-in-out forwards 1000ms;
+                        }
+
+                        &::after {
+                            content: "75%";
+                            opacity: 0;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            animation: textHtml 750ms ease-in-out forwards 1100ms;
+                        }
+                    }
+
+                    & .javascript {
+                        background-color: var(--light);
+                        overflow: hidden;
+                        
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0px;
+                            left: 0;
+                            height: 120%;
+                            background-color: #F5A300;
+                            animation: loadJavascript 750ms ease-in-out forwards 1200ms;
+                        }
+
+                        &::after {
+                            content: "83%";
+                            opacity: 0;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            animation: textJavascript 750ms ease-in-out forwards 1300ms;
+                        }
+                    }
+
+                    & .php {
+                        background-color: var(--light);
+                        overflow: hidden;
+                        
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0px;
+                            left: 0;
+                            height: 120%;
+                            background-color: #B200FF;
+                            animation: loadPhp 750ms ease-in-out forwards 1400ms;
+                        }
+
+                        &::after {
+                            content: "67%";
+                            opacity: 0;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            animation: textPhp 750ms ease-in-out forwards 1500ms;
+                        }
+                    }
+
+                    & .mysql {
+                        background-color: var(--light);
+                        overflow: hidden;
+                        
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0px;
+                            left: 0;
+                            height: 120%;
+                            background-color: #00C655;
+                            animation: loadMysql 750ms ease-in-out forwards 1600ms;
+                        }
+
+                        &::after {
+                            content: "40%";
+                            opacity: 0;
+                            color: var(--dark);
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            animation: textMysql 750ms ease-in-out forwards 1700ms;
+                        }
+                    }
+
+                    & .java {
+                        background-color: var(--light);
+                        overflow: hidden;
+                        
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0px;
+                            left: 0;
+                            height: 120%;
+                            background-color: #F81E42;
+                            animation: loadJava 750ms ease-in-out forwards 1800ms;
+                        }
+
+                        &::after {
+                            content: "30%";
+                            opacity: 0;
+                            color: var(--dark);
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            animation: textJava 750ms ease-in-out forwards 1900ms;
+                        }
+                    }
+
+                    & .python {
+                        background-color: var(--light);
+                        overflow: hidden;
+                        
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0px;
+                            left: 0;
+                            height: 120%;
+                            background-color: #301ef8;
+                            animation: loadPython 750ms ease-in-out forwards 2000ms;
+                        }
+
+                        &::after {
+                            content: "62%";
+                            opacity: 0;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            animation: textPython 750ms ease-in-out forwards 2100ms;
+                        }
+                    }
+                }
+            }
+
+            &_information {
+                position: relative;
+                width: 500px;
+
+                & h1 {
+                    margin: 0 0 30px 0;
+                }
+
+                &_box {
+                    position: absolute;
+                    top: 17em;
+                    right: 2em;
+                    width: 120px;
+                    height: 120px;
+                    border: 7px solid var(--rusty_red);
+                    transform: rotate(45deg);
+                    z-index: -1;
+
+                    &::before {
+                    content: "";
+                        position: absolute;
+                        top: 1em;
+                        right: -3.5em;
+                        width: 60px;
+                        height: 60px;
+                        border: 7px solid var(--light_cyan);
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+
+    & .hobbies_container {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+
+        &_content {
+            padding: 30px 30px;
+            background-color: #050505;
+            width: 400px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 10px;
+
+            &_images {
+                height: 300px;
+                width: 300px;
+                border-radius: 10px;
+            }
+
+            & div {
+                & h3 {
+                    color: var(--rusty_red);
+                    margin-top: 30px;
+                }
+
+                & p {
+                    text-align: justify;
+                    line-height: 34px;
+                }
+            }
+        }
+    }
+
     & hr {
         border: none;
         height: 2px;
@@ -244,6 +509,134 @@ body {
                     color: var(--light)
                 }
             }
+        }
+    }
+
+    @keyframes loadHtml {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 75%;
+        }
+    }
+
+    @keyframes textHtml {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes loadJavascript {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 83%;
+        }
+    }
+
+    @keyframes textJavascript {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes loadPhp {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 67%;
+        }
+    }
+
+    @keyframes textPhp {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes loadMysql {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 40%;
+        }
+    }
+
+    @keyframes textMysql {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+
+    @keyframes loadJava {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 30%;
+        }
+    }
+
+    @keyframes textJava {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes loadPython {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 62%;
+        }
+    }
+
+    @keyframes textPython {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+
+    @keyframes underline {
+        0% {
+            transform: scaleX(0);
+        }
+        100% {
+            transform: scaleX(1);
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
         }
     }
 }

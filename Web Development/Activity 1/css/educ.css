@@ -200,6 +200,92 @@ body section {
   margin: 75px 90px;
 }
 
+body .educ_banner {
+  margin-bottom: -100px;
+  min-height: 768px;
+  height: 100%;
+}
+
+body .educ_banner .educ_banner_image {
+  position: absolute;
+  right: 10;
+  bottom: 0;
+  height: 670px;
+  width: auto;
+  z-index: -1;
+}
+
+body .educ_banner_quote, body .educ_banner_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .educ_banner_quote {
+  position: relative;
+  margin: 80px 0;
+  font-family: "Oleo Script";
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 50px;
+}
+
+body .educ_banner_quote_author {
+  font-size: 34px;
+}
+
+body .educ_banner_quote_box {
+  position: absolute;
+  top: 3.5em;
+  right: 10em;
+  height: 170px;
+  width: 170px;
+  border: 14px solid var(--rusty_red);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: -1;
+}
+
+body .educ_banner_quote_box::before {
+  content: "";
+  position: absolute;
+  right: -2.5em;
+  height: 120px;
+  width: 120px;
+  border: 14px solid var(--light_cyan);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: -1;
+}
+
+body .educational_background_title, body .job_experience_title, body .personal_qualification_title {
+  padding: 20px 0;
+}
+
+body .educational_background_info, body .job_experience_info, body .personal_qualification_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 34px;
+}
+
+body .educational_background_info_year, body .job_experience_info_year, body .personal_qualification_info_year {
+  margin: 0 0 0 100px;
+  width: 180px;
+}
+
+body .educational_background_info_details, body .job_experience_info_details, body .personal_qualification_info_details {
+  width: 100%;
+}
+
 body hr {
   border: none;
   height: 2px;

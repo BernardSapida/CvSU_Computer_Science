@@ -198,7 +198,7 @@ body .show {
 }
 
 body .personal_banner {
-  max-height: 768px;
+  min-height: 768px;
   height: 100%;
 }
 
@@ -329,7 +329,7 @@ body .personal_banner_icons div a {
 }
 
 body .self_introduction {
-  padding: 30px 0 0 0;
+  margin-top: -80px;
 }
 
 body .self_introduction_paragraph {
@@ -339,7 +339,7 @@ body .self_introduction_paragraph {
 }
 
 body section {
-  margin: 75px 90px;
+  margin: 50px 90px;
 }
 
 body hr {
