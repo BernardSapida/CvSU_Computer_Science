@@ -196,6 +196,119 @@ body .show {
           animation: fadeIn 350ms ease forwards;
 }
 
+body .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .contact_title {
+  margin-bottom: 2em;
+}
+
+body .contact .title {
+  text-align: center;
+}
+
+body .contact_container {
+  margin-top: 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body .contact_container_location {
+  height: 100%;
+}
+
+body .contact_container_location h1, body .contact_container_location p {
+  line-height: 34px;
+}
+
+body .contact_container_location_map {
+  margin-top: 10px;
+  height: 100%;
+}
+
+body .contact_container_location_map iframe {
+  height: 400px;
+  width: 550px;
+  border: none;
+  border-radius: 3px;
+}
+
+body .contact_container_form {
+  width: 550px;
+}
+
+body .contact_container_form_question_for_name {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body .contact_container_form_question_for_name_firstname, body .contact_container_form_question_for_name_secondname {
+  margin: 20px 10px;
+}
+
+body .contact_container_form_question_for_name_firstname input, body .contact_container_form_question_for_name_secondname input {
+  display: block;
+  width: 265px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+}
+
+body .contact_container_form_question_for_subject, body .contact_container_form_question_for_email, body .contact_container_form_question_for_message {
+  margin: 0 10px 20px 10px;
+}
+
+body .contact_container_form_question_for_subject input, body .contact_container_form_question_for_email input, body .contact_container_form_question_for_message textarea {
+  display: block;
+  width: 550px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+}
+
+body .contact_container_form_question_for_message textarea {
+  resize: vertical;
+}
+
+body .contact_container_form_question_for_send button {
+  margin: 15px 0;
+  float: right;
+  height: 40px;
+  width: 120px;
+  background-color: var(--rusty_red);
+  font-size: 14px;
+  color: var(--light);
+  border: none;
+  border-radius: 3px;
+}
+
+body .contact_container_form_question_for_send button i {
+  margin-right: 15px;
+  height: 10px;
+  width: 10px;
+  color: var(--light);
+}
+
 body section {
   margin: 75px 90px;
 }
@@ -293,5 +406,45 @@ body footer .third_container div a {
   font-size: 25px;
   text-decoration: none;
   color: var(--light);
+}
+
+@-webkit-keyframes underline {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes underline {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=contact.css.map */
