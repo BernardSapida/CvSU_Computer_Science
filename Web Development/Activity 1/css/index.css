@@ -30,6 +30,7 @@
 .title {
   font-size: 50px;
   font-family: "Playfair Display";
+  text-shadow: 2px 2px 2px var(--crimson);
 }
 
 body {
@@ -226,13 +227,14 @@ body .personal_banner_display {
 }
 
 body .personal_banner_display_introduction {
-  width: 40%;
+  width: 60%;
 }
 
 body .personal_banner_display_introduction_greetings {
   font-family: "Playfair Display";
   font-size: clamp(50px, calc(3vw - 1px), 16px);
   margin-bottom: 18px;
+  text-shadow: 2px 2px 2px var(--crimson);
 }
 
 body .personal_banner_display_introduction_greetings_name {
