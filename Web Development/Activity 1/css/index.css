@@ -33,6 +33,10 @@
   text-shadow: 2px 2px 2px var(--crimson);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1em;
