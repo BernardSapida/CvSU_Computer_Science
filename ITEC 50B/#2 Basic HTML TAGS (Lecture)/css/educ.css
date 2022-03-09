@@ -204,6 +204,16 @@ body section {
   margin: 75px 90px;
 }
 
+body .self_introduction {
+  margin-top: -80px;
+}
+
+body .self_introduction_paragraph {
+  padding: 40px 20px;
+  text-align: justify;
+  line-height: 34px;
+}
+
 body .educ_banner {
   margin-bottom: -100px;
   min-height: 768px;

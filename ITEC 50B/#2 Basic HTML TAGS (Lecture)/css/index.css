@@ -203,6 +203,7 @@ body .show {
 }
 
 body .personal_banner {
+  margin-bottom: -100px;
   min-height: 768px;
   height: 100%;
 }
@@ -332,16 +333,6 @@ body .personal_banner_icons div a {
   text-decoration: none;
   color: var(--light);
   font-size: 30px;
-}
-
-body .self_introduction {
-  margin-top: -80px;
-}
-
-body .self_introduction_paragraph {
-  padding: 40px 20px;
-  text-align: justify;
-  line-height: 34px;
 }
 
 body section {
