@@ -1,0 +1,647 @@
+@import url(main.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Start Scroll Bar */
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--amaranth_pink);
+    
+}
+
+.disableScroll {
+    overflow: hidden;
+}
+
+.rusty_red {
+    color: var(--rusty_red);
+}
+
+.title {
+    font-size: 50px;
+    font-family: "Playfair Display";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {   
+    font-family: "Roboto", sans-serif;
+    font-size: 1em;
+    background-color: var(--dark);
+    overflow-x: hidden;
+    color: var(--light);
+
+    & header {
+        margin: 30px 90px 0 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & #name {
+            font-family: "Roboto";
+        }
+
+        & #navigation {
+            height: 30px;
+            width: 40px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            z-index: 1;
+            cursor: pointer;
+
+            & .top, & .bottom {
+                content: "";
+                position: absolute;
+                background-color: var(--light);
+                height: 5px;
+                width: 40px;
+                border-radius: 5px;
+            }
+
+            & .top {
+                top: 0;
+                transition: all 500ms ease;
+
+            }
+
+            & .bottom {
+                bottom: 0;
+                transition: all 500ms ease;
+
+            }
+
+            & .middle {
+                background-color: var(--light);
+                display: flex;
+                justify-content: flex-end;
+                height: 5px;
+                width: 20px;
+                border-radius: 5px;
+                transition: all 250ms ease;
+
+            }
+
+            & .topAnimate {
+                width: 40px;
+                top: 12px;
+                transform: rotate(-45deg);
+            }
+
+            & .middleAnimate {
+                width: 0px;
+            }
+
+            & .bottomAnimate {
+                width: 40px;
+                top: 12px;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    & .screen_navigation {
+        display: none;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--dark_transparent);
+        transition: all 1s ease-out;
+        z-index: 1;
+
+        & .navigation_links {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 1s ease-out;
+
+            & ul {
+                list-style-type: none;
+
+                & li {
+                    margin: 1.3em 0;
+                    font-size: 40px;
+                    text-align: center;
+
+                    & a {
+                        position: relative;
+                        color: var(--light);
+                        text-decoration: none;
+                        transition: .5s;
+
+                        &:hover::before {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            height: 3px;
+                            width: 100%;
+                            background-color: var(--crimson);
+                            transform: scaleX(0);
+                            animation: underline 500ms ease forwards;
+                        }
+                        &:hover {
+                            color: var(--crimson);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .show {
+        display: block;
+        animation: fadeIn 350ms ease forwards;
+    }
+
+    & section {
+        margin: 75px 90px;
+    }
+
+    & .skills {
+        margin-bottom: -100px;
+        min-height: 768px;
+        height: 100%;
+        text-align: justify;
+        line-height: 34px;
+
+        &_image {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            height: 670px;
+            width: auto;
+            display: flex;
+            z-index: -1;
+        }
+
+        &_banner {
+            margin: 40px 0;
+            display: flex;
+            justify-content: space-between;
+
+            &_language {
+                width: 550px;
+
+                &_record {
+                    // background-color: red;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &_name p {
+                        padding: 10px 30px;
+                        font-size: 24px;
+                    }
+
+                    &_percentage {
+                        position: relative;
+                        height: 20px;
+                        width: 360px;
+                        border-radius: 10px;
+                    }
+
+                    & .html {
+                        background-color: var(--light);
+                        overflow: hidden;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0px;
+                            left: 0;
+                            height: 120%;
+                            background-color: #F8581E;
+                            animation: loadHtml 750ms ease-in-out forwards 1000ms;
+                        }
+
+                        &::after {
+                            content: "75%";
+                            opacity: 0;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            animation: textHtml 750ms ease-in-out forwards 1100ms;
+                        }
+                    }
+
+                    & .javascript {
+                        background-color: var(--light);
+                        overflow: hidden;
+                        
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0px;
+                            left: 0;
+                            height: 120%;
+                            background-color: #F5A300;
+                            animation: loadJavascript 750ms ease-in-out forwards 1200ms;
+                        }
+
+                        &::after {
+                            content: "83%";
+                            opacity: 0;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            animation: textJavascript 750ms ease-in-out forwards 1300ms;
+                        }
+                    }
+
+                    & .php {
+                        background-color: var(--light);
+                        overflow: hidden;
+                        
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0px;
+                            left: 0;
+                            height: 120%;
+                            background-color: #B200FF;
+                            animation: loadPhp 750ms ease-in-out forwards 1400ms;
+                        }
+
+                        &::after {
+                            content: "67%";
+                            opacity: 0;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            animation: textPhp 750ms ease-in-out forwards 1500ms;
+                        }
+                    }
+
+                    & .mysql {
+                        background-color: var(--light);
+                        overflow: hidden;
+                        
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0px;
+                            left: 0;
+                            height: 120%;
+                            background-color: #00C655;
+                            animation: loadMysql 750ms ease-in-out forwards 1600ms;
+                        }
+
+                        &::after {
+                            content: "40%";
+                            opacity: 0;
+                            color: var(--dark);
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            animation: textMysql 750ms ease-in-out forwards 1700ms;
+                        }
+                    }
+
+                    & .java {
+                        background-color: var(--light);
+                        overflow: hidden;
+                        
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0px;
+                            left: 0;
+                            height: 120%;
+                            background-color: #F81E42;
+                            animation: loadJava 750ms ease-in-out forwards 1800ms;
+                        }
+
+                        &::after {
+                            content: "30%";
+                            opacity: 0;
+                            color: var(--dark);
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            animation: textJava 750ms ease-in-out forwards 1900ms;
+                        }
+                    }
+
+                    & .python {
+                        background-color: var(--light);
+                        overflow: hidden;
+                        
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0px;
+                            left: 0;
+                            height: 120%;
+                            background-color: #301ef8;
+                            animation: loadPython 750ms ease-in-out forwards 2000ms;
+                        }
+
+                        &::after {
+                            content: "62%";
+                            opacity: 0;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            animation: textPython 750ms ease-in-out forwards 2100ms;
+                        }
+                    }
+                }
+            }
+
+            &_information {
+                position: relative;
+                width: 500px;
+
+                & h1 {
+                    margin: 0 0 30px 0;
+                }
+
+                &_box {
+                    position: absolute;
+                    top: 17em;
+                    right: 2em;
+                    width: 120px;
+                    height: 120px;
+                    border: 7px solid var(--rusty_red);
+                    transform: rotate(45deg);
+                    z-index: -1;
+
+                    &::before {
+                    content: "";
+                        position: absolute;
+                        top: 1em;
+                        right: -3.5em;
+                        width: 60px;
+                        height: 60px;
+                        border: 7px solid var(--light_cyan);
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+
+    & .hobbies_container {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+
+        &_content {
+            padding: 30px 30px;
+            background-color: rgb(2, 2, 2);
+            width: 400px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 10px;
+
+            &_images {
+                height: 300px;
+                width: 300px;
+                border-radius: 10px;
+            }
+
+            & div {
+                & h2 {
+                    color: var(--rusty_red);
+                    line-height: 34px;
+                    margin-top: 30px;
+                }
+
+                & p {
+                    text-align: justify;
+                    line-height: 34px;
+                }
+            }
+        }
+    }
+
+    & hr {
+        border: none;
+        height: 2px;
+        width: 100%;
+        background-color: var(--dark_line);
+    }
+
+    & footer {
+        margin: 50px 90px 50px 90px;
+        display: flex;
+        justify-content: space-between;
+
+        & .first_container {
+            max-width: 400px;
+            width: 100%;
+            
+            & h1 {
+                padding: 15px 0;
+            }
+
+            & p {
+                text-align: justify;
+                line-height: 34px;
+            }
+        }
+
+        & .second_container {
+            max-width: 400px;
+            width: 100%;
+            
+            & h1 {
+                padding: 15px 0;
+            }
+
+            &_details {
+                display: flex;
+
+                &_icons {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 25px;
+
+                    & i {
+                        padding: 10px 30px 10px 0;
+                    }
+                }
+
+                &_text {
+                    width: auto;
+
+                    & p {
+                        padding: 10px 0;
+                    }
+                }
+            }
+        }
+
+        & .third_container {
+            max-width: 400px;
+            width: 100%;
+            
+            & h1 {
+                padding: 15px 0;
+            }
+            & div {
+                display: flex;
+                flex-direction: row;
+
+                & a {
+                    padding: 0 24px 0 0;
+                    font-size: 25px;
+                    text-decoration: none;
+                    color: var(--light)
+                }
+            }
+        }
+    }
+
+    @keyframes loadHtml {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 75%;
+        }
+    }
+
+    @keyframes textHtml {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes loadJavascript {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 83%;
+        }
+    }
+
+    @keyframes textJavascript {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes loadPhp {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 67%;
+        }
+    }
+
+    @keyframes textPhp {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes loadMysql {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 40%;
+        }
+    }
+
+    @keyframes textMysql {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+
+    @keyframes loadJava {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 30%;
+        }
+    }
+
+    @keyframes textJava {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes loadPython {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 62%;
+        }
+    }
+
+    @keyframes textPython {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+
+    @keyframes underline {
+        0% {
+            transform: scaleX(0);
+        }
+        100% {
+            transform: scaleX(1);
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
