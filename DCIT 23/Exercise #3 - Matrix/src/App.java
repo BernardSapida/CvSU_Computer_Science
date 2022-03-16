@@ -2,19 +2,18 @@
 
 public class App {
     public static void main(String[] args) throws Exception {
+        // Swapping Variable Value
+        int x = 14, y = 7, z;
 
-        // Matrix
-        int x = 4, y = 7, z;
+        // x = (14 + 7) - 14 => 7
+        x = (x + y) - x;
 
-        // z get the value of x
-        z = 4;
+        // z = 7 + 7 => 14 
+        z = x + y;
 
-        // x get the value of y
-        x = y;
-
-        // y get the value of z
+        // y = 14 => 14
         y = z;
-        
-        System.out.println("x: " + x + ", " + "y: " + z);
+
+        System.out.println("x: " + x + ", " + "y: " + y);
     }
 }
