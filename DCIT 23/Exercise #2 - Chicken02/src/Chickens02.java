@@ -17,9 +17,10 @@ public class Chickens02 {
 }
 
 class FarmerFred {
-    // Variables for class FarmerFred
+    // Properties of FarmerFred
     private double dailyAverage, monthlyAverage, monthlyProfit;
 
+    // Behavior of FarmerFred
     // Setter Method for setDailyAverage
     public void setDailyAverage(double monday, double tuesday, double wednesday){
         this.dailyAverage = (monday + tuesday + wednesday) / 3;
