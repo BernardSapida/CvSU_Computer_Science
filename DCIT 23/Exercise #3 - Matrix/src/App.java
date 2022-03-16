@@ -2,18 +2,18 @@
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // Swapping Variable Value
+        // Swap the variable value using expression.
         int x = 14, y = 7, z;
 
-        // x = (14 + 7) - 14 => 7
-        x = (x + y) - x;
-
-        // z = 7 + 7 => 14 
+        // z = 14 + 7 => 21
         z = x + y;
 
-        // y = 14 => 14
-        y = z;
+        // x = 21 - 14 => 7
+        x = z - x;
 
-        System.out.println("x: " + x + ", " + "y: " + y);
+        // y = 21 - 7 => 14
+        y = z - y;
+
+        System.out.println("x: " + x + "\n" + "y: " + y);
     }
 }
