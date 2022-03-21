@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <button id="switch" class="fa-solid fa-bolt-lightning"></button>
+        <section class="section_form">
+            <h1>Leave a Comments/Suggestions</h1>
+            <form action="" method="get" autocomplete="off">
+                <p>
+                    <label for="name">
+                        <span class="title">Name</span><input type="text" id="name" name="name" placeholder="Your name">
+                    </label>
+                </p>
+                <p>
+                    <span class="title">Sex</span> 
+                    <label for="male">
+                        <input type="radio" id="male" name="sex" value="Male"> Male
+                        <span class="radio-btn"></span>
+                    </label>
+                    <label for="female">
+                        <input type="radio" id="female" name="sex" value="Female"> Female
+                        <span class="radio-btn"></span>
+                    </label>
+                </p>
+                <p>
+                    <label for="gender">
+                        <span class="title">Gender</span>
+                        <select name="gender" id="gender">
+                            <option value="Feminine">--Your Gender--</option>
+                            <option value="Feminine">Feminine</option>
+                            <option value="Masculine">Masculine</option>
+                            <option value="Lesbian">Lesbian</option>
+                            <option value="Gay">Gay</option>
+                            <option value="Bisexual">Bisexual</option>
+                            <option value="Transgender">Transgender</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <span class="title">Comments</span>
+                    <textarea name="comments" id="comments" placeholder="Please comment"></textarea>
+                </p>
+                <hr>
+                <input type="reset" name="reset" id="reset" value="reset">
+                <input type="button" name="button" id="button" value="cancel">
+                <input type="submit" name="submit" id="submit" value="submit">
+            </form>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="javascript/changeBackground.js"></script>
+</body>
+</html>

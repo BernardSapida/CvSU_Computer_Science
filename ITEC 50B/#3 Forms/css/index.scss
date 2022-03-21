@@ -1,0 +1,197 @@
+:root {
+    --background-light: rgb(255, 255, 255);
+    --background-dark: hsl(200, 7.0%, 8.8%);
+    --primary-darkbg-text: hsl(210, 6%, 93%);
+    --secondary-darkbg-text: hsl(153, 5%, 62%);
+    --primary-lightbg-text: hsl(202, 24%, 9%);
+    --secondary-lightbg-text: #687076;
+    --input-background: hsl(210, 38%, 95%);
+    --background-dark-btn: hsl(200, 7.0%, 15.8%);
+    --background-darkHover-btn: hsl(200, 7.0%, 20.8%);
+    --submitBtn: hsl(221, 100%, 50%);
+    --submitBtnHover: hsl(221, 100%, 55%);
+    --resetBtn: hsl(342, 100%, 50%);
+    --resetBtnHover: hsl(342, 100%, 55%);
+    --switchBtn: hsl(61, 100%, 68%);
+    --radioBtn: hsl(253, 100%, 55%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.lightsOff {
+    background-color: var(--background-dark) !important;
+    color: var(--primary-darkbg-text) !important;
+}
+
+.lightsOffPrimary, .lightsOffSecondary {
+    color: var(--primary-darkbg-text) !important;
+}
+
+
+body {
+    background-color: var(--background-light);
+
+    & main {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & #switch {
+            background-color: transparent !important;
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            color: var(--background-dark);
+            font-size: 45px;
+            border: none;
+            cursor: pointer;
+        }
+
+        & .section_form {
+            width: max-content;
+
+            & h1 {
+                margin: 0 0 40px 0;
+                font-size: 40px;
+            }
+
+            & form {
+                width: max-content;
+                margin: auto;
+
+                & p {
+                    width: max-content;
+                    margin: 20px;
+                    
+                    & .title {
+                        display: block;
+                        padding: 10px 0;
+                        font-size: 16px;
+                        font-weight: bolder;
+                    }
+
+                    & label[for="male"], & label[for="female"] {
+                        display: inline-flex;
+                        flex-direction: row-reverse;
+
+                        & input[type="radio"] {
+                            position: relative;
+                            align-items: center;
+                            display: none;
+
+                            &:checked + .radio-btn::before {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%) scale(1);
+                                align-items: center;
+                                justify-content: center;
+                                height: 14px;
+                                width: 14px;
+                                border-radius: 100%;
+                                background-color: var(--secondary-lightbg-text);
+                            }
+                        }
+
+                        & .radio-btn {
+                            margin: 0 5px;
+                            position: relative;
+                            height: 1.4em;
+                            width: 1.4em;
+                            border: 2px solid var(--secondary-lightbg-text);
+                            border-radius: 50%;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%) scale(0);
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 100%;
+                                transition: all 350ms cubic-bezier(0.88, 0, 0.15, 1.64);
+                            }
+                        }
+                    }
+    
+                    & input[type="text"], & textarea, & select {
+                        width: 400px;
+                        padding: 10px 10px;
+                        color: var(--secondary-lightbg-text);
+                        font-size: 18px;
+                        border-radius: 5px;
+                        border: none;
+                        background-color: var(--input-background);
+    
+                        &:focus {
+                            background-color: var(--background-light);
+                            border: 2px solid black;
+                        }
+                    }
+
+                    & textarea {
+                        width: 400px !important;
+                        height: 200px;
+                        resize: vertical;
+                    }
+                }
+
+                & hr {
+                    margin-bottom: 5px;
+                    height: 1px;
+                    width: 100%;
+                    border: none;
+                    background-color: var(--secondary-lightbg-text);
+                }
+
+                & input[type="reset"], & input[type="button"], & input[type="submit"] {
+                    padding: 10px 50px;
+                    background: var(--background-dark-btn);
+                    color: var(--primary-darkbg-text);
+                    border: none;
+                    border-radius: 3px;
+                    text-transform: capitalize;
+                    font-size: 16px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: var(--background-darkHover-btn);
+                    }
+                }
+
+                & input[type="reset"] {
+                    background-color: var(--resetBtn);
+                    &:hover {
+                        background-color: var(--resetBtnHover);
+                    }
+                }
+
+                & input[type="cancelBtn"] {
+                    background-color: var(--background-dark-btn);
+                    &:hover {
+                        background-color: var(--background-darkHover-btn);
+                    }
+                }
+
+                & input[type="submit"] {
+                    background-color: var(--submitBtn);
+                    &:hover {
+                        background-color: var(--submitBtnHover);
+                    }
+                }
+            }
+        }
+    }
+}

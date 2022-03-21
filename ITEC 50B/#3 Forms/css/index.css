@@ -1,0 +1,232 @@
+:root {
+  --background-light: rgb(255, 255, 255);
+  --background-dark: hsl(200, 7.0%, 8.8%);
+  --primary-darkbg-text: hsl(210, 6%, 93%);
+  --secondary-darkbg-text: hsl(153, 5%, 62%);
+  --primary-lightbg-text: hsl(202, 24%, 9%);
+  --secondary-lightbg-text: #687076;
+  --input-background: hsl(210, 38%, 95%);
+  --background-dark-btn: hsl(200, 7.0%, 15.8%);
+  --background-darkHover-btn: hsl(200, 7.0%, 20.8%);
+  --submitBtn: hsl(221, 100%, 50%);
+  --submitBtnHover: hsl(221, 100%, 55%);
+  --resetBtn: hsl(342, 100%, 50%);
+  --resetBtnHover: hsl(342, 100%, 55%);
+  --switchBtn: hsl(61, 100%, 68%);
+  --radioBtn: hsl(253, 100%, 55%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.lightsOff {
+  background-color: var(--background-dark) !important;
+  color: var(--primary-darkbg-text) !important;
+}
+
+.lightsOffPrimary, .lightsOffSecondary {
+  color: var(--primary-darkbg-text) !important;
+}
+
+body {
+  background-color: var(--background-light);
+}
+
+body main {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main #switch {
+  background-color: transparent !important;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  color: var(--background-dark);
+  font-size: 45px;
+  border: none;
+  cursor: pointer;
+}
+
+body main .section_form {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+body main .section_form h1 {
+  margin: 0 0 40px 0;
+  font-size: 40px;
+}
+
+body main .section_form form {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+}
+
+body main .section_form form p {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 20px;
+}
+
+body main .section_form form p .title {
+  display: block;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+body main .section_form form p label[for="male"], body main .section_form form p label[for="female"] {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+body main .section_form form p label[for="male"] input[type="radio"], body main .section_form form p label[for="female"] input[type="radio"] {
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+body main .section_form form p label[for="male"] input[type="radio"]:checked + .radio-btn::before, body main .section_form form p label[for="female"] input[type="radio"]:checked + .radio-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 14px;
+  width: 14px;
+  border-radius: 100%;
+  background-color: var(--secondary-lightbg-text);
+}
+
+body main .section_form form p label[for="male"] .radio-btn, body main .section_form form p label[for="female"] .radio-btn {
+  margin: 0 5px;
+  position: relative;
+  height: 1.4em;
+  width: 1.4em;
+  border: 2px solid var(--secondary-lightbg-text);
+  border-radius: 50%;
+}
+
+body main .section_form form p label[for="male"] .radio-btn::before, body main .section_form form p label[for="female"] .radio-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  -webkit-transition: all 350ms cubic-bezier(0.88, 0, 0.15, 1.64);
+  transition: all 350ms cubic-bezier(0.88, 0, 0.15, 1.64);
+}
+
+body main .section_form form p input[type="text"], body main .section_form form p textarea, body main .section_form form p select {
+  width: 400px;
+  padding: 10px 10px;
+  color: var(--secondary-lightbg-text);
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--input-background);
+}
+
+body main .section_form form p input[type="text"]:focus, body main .section_form form p textarea:focus, body main .section_form form p select:focus {
+  background-color: var(--background-light);
+  border: 2px solid black;
+}
+
+body main .section_form form p textarea {
+  width: 400px !important;
+  height: 200px;
+  resize: vertical;
+}
+
+body main .section_form form hr {
+  margin-bottom: 5px;
+  height: 1px;
+  width: 100%;
+  border: none;
+  background-color: var(--secondary-lightbg-text);
+}
+
+body main .section_form form input[type="reset"], body main .section_form form input[type="button"], body main .section_form form input[type="submit"] {
+  padding: 10px 50px;
+  background: var(--background-dark-btn);
+  color: var(--primary-darkbg-text);
+  border: none;
+  border-radius: 3px;
+  text-transform: capitalize;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+body main .section_form form input[type="reset"]:hover, body main .section_form form input[type="button"]:hover, body main .section_form form input[type="submit"]:hover {
+  background: var(--background-darkHover-btn);
+}
+
+body main .section_form form input[type="reset"] {
+  background-color: var(--resetBtn);
+}
+
+body main .section_form form input[type="reset"]:hover {
+  background-color: var(--resetBtnHover);
+}
+
+body main .section_form form input[type="cancelBtn"] {
+  background-color: var(--background-dark-btn);
+}
+
+body main .section_form form input[type="cancelBtn"]:hover {
+  background-color: var(--background-darkHover-btn);
+}
+
+body main .section_form form input[type="submit"] {
+  background-color: var(--submitBtn);
+}
+
+body main .section_form form input[type="submit"]:hover {
+  background-color: var(--submitBtnHover);
+}
+/*# sourceMappingURL=index.css.map */
