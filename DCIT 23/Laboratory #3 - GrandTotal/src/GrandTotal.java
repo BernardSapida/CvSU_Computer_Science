@@ -5,28 +5,28 @@ public class GrandTotal {
     public double tip = .15;
     public static double tableTotal;
     public static void main(String[] args) throws Exception {
-        DecimalFormat df = new DecimalFormat(".##");
+        DecimalFormat df = new DecimalFormat("0.00");
         GrandTotal gt = new GrandTotal();
 
         // Each bill of eight person
-        System.out.println("Person 1: " + gt.findTotal(10, df));
-        System.out.println("Person 2: " + gt.findTotal(12, df));
-        System.out.println("Person 3: " + gt.findTotal(9, df));
-        System.out.println("Person 4: " + gt.findTotal(8, df));
-        System.out.println("Person 5: " + gt.findTotal(7, df));
+        System.out.println("Person 1: $" + gt.findTotal(10, df));
+        System.out.println("Person 2: $" + gt.findTotal(12, df));
+        System.out.println("Person 3: $" + gt.findTotal(9, df));
+        System.out.println("Person 4: $" + gt.findTotal(8, df));
+        System.out.println("Person 5: $" + gt.findTotal(7, df));
 
         // Since Alex meal was meant to be a birthday present.
         // Therefore, his/her bill are distributed to his/her friends equally.
-        // System.out.println("Person 6: " + gt.findTotal(15) + " (Alex)");
+        // System.out.println("Person 6: $" + gt.findTotal(15) + " (Alex)");
 
-        System.out.println("Person 7: " + gt.findTotal(11, df));
+        System.out.println("Person 7: $" + gt.findTotal(11, df));
 
         // Since person 8 forget the wallet. Therefore, he/she is not included.
         // The person 8 bill's shared to his/her 6 friends equally.
-        // System.out.println("Person 8: " + gt.findTotal(30));
+        // System.out.println("Person 8: $" + gt.findTotal(30));
 
         // Table's Total Bill
-        System.out.println("Table's Total: " + df.format(tableTotal));
+        System.out.println("Table's Total: $" + df.format(tableTotal));
     }
 
     public double findTotal(double originalPrice, DecimalFormat df) {
