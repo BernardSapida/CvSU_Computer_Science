@@ -69,6 +69,7 @@ public class App {
             }
         }
 
+        // Show goodbye message dialog
         JOptionPane.showMessageDialog(frame, getHTML("https://th.bing.com/th/id/R.d7868a006ca700ccf5d21cdea80fec27?rik=ycd2e8rZE83LkA&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f12%2fHappy-Emoji-PNG-File.png&ehk=d4OgA94bsms07LaBekhxOgickzAVVKfhawE8euzotAo%3d&risl=&pid=ImgRaw&r=0", app.getAnswer()[0] + ", I need to end our conversation since I need to do something, I want to say that I have your details such as you are " + app.getAnswer()[1] + " years old, " + " your birthday is " + app.getAnswer()[2] + ", you are a " + app.getAnswer()[5].toLowerCase() + ", " + "and when I ask you about if you know where tagaytay is, you said '" + app.getAnswer()[7] + "'. Since you said " + app.getAnswer()[8].toLowerCase() + " is your favorite dish. Therefore, I will try to order your favorite dish when we go to Tagaytay. " + (Pattern.compile("^(09|08)[0-9][0-9]-[0-9]{3}-[0-9]{4}$").matcher(app.getAnswer()[9]).find() ? "I will contact your phone#: " + app.getAnswer()[9] + " once I finished my task. By the way, my phone# is 0947-212-6029! I'm enjoying chatting with you, keep safe and enjoy your day! Thank youuuuu!" : "")), "Bernard Sapida reponse message!", JOptionPane.PLAIN_MESSAGE);
     }
 
