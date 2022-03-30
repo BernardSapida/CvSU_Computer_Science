@@ -1,7 +1,4 @@
 *.log
-
 .vscode
-
 lib
-
 bin
