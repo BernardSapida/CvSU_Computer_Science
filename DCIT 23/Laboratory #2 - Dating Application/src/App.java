@@ -1,6 +1,5 @@
 import java.util.regex.Pattern;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 public class App {
     // Array for storing user response
