@@ -1,69 +1,50 @@
 import java.text.DecimalFormat;
 
 public class GrandTotal {
-    public double tax = .05;
-    public double tip = .15;
-    public static double tableTotal;
     public static void main(String[] args) throws Exception {
         DecimalFormat df = new DecimalFormat("0.00");
-        GrandTotal gt = new GrandTotal();
+        ComputeBill cb = new ComputeBill();
 
         // Each bill of eight person
-        System.out.println("Person 1: $" + gt.findTotal(10, df));
-        System.out.println("Person 2: $" + gt.findTotal(12, df));
-        System.out.println("Person 3: $" + gt.findTotal(9, df));
-        System.out.println("Person 4: $" + gt.findTotal(8, df));
-        System.out.println("Person 5: $" + gt.findTotal(7, df));
+        System.out.println("Person 1: $" + cb.findTotal(10, df));
+        System.out.println("Person 2: $" + cb.findTotal(12, df));
+        System.out.println("Person 3: $" + cb.findTotal(9, df));
+        System.out.println("Person 4: $" + cb.findTotal(8, df));
+        System.out.println("Person 5: $" + cb.findTotal(7, df));
 
         // Since Alex meal was meant to be a birthday present.
         // Therefore, his/her bill are distributed to his/her friends equally.
-        // System.out.println("Person 6: $" + gt.findTotal(15) + " (Alex)");
+        // System.out.println("Person 6: $" + cb.findTotal(15, df) + " (Alex)");
 
-        System.out.println("Person 7: $" + gt.findTotal(11, df));
+        System.out.println("Person 7: $" + cb.findTotal(11, df));
 
         // Since person 8 forget the wallet. Therefore, he/she is not included.
         // The person 8 bill's shared to his/her 6 friends equally.
-        // System.out.println("Person 8: $" + gt.findTotal(30));
+        // System.out.println("Person 8: $" + cb.findTotal(30, df));
 
         // Table's Total Bill
-        System.out.println("Table's Total: $" + df.format(tableTotal));
-    }
-
-    public double findTotal(double originalPrice, DecimalFormat df) {
-        // Alex bill
-        double person6 = (15*(1 + this.tax + this.tip))/6;
-
-        // Person 8 bill
-        double person8 = (30*(1 + this.tax + this.tip))/6;
-
-        // Person # Total Bill
-        double personTotal = Double.parseDouble(df.format(originalPrice*(1 + this.tax + this.tip) + person8 + person6));
-
-        // Table Total
-        tableTotal += personTotal;
-
-        return personTotal;
+        System.out.println("Table's Total: $" + df.format(ComputeBill.tableTotal));
     }
 }
 
 /*
-  * It’s Alex’s birthday! You’ve arranged a group of eight friends to celebrate at a local restaurant.
-  * When your party receives their bill, nobody is quite sure what they owe.
-  * You only know everyone’s total before tax (5%) and tip (15%). 
-  * But lucky you! You brought your laptop and are asked to write a program that calculates everybody’s total
+  ? 8 Persons Total Bill
+  * Person 1: $12.0
+  * Person 2: $14.4       
+  * Person 3: $10.8       
+  * Person 4: $9.6        
+  * Person 5: $8.4        
+  * Person 6: $18.0 (Alex)
+  * Person 7: $13.2       
+  * Person 8: $36.0       
+  * Table's Total: $122.40
 
-  * Person1: $10
-  * Person2: $12
-  * Person3: $9
-  * Person4: $8
-  * Person5: $7
-  * Person6: $15 (Alex)
-  * Person7: $11
-  * Person8: $30
-
-  ? Find and print the entire table’s total, including tax and tip.
-  ! You'll need to edit findTotal() so that it returns its calculated value.
-  ! Person8 forgot their wallet. And Alex’s meal was meant to be a birthday present. 
-  ! Modify findTotal() so that the cost of their meals are shared equally with the rest of the party.
-  ? Recalculate the entire table’s total. 
+  ? 6 Persons Total Bill (Alex & Person 8 Bill's Truncated)
+  * Person 1: $21.0
+  * Person 2: $23.4       
+  * Person 3: $19.8       
+  * Person 4: $18.6       
+  * Person 5: $17.4       
+  * Person 7: $22.2       
+  * Table's Total: $122.40
 */
