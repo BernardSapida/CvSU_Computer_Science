@@ -1,7 +1,10 @@
 import java.util.*; // Scanner
 
 public class TestClass {
+    // TestClass Fields
     public static int a, b;
+    
+    
     public static void main(String[] args) throws Exception {
         // Instantiating TextClass Object
         TestClass tc = new TestClass();

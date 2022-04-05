@@ -5,6 +5,7 @@ public class ComputeMethods {
     // Class Fields
     public int dice_1, dice_2, multiplier, result;
 
+    // Behaviors
     // hypotenuse method will return the calculated hypotenuse
     public double hypotenuse(int a, int b) {
         System.out.println("\nOutput:");
