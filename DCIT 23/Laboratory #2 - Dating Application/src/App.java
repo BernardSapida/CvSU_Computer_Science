@@ -3,7 +3,7 @@ import javax.swing.*;
 
 public class App {
     // Array for storing user response
-    private final String[] answers = new String[10];
+    private final String[] answers = new String[10]; // {null, null, null... 10}
 
     // Pattern for checking if the user inputs are valid
     private final String[] pattern = {
