@@ -1,34 +1,37 @@
-import java.util.Scanner;
-import java.util.regex.Pattern;
-
 public class ShoppingCart {
-    // ShoppingCart Fields
-    public static Scanner in = new Scanner(System.in);
-    public static boolean outOfStock;
-    public static String quantity;
-
-    public static void main(String[] args) throws Exception {
-        // Invoking getNumberOfStock methods
-        while(true) {
-            getNumberOfStock();
+    public static void main(String[] args) {
+        String custName = "Mary Smith";
+        String itemDesc = "Shirt";
+        double price = 21.99;
+        int quantity = 2;
+        double tax = 1.04;
+        double total;
+        String message = custName+" wants to purchase "+quantity+" "+itemDesc;
+        
+        // Calculating total cost
+        total = (price*quantity)*tax;
+        
+        // Declare outOfStock variable and initialize it.
+        boolean outOfStock = false;
+        
+        // Test quantity and modify message if quantity > 1.
+        // Singular: Mary Smith wants to purchase 1 shirt.
+        // Plural: Mary Smith wants to purchase >1 shirts.
+        if(quantity > 1) {
+            itemDesc = "Shirts";
+            message = custName+" wants to purchase "+quantity+" "+itemDesc;
         }
-    }
-
-    public static void getNumberOfStock() {
-        // Ask for product's quantity
-        System.out.print("\nEnter product quantity: ");
-        quantity = in.nextLine();
-
-        // Validate user input
-        while(!Pattern.compile("^[0-9]+$").matcher(String.valueOf(quantity)).find()) {
-            System.out.println("Your input is invalid!");
-            System.out.print("\nEnter product quantity: ");
-            quantity = in.nextLine();
+        
+        // Test outOfStock and notify user in either case.
+        // If quantity is 0 then print Message: The item is unavailable!
+        if(quantity <= 0) {
+            outOfStock = true;
+            System.out.println("Message: The item is unavailable!");
         }
-
-        // If quantity == 0 then print "The item is unavailable due to out of stock."
-        // If quantity == 1 then print "The number of item is 1"
-        // If quantity => 1 then print "The number of items is " + quantity
-        System.out.println(Integer.parseInt(quantity)>1 ? "The number of items is " + Integer.parseInt(quantity) + "." : Integer.parseInt(quantity) <= 0 ? "The item is unavailable due to out of stock." : "The number of item is 1.");
+        
+        // If outOfStock is false then print the message and total.
+        if(!outOfStock) {
+            System.out.println(message+"\nTotal: "+total);
+        }
     }
 }
