@@ -3,7 +3,7 @@ public class ShoppingCart {
         String custName = "Mary Smith";
         String itemDesc = "Shirt";
         double price = 21.99;
-        int quantity = 1;
+        int quantity = 2;
         double tax = 1.04;
         double total;
         String message = custName+" wants to purchase "+quantity+" "+itemDesc;
