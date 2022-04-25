@@ -3,42 +3,35 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner in = new Scanner(System.in);
         
-        System.out.print("\nEnter Rectangle Width: ");
-        int rectangleWidth = in.nextInt();
+        // System.out.print("\nEnter Rectangle Width: ");
+        // int rectangleWidth = in.nextInt();
         
-        System.out.print("Enter Rectangle Height: ");
-        int rectangleHeight = in.nextInt();
+        // System.out.print("Enter Rectangle Height: ");
+        // int rectangleHeight = in.nextInt();
 
-        createRectangle(rectangleWidth, rectangleHeight);
+        // createRectangle(rectangleWidth, rectangleHeight);
         
         System.out.print("\nEnter Triangle Size (NORMAL): ");
         int triangleSize = in.nextInt();
         createTriangle(triangleSize);
 
-        // System.out.print("\nEnter Triangle Size (Horizontally Mirror): ");
-        // int triangleXSize = in.nextInt();
-        // createTriangleHorizontalFlipped(triangleXSize);
+        System.out.print("\nEnter Triangle Size (Horizontally Mirror): ");
+        int triangleXSize = in.nextInt();
+        createTriangleHorizontalFlipped(triangleXSize);
 
-        // System.out.print("\nEnter Triangle Size (Vertically Mirror): ");
-        // int triangleYSize = in.nextInt();
-        // createTriangleVerticalFlipped(triangleYSize);
+        System.out.print("\nEnter Triangle Size (Vertically Mirror): ");
+        int triangleYSize = in.nextInt();
+        createTriangleVerticalFlipped(triangleYSize);
 
         in.close();
     }
 
     public static String createRectangle(int width, int height) {
         String rectangle = "";
-        for(int y = 0; y < height; y++){
-            for(int x = 0; x < width; x++){
-                if(y == 0 || y == height-1) {
-                    System.out.print("#");
-                } else {
-                    if(x == 0 || x == width-1) {
-                        System.out.print('#');
-                    } else {
-                        System.out.print(' ');
-                    }
-                }
+        for(int rectangleHeight = 0; rectangleHeight < height; rectangleHeight++){
+            for(int rectangleWidth = 0; rectangleWidth < width; rectangleWidth++){
+                if(rectangleHeight == 0 || rectangleHeight == height-1) System.out.print("#");
+                else System.out.print((rectangleWidth == 0 || rectangleWidth == width-1) ? '#' : ' ');
             }
             System.out.println();
         }
@@ -46,17 +39,10 @@ public class App {
     }
 
     public static void createTriangle(int size) {
-        for (int y = 0; y < size; y++) {
-            for (int x = 0; x <= y; x++) {
-                if(x == 0 || x == y) {
-                    System.out.print("*");
-                } else {
-                    if((y == size-1)) {
-                        System.out.print("*");
-                    } else {
-                        System.out.print(" ");
-                    }
-                }
+        for (int heightSize = 0; heightSize < size; heightSize++) {
+            for (int widthSize = 0; widthSize <= heightSize; widthSize++) {
+                if(widthSize == 0 || widthSize == heightSize) System.out.print("*");
+                else System.out.print((heightSize == size-1) ? "*" : " ");
             }
             System.out.println();
         }
