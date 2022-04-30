@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import 'main.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--primary-text);
+    font-family: 'Inter', verdana, arial, helvetica;
+}
+
+body {
+    background-color: var(--primary-dark);
+
+    p {
+        line-height: 1.7;
+    }
+
+    & header {
+        height: 70px;
+        border-bottom: 1px solid var(--secondary-dark);
+
+        & nav {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            & h1.business-name {
+                align-items: center;
+                font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+                font-size: 34px;
+
+                & span {
+                    color: var(--yellow);
+                    font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+                }
+            }
+
+            & ul {
+                display: inline-flex;
+                align-items: center;
+                list-style-type: none;
+
+                & li {
+                    a {
+                        position: relative;
+                        width: max-content;
+                        margin-inline: 12px;
+                        padding: 5px 0;
+                        text-decoration: none;
+                        font-weight: 400;
+                        transition: color 350ms ease;
+    
+                        &:hover {
+                            color: var(--yellow);
+                        }
+                    }
+
+                    &:hover a {
+                        color: var(--yellow);
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            background: var(--yellow);
+                            height: 2px;
+                            width: 100%;
+                            border-radius: 5px;
+                            animation: underline 350ms ease forwards;
+                        }
+                    }
+
+                    &.active a {
+                        color: var(--yellow);
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            background: var(--yellow);
+                            height: 2px;
+                            width: 100%;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & main {
+        & .section_profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 100px 0;
+
+            & .container_image {
+                margin-inline: 15px;
+
+                & img {
+                    height: 400px;
+                    border-radius: 10px;
+                }
+            }
+
+            & .container_profile-description {
+                margin-inline: 15px;
+
+                & h4 {
+                    margin-bottom: 20px;
+                    padding: 5px 15px;
+                    position: relative;
+                    width: max-content;
+                    background-color: var(--yellow-darken);
+                    font-weight: 600;
+                    font-size: 12px;
+                    border-radius: 5px;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: -18px;
+                        left: 2px;
+                        border-top: 20px solid var(--yellow-darken);
+                        border-right: 10px solid transparent;
+                        border-left: 10px solid transparent;
+                        border-bottom: 10px solid transparent;
+                        transform: rotate(30deg);
+                        z-index: -1;
+                    }
+                }
+
+                & h1 {
+                    font-weight: 200;
+                    color: var(--secondary-text);
+
+                    & span {
+                        font-weight: 500;
+                    }
+                }
+
+                & p {
+                    font-weight: 200;
+                    color: var(--secondary-text);
+                }
+
+                & div.line {
+                    margin: 15px 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: var(--secondary-dark);
+                }
+
+                & .description {
+                    & p {
+                        padding: 7px 0;
+                        color: var(--secondary-text);
+                        font-weight: 300;
+
+                        & span {
+                            display: inline-block;
+                            width: 130px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & footer {
+        background-color: var(--secondary-dark);
+
+        & h2.business-name {
+            padding: 20px 0;
+            text-align: center;
+            font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+            font-size: 34px;
+
+            & span {
+                color: var(--yellow);
+                font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+            }
+        }
+
+        & .business-description {
+            margin-inline: auto;
+            width: 650px;
+            text-align: center;
+            color: var(--secondary-text);
+            font-weight: 200;
+        }
+
+        & .icons {
+            padding: 20px 0;
+            text-align: center;
+            
+            & span {
+                padding: 0 7px;
+            }
+        }
+
+        & .footer-copyright {
+            padding: 15px;
+            background-color: var(--primary-dark);
+
+            & p {
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@keyframes underline {
+    0% {
+        position: absolute;
+        opacity: 0;
+        bottom: -5px;
+    }
+    100% {
+        position: absolute;
+        opacity: 1;
+        bottom: 0;
+    }
+}

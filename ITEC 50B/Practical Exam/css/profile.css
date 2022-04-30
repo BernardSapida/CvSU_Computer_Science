@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --primary-dark: hsl(0, 25%, 2%);
+  --secondary-dark: hsl(60, 4%, 5%);
+  --primary-text: hsl(0, 0%, 100%);
+  --secondary-text: hsl(0, 0%, 100%, .5);
+  --yellow: hsl(47, 100%, 54%);
+  --yellow-darken: hsl(47, 100%, 44%);
+  --pink: hsl(330, 100%, 44%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: var(--primary-text);
+  font-family: 'Inter', verdana, arial, helvetica;
+}
+
+body {
+  background-color: var(--primary-dark);
+}
+
+body p {
+  line-height: 1.7;
+}
+
+body header {
+  height: 70px;
+  border-bottom: 1px solid var(--secondary-dark);
+}
+
+body header nav {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body header nav h1.business-name {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+  font-size: 34px;
+}
+
+body header nav h1.business-name span {
+  color: var(--yellow);
+  font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+}
+
+body header nav ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+}
+
+body header nav ul li a {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-inline: 12px;
+  padding: 5px 0;
+  text-decoration: none;
+  font-weight: 400;
+  -webkit-transition: color 350ms ease;
+  transition: color 350ms ease;
+}
+
+body header nav ul li a:hover {
+  color: var(--yellow);
+}
+
+body header nav ul li:hover a {
+  color: var(--yellow);
+}
+
+body header nav ul li:hover a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background: var(--yellow);
+  height: 2px;
+  width: 100%;
+  border-radius: 5px;
+  -webkit-animation: underline 350ms ease forwards;
+          animation: underline 350ms ease forwards;
+}
+
+body header nav ul li.active a {
+  color: var(--yellow);
+}
+
+body header nav ul li.active a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background: var(--yellow);
+  height: 2px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+body main .section_profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 100px 0;
+}
+
+body main .section_profile .container_image {
+  margin-inline: 15px;
+}
+
+body main .section_profile .container_image img {
+  height: 400px;
+  border-radius: 10px;
+}
+
+body main .section_profile .container_profile-description {
+  margin-inline: 15px;
+}
+
+body main .section_profile .container_profile-description h4 {
+  margin-bottom: 20px;
+  padding: 5px 15px;
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: var(--yellow-darken);
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+body main .section_profile .container_profile-description h4::before {
+  content: "";
+  position: absolute;
+  bottom: -18px;
+  left: 2px;
+  border-top: 20px solid var(--yellow-darken);
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  z-index: -1;
+}
+
+body main .section_profile .container_profile-description h1 {
+  font-weight: 200;
+  color: var(--secondary-text);
+}
+
+body main .section_profile .container_profile-description h1 span {
+  font-weight: 500;
+}
+
+body main .section_profile .container_profile-description p {
+  font-weight: 200;
+  color: var(--secondary-text);
+}
+
+body main .section_profile .container_profile-description div.line {
+  margin: 15px 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--secondary-dark);
+}
+
+body main .section_profile .container_profile-description .description p {
+  padding: 7px 0;
+  color: var(--secondary-text);
+  font-weight: 300;
+}
+
+body main .section_profile .container_profile-description .description p span {
+  display: inline-block;
+  width: 130px;
+}
+
+body footer {
+  background-color: var(--secondary-dark);
+}
+
+body footer h2.business-name {
+  padding: 20px 0;
+  text-align: center;
+  font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+  font-size: 34px;
+}
+
+body footer h2.business-name span {
+  color: var(--yellow);
+  font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+}
+
+body footer .business-description {
+  margin-inline: auto;
+  width: 650px;
+  text-align: center;
+  color: var(--secondary-text);
+  font-weight: 200;
+}
+
+body footer .icons {
+  padding: 20px 0;
+  text-align: center;
+}
+
+body footer .icons span {
+  padding: 0 7px;
+}
+
+body footer .footer-copyright {
+  padding: 15px;
+  background-color: var(--primary-dark);
+}
+
+body footer .footer-copyright p {
+  text-align: center;
+  font-size: 14px;
+}
+
+@-webkit-keyframes underline {
+  0% {
+    position: absolute;
+    opacity: 0;
+    bottom: -5px;
+  }
+  100% {
+    position: absolute;
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@keyframes underline {
+  0% {
+    position: absolute;
+    opacity: 0;
+    bottom: -5px;
+  }
+  100% {
+    position: absolute;
+    opacity: 1;
+    bottom: 0;
+  }
+}
+/*# sourceMappingURL=profile.css.map */

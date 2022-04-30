@@ -1,0 +1,10 @@
+:root {
+  --primary-dark: hsl(0, 25%, 2%);
+  --secondary-dark: hsl(60, 4%, 5%);
+  --primary-text: hsl(0, 0%, 100%);
+  --secondary-text: hsl(0, 0%, 100%, .5);
+  --yellow: hsl(47, 100%, 54%);
+  --yellow-darken: hsl(47, 100%, 44%);
+  --pink: hsl(330, 100%, 44%);
+}
+/*# sourceMappingURL=main.css.map */

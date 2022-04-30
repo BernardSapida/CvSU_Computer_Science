@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --primary-dark: hsl(0, 25%, 2%);
+  --secondary-dark: hsl(60, 4%, 5%);
+  --primary-text: hsl(0, 0%, 100%);
+  --secondary-text: hsl(0, 0%, 100%, .5);
+  --yellow: hsl(47, 100%, 54%);
+  --yellow-darken: hsl(47, 100%, 44%);
+  --pink: hsl(330, 100%, 44%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: var(--primary-text);
+  font-family: 'Inter', verdana, arial, helvetica;
+}
+
+body {
+  background-color: var(--primary-dark);
+}
+
+body p {
+  line-height: 1.7;
+}
+
+body header {
+  height: 70px;
+  border-bottom: 1px solid var(--secondary-dark);
+}
+
+body header nav {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body header nav h1.business-name {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+  font-size: 34px;
+}
+
+body header nav h1.business-name span {
+  color: var(--yellow);
+  font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+}
+
+body header nav ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+}
+
+body header nav ul li a {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-inline: 12px;
+  padding: 5px 0;
+  text-decoration: none;
+  font-weight: 400;
+  -webkit-transition: color 350ms ease;
+  transition: color 350ms ease;
+}
+
+body header nav ul li a:hover {
+  color: var(--yellow);
+}
+
+body header nav ul li:hover a {
+  color: var(--yellow);
+}
+
+body header nav ul li:hover a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background: var(--yellow);
+  height: 2px;
+  width: 100%;
+  border-radius: 5px;
+  -webkit-animation: underline 350ms ease forwards;
+          animation: underline 350ms ease forwards;
+}
+
+body header nav ul li.active a {
+  color: var(--yellow);
+}
+
+body header nav ul li.active a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background: var(--yellow);
+  height: 2px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+body main .section_contact {
+  margin: 50px 0;
+}
+
+body main .section_contact div.map iframe {
+  display: block;
+  margin: auto;
+  width: 950px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+body main .container_contact {
+  margin: 50px auto;
+  max-width: 950px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .container_contact .container_form form h2 {
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+body main .container_contact .container_form form label {
+  display: block;
+  padding: 10px 0;
+}
+
+body main .container_contact .container_form form label p {
+  font-size: 14px;
+  color: var(--secondary-text);
+}
+
+body main .container_contact .container_form form label p span {
+  color: #ff0b4c;
+}
+
+body main .container_contact .container_form form label input[type="text"], body main .container_contact .container_form form label textarea {
+  width: 500px;
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--secondary-dark);
+  border-radius: 10px;
+}
+
+body main .container_contact .container_form form button {
+  margin: 10px 0;
+  display: block;
+  background: var(--yellow);
+  border: none;
+  padding: 13px 30px;
+  font-size: 14px;
+  text-shadow: 0 0 5px var(--secondary-dark);
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+body main .container_contact .container_form form button:hover {
+  background-color: var(--yellow-darken);
+}
+
+body main .container_contact .container_business > div {
+  margin-bottom: 20px;
+}
+
+body main .container_contact .container_business > div > h2 {
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+body main .container_contact .container_business > div > p {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+body main .container_contact .container_business > div > p:last-child {
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+body main .container_contact .container_business > div .icons {
+  text-decoration: none !important;
+}
+
+body main .container_contact .container_business > div .icons span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+  width: 30px;
+  margin-inline: 5px;
+  background: var(--primary-text);
+  border-radius: 50%;
+}
+
+body main .container_contact .container_business > div .icons span .fa-brands {
+  color: var(--primary-text);
+  font-size: 14px;
+}
+
+body main .container_contact .container_business > div .icons span:nth-child(1) {
+  background-color: #28a4f0;
+}
+
+body main .container_contact .container_business > div .icons span:nth-child(2) {
+  background-color: #3b5998;
+}
+
+body main .container_contact .container_business > div .icons span:nth-child(3) {
+  background-color: #fb416b;
+}
+
+body main .container_contact .container_business > div .icons span:nth-child(4) {
+  background-color: #bd081c;
+}
+
+body main .container_contact .container_business > div .icons span:nth-child(5) {
+  background-color: var(--secondary-dark);
+}
+
+body footer {
+  background-color: var(--secondary-dark);
+}
+
+body footer h2.business-name {
+  padding: 20px 0;
+  text-align: center;
+  font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+  font-size: 34px;
+}
+
+body footer h2.business-name span {
+  color: var(--yellow);
+  font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+}
+
+body footer .business-description {
+  margin-inline: auto;
+  width: 650px;
+  text-align: center;
+  color: var(--secondary-text);
+  font-weight: 200;
+}
+
+body footer .icons {
+  padding: 20px 0;
+  text-align: center;
+}
+
+body footer .icons span {
+  padding: 0 7px;
+}
+
+body footer .footer-copyright {
+  padding: 15px;
+  background-color: var(--primary-dark);
+}
+
+body footer .footer-copyright p {
+  text-align: center;
+  font-size: 14px;
+}
+
+@-webkit-keyframes underline {
+  0% {
+    position: absolute;
+    opacity: 0;
+    bottom: -5px;
+  }
+  100% {
+    position: absolute;
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@keyframes underline {
+  0% {
+    position: absolute;
+    opacity: 0;
+    bottom: -5px;
+  }
+  100% {
+    position: absolute;
+    opacity: 1;
+    bottom: 0;
+  }
+}
+/*# sourceMappingURL=contact.css.map */

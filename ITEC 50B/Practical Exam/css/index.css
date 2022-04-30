@@ -1,0 +1,573 @@
+@import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --primary-dark: hsl(0, 25%, 2%);
+  --secondary-dark: hsl(60, 4%, 5%);
+  --primary-text: hsl(0, 0%, 100%);
+  --secondary-text: hsl(0, 0%, 100%, .5);
+  --yellow: hsl(47, 100%, 54%);
+  --yellow-darken: hsl(47, 100%, 44%);
+  --pink: hsl(330, 100%, 44%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: var(--primary-text);
+  font-family: 'Inter', verdana, arial, helvetica;
+}
+
+body {
+  background-color: var(--primary-dark);
+}
+
+body p {
+  line-height: 1.7;
+}
+
+body header {
+  height: 70px;
+  border-bottom: 1px solid var(--secondary-dark);
+}
+
+body header nav {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body header nav h1.business-name {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+  font-size: 34px;
+}
+
+body header nav h1.business-name span {
+  color: var(--yellow);
+  font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+}
+
+body header nav ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+}
+
+body header nav ul li a {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-inline: 12px;
+  padding: 5px 0;
+  text-decoration: none;
+  font-weight: 400;
+  -webkit-transition: color 350ms ease;
+  transition: color 350ms ease;
+}
+
+body header nav ul li a:hover {
+  color: var(--yellow);
+}
+
+body header nav ul li:hover a {
+  color: var(--yellow);
+}
+
+body header nav ul li:hover a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background: var(--yellow);
+  height: 2px;
+  width: 100%;
+  border-radius: 5px;
+  -webkit-animation: underline 350ms ease forwards;
+          animation: underline 350ms ease forwards;
+}
+
+body header nav ul li.active a {
+  color: var(--yellow);
+}
+
+body header nav ul li.active a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background: var(--yellow);
+  height: 2px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+body main .section_landing-page {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-image: url("../images/home_landing_page.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+}
+
+body main .section_landing-page .card {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 300px;
+  width: 570px;
+  background-color: var(--secondary-dark);
+  border-radius: 8px;
+}
+
+body main .section_landing-page .card-contents p {
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--yellow);
+}
+
+body main .section_landing-page .card-contents h1 {
+  padding: 10px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 34px;
+}
+
+body main .section_landing-page .card-contents button {
+  margin: 10px auto;
+  display: block;
+  background: var(--yellow);
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+body main .section_landing-page .card-contents button:hover {
+  background: var(--yellow-darken);
+}
+
+body main .section_ads {
+  margin: 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .section_ads .card {
+  padding: 30px;
+  height: 200px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+}
+
+body main .section_ads .card:nth-child(1) {
+  background-color: var(--yellow);
+}
+
+body main .section_ads .card:nth-child(2) {
+  background-color: var(--pink);
+}
+
+body main .section_ads .card-image {
+  height: 100%;
+  width: 250px;
+}
+
+body main .section_ads .card-image img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+}
+
+body main .section_ads .card-description h1 {
+  padding: 10px 0;
+  font-weight: 500;
+}
+
+body main .section_ads .card-description button {
+  padding: 13px 20px;
+  background: var(--primary-text);
+  color: var(--primary-dark);
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+body main .section_ads .card-description button:hover {
+  background: #e6e6e6;
+}
+
+body main .section_stuffed-toys {
+  margin: 100px 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+body main .section_stuffed-toys h1 {
+  margin: 10px;
+  font-weight: 500;
+}
+
+body main .section_stuffed-toys div.line {
+  margin-bottom: 30px;
+  height: 3px;
+  width: 50px;
+  background-color: var(--yellow);
+  border-radius: 5px;
+}
+
+body main .section_stuffed-toys .container_stuffed-toys {
+  width: 100%;
+  max-width: 1150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  cursor: pointer;
+}
+
+body main .section_stuffed-toys .container_stuffed-toys .display-stuffed-toys {
+  margin: 10px 0;
+  padding: 20px 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin-inline: 10px;
+  background-color: var(--secondary-dark);
+  width: 250px;
+  border-radius: 10px;
+  -webkit-transition: all 350ms ease-in;
+  transition: all 350ms ease-in;
+}
+
+body main .section_stuffed-toys .container_stuffed-toys .display-stuffed-toys img {
+  width: 200px;
+}
+
+body main .section_stuffed-toys .container_stuffed-toys .display-stuffed-toys p {
+  padding: 10px 0;
+}
+
+body main .section_stuffed-toys .container_stuffed-toys .display-stuffed-toys p.price {
+  padding: 5px 10px;
+  background-color: var(--yellow-darken);
+  font-size: 10px;
+  border-radius: 15px;
+}
+
+body main .section_stuffed-toys .container_stuffed-toys .display-stuffed-toys:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body main .section_wooden-toys {
+  margin: 100px 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+body main .section_wooden-toys h1 {
+  margin: 10px;
+  font-weight: 500;
+}
+
+body main .section_wooden-toys div.line {
+  margin-bottom: 30px;
+  height: 3px;
+  width: 50px;
+  background-color: var(--yellow);
+  border-radius: 5px;
+}
+
+body main .section_wooden-toys .container_wooden-toys {
+  width: 100%;
+  max-width: 1150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  cursor: pointer;
+}
+
+body main .section_wooden-toys .container_wooden-toys .display-wooden-toys {
+  margin: 10px 0;
+  padding: 20px 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin-inline: 10px;
+  background-color: var(--secondary-dark);
+  width: 250px;
+  border-radius: 10px;
+  -webkit-transition: all 350ms ease-in;
+  transition: all 350ms ease-in;
+}
+
+body main .section_wooden-toys .container_wooden-toys .display-wooden-toys img {
+  width: 200px;
+}
+
+body main .section_wooden-toys .container_wooden-toys .display-wooden-toys p {
+  padding: 10px 0;
+}
+
+body main .section_wooden-toys .container_wooden-toys .display-wooden-toys p.price {
+  padding: 5px 10px;
+  background-color: var(--yellow-darken);
+  font-size: 10px;
+  border-radius: 15px;
+}
+
+body main .section_wooden-toys .container_wooden-toys .display-wooden-toys:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body main .section_customer {
+  margin: 100px 0;
+}
+
+body main .section_customer > p {
+  font-size: 14px;
+  text-align: center;
+  color: var(--yellow);
+}
+
+body main .section_customer > h1 {
+  font-size: 34px;
+  text-align: center;
+}
+
+body main .section_customer .container_customer {
+  margin: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .section_customer .container_customer .customer-description {
+  margin-inline: 30px;
+  padding: 20px;
+  width: 450px;
+}
+
+body main .section_customer .container_customer .customer-description h1 {
+  font-weight: 400;
+}
+
+body main .section_customer .container_customer .customer-description div.line {
+  margin: 10px 0;
+  height: 3px;
+  width: 50px;
+  background-color: var(--yellow);
+  border-radius: 5px;
+}
+
+body main .section_customer .container_customer .customer-description p {
+  padding: 10px 0;
+  color: var(--secondary-text);
+  font-size: 14px;
+  font-weight: 200;
+}
+
+body main .section_customer .container_customer .customer-description button {
+  padding: 10px 20px;
+  background-color: var(--yellow);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+body main .section_customer .container_customer .customer-description button:hover {
+  background-color: var(--yellow-darken);
+}
+
+body main .section_customer .container_customer .customer-image img {
+  height: 300px;
+  border-radius: 10px;
+}
+
+body main .section_social-media {
+  margin: 100px 0;
+}
+
+body main .section_social-media > p {
+  font-size: 14px;
+  text-align: center;
+  color: var(--yellow);
+}
+
+body main .section_social-media > h1 {
+  font-size: 34px;
+  text-align: center;
+}
+
+body main .section_social-media .container_toys {
+  margin: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .section_social-media .container_toys div {
+  margin-inline: 8px;
+}
+
+body main .section_social-media .container_toys div img {
+  height: 180px;
+  width: 180px;
+  border-radius: 20px;
+  -webkit-transition: all 350ms ease-in;
+  transition: all 350ms ease-in;
+  cursor: pointer;
+}
+
+body main .section_social-media .container_toys div img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+body main .section_social-media button {
+  margin: 10px auto;
+  display: block;
+  background: var(--yellow);
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+body footer {
+  background-color: var(--secondary-dark);
+}
+
+body footer h2.business-name {
+  padding: 20px 0;
+  text-align: center;
+  font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+  font-size: 34px;
+}
+
+body footer h2.business-name span {
+  color: var(--yellow);
+  font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+}
+
+body footer .business-description {
+  margin-inline: auto;
+  width: 650px;
+  text-align: center;
+  color: var(--secondary-text);
+  font-weight: 200;
+}
+
+body footer .icons {
+  padding: 20px 0;
+  text-align: center;
+}
+
+body footer .icons span {
+  padding: 0 7px;
+}
+
+body footer .footer-copyright {
+  padding: 15px;
+  background-color: var(--primary-dark);
+}
+
+body footer .footer-copyright p {
+  text-align: center;
+  font-size: 14px;
+}
+
+@-webkit-keyframes underline {
+  0% {
+    position: absolute;
+    opacity: 0;
+    bottom: -5px;
+  }
+  100% {
+    position: absolute;
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@keyframes underline {
+  0% {
+    position: absolute;
+    opacity: 0;
+    bottom: -5px;
+  }
+  100% {
+    position: absolute;
+    opacity: 1;
+    bottom: 0;
+  }
+}
+/*# sourceMappingURL=index.css.map */

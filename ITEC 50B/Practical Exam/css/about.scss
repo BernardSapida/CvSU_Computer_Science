@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import 'main.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--primary-text);
+    font-family: 'Inter', verdana, arial, helvetica;
+}
+
+body {
+    background-color: var(--primary-dark);
+
+    p {
+        line-height: 1.7;
+    }
+
+    & header {
+        height: 70px;
+        border-bottom: 1px solid var(--secondary-dark);
+
+        & nav {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            & h1.business-name {
+                align-items: center;
+                font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+                font-size: 34px;
+
+                & span {
+                    color: var(--yellow);
+                    font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+                }
+            }
+
+            & ul {
+                display: inline-flex;
+                align-items: center;
+                list-style-type: none;
+
+                & li {
+                    a {
+                        position: relative;
+                        width: max-content;
+                        margin-inline: 12px;
+                        padding: 5px 0;
+                        text-decoration: none;
+                        font-weight: 400;
+                        transition: color 350ms ease;
+    
+                        &:hover {
+                            color: var(--yellow);
+                        }
+                    }
+
+                    &:hover a {
+                        color: var(--yellow);
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            background: var(--yellow);
+                            height: 2px;
+                            width: 100%;
+                            border-radius: 5px;
+                            animation: underline 350ms ease forwards;
+                        }
+                    }
+
+                    &.active a {
+                        color: var(--yellow);
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            background: var(--yellow);
+                            height: 2px;
+                            width: 100%;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & main {
+        & .section_mission, & .section_vision {
+            margin: 100px 0;
+
+            & > p {
+                font-size: 14px;
+                text-align: center;
+                color: var(--yellow);
+            }
+
+            & > h1 {
+                font-size: 34px;
+                text-align: center;
+            }
+
+            & .container_mission, & .container_vision {
+                margin: 50px 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                & .mission-description, & .vision-description {
+                    margin-inline: 30px;
+                    padding: 20px;
+                    width: 450px;
+
+                    & h1 {
+                        font-weight: 400;
+                    }
+
+                    & div.line {
+                        margin: 10px 0;
+                        height: 3px;
+                        width: 50px;
+                        background-color: var(--yellow);
+                        border-radius: 5px;
+                    }
+
+                    & p {
+                        padding: 10px 0;
+                        color: var(--secondary-text);
+                        font-size: 14px;
+                        font-weight: 200;
+                    }
+
+                    & button {
+                        padding: 10px 20px;
+                        background-color: var(--yellow);
+                        border-radius: 20px;
+                        border: none;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: var(--yellow-darken)
+                        }
+                    }
+                }
+
+                & .mission-image, & .vision-image {
+                    & img {
+                        height: 300px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+        
+        & .section_social-media {
+            margin: 100px 0;
+
+            & > p {
+                font-size: 14px;
+                text-align: center;
+                color: var(--yellow);
+            }
+
+            & > h1 {
+                font-size: 34px;
+                text-align: center;
+            }
+
+            & .container_toys {
+                margin: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                & div {
+                    margin-inline: 8px;
+
+                    & img {
+                        height: 180px;
+                        width: 180px;
+                        border-radius: 20px;
+                        transition: all 350ms ease-in;
+                        cursor: pointer;
+
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+
+            & button {
+                margin: 10px auto;
+                display: block;
+                background: var(--yellow);
+                border: none;
+                padding: 15px 30px;
+                font-size: 18px;
+                cursor: pointer;
+                border-radius: 20px;
+            }
+        }
+    }
+
+    & footer {
+        background-color: var(--secondary-dark);
+
+        & h2.business-name {
+            padding: 20px 0;
+            text-align: center;
+            font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+            font-size: 34px;
+
+            & span {
+                color: var(--yellow);
+                font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+            }
+        }
+
+        & .business-description {
+            margin-inline: auto;
+            width: 650px;
+            text-align: center;
+            color: var(--secondary-text);
+            font-weight: 200;
+        }
+
+        & .icons {
+            padding: 20px 0;
+            text-align: center;
+            
+            & span {
+                padding: 0 7px;
+            }
+        }
+
+        & .footer-copyright {
+            padding: 15px;
+            background-color: var(--primary-dark);
+
+            & p {
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@keyframes underline {
+    0% {
+        position: absolute;
+        opacity: 0;
+        bottom: -5px;
+    }
+    100% {
+        position: absolute;
+        opacity: 1;
+        bottom: 0;
+    }
+}

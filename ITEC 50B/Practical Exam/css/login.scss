@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import 'main.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--primary-text);
+    font-family: 'Inter', verdana, arial, helvetica;
+}
+
+body {
+    background-color: var(--primary-dark);
+
+    p {
+        line-height: 1.7;
+    }
+
+    & header {
+        height: 70px;
+        border-bottom: 1px solid var(--secondary-dark);
+
+        & nav {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            & h1.business-name {
+                align-items: center;
+                font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+                font-size: 34px;
+
+                & span {
+                    color: var(--yellow);
+                    font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+                }
+            }
+
+            & ul {
+                display: inline-flex;
+                align-items: center;
+                list-style-type: none;
+
+                & li {
+                    a {
+                        position: relative;
+                        width: max-content;
+                        margin-inline: 12px;
+                        padding: 5px 0;
+                        text-decoration: none;
+                        font-weight: 400;
+                        transition: color 350ms ease;
+    
+                        &:hover {
+                            color: var(--yellow);
+                        }
+                    }
+
+                    &:hover a {
+                        color: var(--yellow);
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            background: var(--yellow);
+                            height: 2px;
+                            width: 100%;
+                            border-radius: 5px;
+                            animation: underline 350ms ease forwards;
+                        }
+                    }
+
+                    &.active a {
+                        color: var(--yellow);
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            background: var(--yellow);
+                            height: 2px;
+                            width: 100%;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & main {
+        & .section_login {
+            margin: 100px auto;
+            padding: 50px;
+            background-color: var(--secondary-dark);
+            width: 600px;
+            border-radius: 10px;
+
+            & h1 {
+                font-size: 34px;
+                text-align: center;
+                font-weight: 500;
+            }
+
+            & > p {
+                font-size: 12px;
+                text-align: center;
+                font-weight: 300;
+
+                & > a {
+                    color: var(--yellow);
+                }
+            }
+
+            & form {
+                margin-inline: auto;
+                width: 480px;
+
+                & > label {
+                    display: block;
+                    margin: 20px auto;
+
+                    & p {
+                        font-size: 12px;
+
+                        &.error-email, &.error-password {
+                            opacity: 0;
+                            color: rgb(255, 0, 64);
+                        }
+                    }
+
+                    & > input[type="text"] {
+                        padding: 10px 15px;
+                        width: 480px;
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: .3px solid var(--secondary-text);
+                    }
+                }
+
+                & button {
+                    padding: 10px 0;
+                    width: 100%;
+                    border: none;
+                    font-size: 16px;
+                    background-color: var(--yellow);
+                    text-shadow: 0 0 5px var(--secondary-dark);
+                    border-radius: 5px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: var(--yellow-darken);
+                    }
+                }
+
+                & .login_user-assistant {
+                    padding: 10px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    & label {
+                        display: block;
+                        cursor: pointer;
+
+                        & input[type="checkbox"] {
+                            border: none;
+                            background-color: transparent;
+                        }
+                    }
+
+                    & p, & .forgot-password a {
+                        font-size: 13px;
+                        color: var(--secondary-text);
+                        font-weight: 300;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    & footer {
+        background-color: var(--secondary-dark);
+
+        & h2.business-name {
+            padding: 20px 0;
+            text-align: center;
+            font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+            font-size: 34px;
+
+            & span {
+                color: var(--yellow);
+                font-family: 'Grenze Gotisch', cursive, verdana, arial, helvetica;
+            }
+        }
+
+        & .business-description {
+            margin-inline: auto;
+            width: 650px;
+            text-align: center;
+            color: var(--secondary-text);
+            font-weight: 200;
+        }
+
+        & .icons {
+            padding: 20px 0;
+            text-align: center;
+            
+            & span {
+                padding: 0 7px;
+            }
+        }
+
+        & .footer-copyright {
+            padding: 15px;
+            background-color: var(--primary-dark);
+
+            & p {
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@keyframes underline {
+    0% {
+        position: absolute;
+        opacity: 0;
+        bottom: -5px;
+    }
+    100% {
+        position: absolute;
+        opacity: 1;
+        bottom: 0;
+    }
+}
