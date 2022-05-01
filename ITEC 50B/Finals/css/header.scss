@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import 'main-variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--primary-light);
+    font-family: 'Inter', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--yellow);
+    border-radius: 10px;
+    
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body {
+    position: relative;
+    background: var(--primary-dark);
+
+    & header.header_burgerhub {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 15px 40px;
+        background-color: var(--primary-dark);
+
+        & nav.navigation_burgerhub {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            & h1.restaurant-name {
+                font-family: 'Grenze Gotisch';
+                font-size: 34px;
+                color: var(--yellow);
+            }
+
+            & ul.nav_links {
+                width: max-content;
+
+                & li.active a {
+                    color: var(--yellow);
+                }
+
+                & li#signin {
+                    display: none;
+                }
+
+                & li.links {
+                    padding: 0 8px;
+                    display: inline-block;
+                    font-size: 16px;
+                    font-weight: 300;
+                    text-align: center;
+
+                    & a {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            & div.navigation_right {
+                & button.button_signin, & p.cart {
+                    display: inline-block;
+                }
+
+                & button.button_signin {
+                    margin-inline: 5px;
+                    padding: 3px 15px;
+                    background-color: var(--yellow);
+                    text-shadow: 0 0 5px var(--secondary-dark);
+
+                    &:hover {
+                        background-color: var(--yellow-darken);
+                    }
+                }
+
+                & p.cart {
+                    position: relative;
+                    padding: 3px 7px;
+                    font-size: 14px;
+                    background: var(--secondary-dark);
+                    border-radius: 50%;
+
+                    & span.cart_orders-quantity {
+                        position: absolute;
+                        bottom: -7px;
+                        right: -8px;
+                        padding: 2px 8px;
+                        background: var(--danger);
+                        text-align: center;
+                        border-radius: 10px;
+                        font-size: 10px;
+                    }
+                }
+
+                & .navigation_responsive {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    & main {
+        margin: 100px;
+    }
+
+    & footer.footer_burgerhub {
+        margin-bottom: 50px;
+        margin-inline: auto;
+        max-width: 1350px;
+        width: 95%;
+        display: grid;
+        grid-template-columns: 1fr 1.2fr .4fr .6fr;
+        gap: 15px 15px;
+
+        & section {
+            padding: 0 15px;
+        }
+
+        & section.section_footer-description {
+            border-radius: 10px;
+            // background: rgba(0, 0, 0, 0.888);
+
+            & h1.restaurant-name {
+                line-height: 1;
+                font-family: 'Grenze Gotisch';
+                font-size: 34px;
+                color: var(--yellow);
+            }
+
+            & p {
+                margin-top: 12px;
+                font-size: 14px;
+                color: var(--secondary-light);
+                font-weight: 300;
+            }
+        }
+
+        & section.section_footer-contact {
+            & p {
+                padding: 2px 0;
+                color: var(--secondary-light);
+                font-weight: 300;
+                font-size: 14px;
+
+                & span {
+                    display: inline-block;
+                    margin-right: 10px;
+                    width: 30px;
+                    padding: 2px 0;
+                    background: var(--secondary-dark);
+                    border-radius: 20px;
+                    text-align: center;
+
+                    &:hover {
+                        background-color: var(--yellow);
+                        transition: all 550ms ease;
+
+                        & i {
+                            color: var(--primary-dark);
+                        }
+                    }
+
+                    & i {
+                        color: var(--secondary-light);
+                    }
+                }
+            }
+        }
+
+        & section.section_footer-links {
+            & ul {
+                list-style-type: none;
+
+                & li {
+                    & a {
+                        color: var(--secondary-light);
+                        font-weight: 300;
+                        text-decoration: none;
+                        font-size: 14px;
+                        transition: all 350ms ease;
+
+                        &:hover {
+                            color: var(--yellow);
+                        }
+                    }
+                }
+            }
+        }
+
+        & section.section_footer-accounts {
+            width: max-content;
+
+            & ul {
+                width: max-content;
+                list-style-type: none;
+
+                & li {
+                    margin-inline: 3px;
+                    padding: 3px 0;
+                    width: 32px;
+                    display: inline-block;
+                    font-size: 14px;
+                    text-align: center;
+                    border-radius: 30px;
+                    transition: all 350ms ease;
+
+                    &:nth-child(1) {
+                        background: var(--facebook);
+
+                        &:hover {
+                            background: var(--facebook-light);   
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        background: var(--twitter);
+
+                        &:hover {
+                            background: var(--twitter-light);   
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        background: var(--instagram);
+
+                        &:hover {
+                            background: var(--instagram-light);   
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        background: var(--email);
+
+                        &:hover {
+                            background: var(--email-light);   
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and
+(max-width: 750px) {
+    body {
+        & header.header_burgerhub {
+            & nav.navigation_burgerhub {
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+
+                & h1.restaurant-name {
+                    font-size: 24px;
+                }
+
+                & ul.nav_links {
+                    display: none;
+                    margin: 50px 0;
+                    opacity: 0;
+                    order: 3;
+                    width: 100%;
+                    height: 100vh;
+                    transition: all 750ms ease-in-out;
+                    
+                    & li#signin {
+                        display: block;
+                    }
+
+                    & li.links {
+                        padding: 8px 0;
+                        width: 100%;
+                        display: block;
+                        font-size: 24px;
+                    }
+
+                    &.open {
+                        opacity: 1;
+                        display: block !important;
+                        transition: all 750ms ease-in-out;
+                    }
+                }
+
+                & div.navigation_right {
+                    width: 50%;
+
+                    & button.button_signin, & p.cart {
+                        display: none;
+                    }
+
+                    & .navigation_responsive {
+                        display: block;
+                        width: max-content;
+                        margin-left: auto;
+
+                        & input[type="checkbox"] {
+                            display: none;
+
+                            &:checked + div.hamburger-menu {
+                                & div.line-top {
+                                    top: 50%;
+                                    transform: translateY(-50%) rotate(45deg);
+                                }
+
+                                & div.line-middle {
+                                    transform: translateX(-30px);
+                                }
+
+                                & div.line-bottom {
+                                    top: 50%;
+                                    transform: translateY(-50%) rotate(-45deg);
+                                }
+                            }
+                        }
+
+                        & div.hamburger-menu {
+                            position: relative;
+                            height: 23px;
+                            width: 30px;
+                            overflow: hidden;
+                            transform: scale(.8);
+                            cursor: pointer;
+                            
+                            & div.line-top, & div.line-middle, & div.line-bottom {
+                                position: absolute;
+                                height: 4px;
+                                border-radius: 15px;
+                                background: var(--yellow);
+                                transition: all 150ms ease-in;
+                            }
+
+                            & div.line-top {
+                                top: 0;
+                                left: 0px;
+                                width: 100%;
+                            }
+
+                            & div.line-middle {
+                                top: 50%;
+                                transform: translateY(-50%);
+                                width: 20px;
+                                transition: all 150ms ease-in;
+                            }
+
+                            & div.line-bottom {
+                                bottom: 0;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        & footer.footer_burgerhub {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+    }
+}
+
+@media only screen and
+(max-width: 600px) {
+    body {
+        & footer.footer_burgerhub {
+            margin-bottom: 50px;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+        }
+    }
+}
+
+@media only screen and
+(max-width: 320px) {
+    body {
+        
+    }
+}

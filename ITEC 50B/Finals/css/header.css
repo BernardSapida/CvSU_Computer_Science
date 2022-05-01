@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --primary-dark: hsl(0, 0%, 2%);
+  --secondary-dark: hsl(0, 0%, 7%);
+  --primary-light: hsl(0, 0%, 100%);
+  --secondary-light: hsl(0, 0%, 100%, .5);
+  --tertiary-light: hsl(0, 0%, 100%, .1);
+  --yellow: hsl(47, 100%, 54%);
+  --yellow-darken: hsl(47, 100%, 44%);
+  --danger-light: hsl(349, 100%,64%);
+  --danger: hsl(349, 100%, 54%);
+  --twitter-light: hsl(203, 87%, 65%);
+  --twitter: hsl(203, 87%, 55%);
+  --facebook-light: hsl(221, 44%, 51%);
+  --facebook: hsl(221, 44%, 41%);
+  --instagram-light: hsl(346, 96%, 72%);
+  --instagram: hsl(346, 96%, 62%);
+  --email-light: hsl(353, 92%, 49%);
+  --email: hsl(353, 92%, 39%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: var(--primary-light);
+  font-family: 'Inter', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+  border-radius: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body {
+  position: relative;
+  background: var(--primary-dark);
+}
+
+body header.header_burgerhub {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 15px 40px;
+  background-color: var(--primary-dark);
+}
+
+body header.header_burgerhub nav.navigation_burgerhub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body header.header_burgerhub nav.navigation_burgerhub h1.restaurant-name {
+  font-family: 'Grenze Gotisch';
+  font-size: 34px;
+  color: var(--yellow);
+}
+
+body header.header_burgerhub nav.navigation_burgerhub ul.nav_links {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li.active a {
+  color: var(--yellow);
+}
+
+body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li#signin {
+  display: none;
+}
+
+body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li.links {
+  padding: 0 8px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+}
+
+body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li.links a {
+  text-decoration: none;
+}
+
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_right button.button_signin, body header.header_burgerhub nav.navigation_burgerhub div.navigation_right p.cart {
+  display: inline-block;
+}
+
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_right button.button_signin {
+  margin-inline: 5px;
+  padding: 3px 15px;
+  background-color: var(--yellow);
+  text-shadow: 0 0 5px var(--secondary-dark);
+}
+
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_right button.button_signin:hover {
+  background-color: var(--yellow-darken);
+}
+
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_right p.cart {
+  position: relative;
+  padding: 3px 7px;
+  font-size: 14px;
+  background: var(--secondary-dark);
+  border-radius: 50%;
+}
+
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_right p.cart span.cart_orders-quantity {
+  position: absolute;
+  bottom: -7px;
+  right: -8px;
+  padding: 2px 8px;
+  background: var(--danger);
+  text-align: center;
+  border-radius: 10px;
+  font-size: 10px;
+}
+
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive {
+  display: none;
+}
+
+body main {
+  margin: 100px;
+}
+
+body footer.footer_burgerhub {
+  margin-bottom: 50px;
+  margin-inline: auto;
+  max-width: 1350px;
+  width: 95%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.2fr .4fr .6fr;
+      grid-template-columns: 1fr 1.2fr .4fr .6fr;
+  gap: 15px 15px;
+}
+
+body footer.footer_burgerhub section {
+  padding: 0 15px;
+}
+
+body footer.footer_burgerhub section.section_footer-description {
+  border-radius: 10px;
+}
+
+body footer.footer_burgerhub section.section_footer-description h1.restaurant-name {
+  line-height: 1;
+  font-family: 'Grenze Gotisch';
+  font-size: 34px;
+  color: var(--yellow);
+}
+
+body footer.footer_burgerhub section.section_footer-description p {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--secondary-light);
+  font-weight: 300;
+}
+
+body footer.footer_burgerhub section.section_footer-contact p {
+  padding: 2px 0;
+  color: var(--secondary-light);
+  font-weight: 300;
+  font-size: 14px;
+}
+
+body footer.footer_burgerhub section.section_footer-contact p span {
+  display: inline-block;
+  margin-right: 10px;
+  width: 30px;
+  padding: 2px 0;
+  background: var(--secondary-dark);
+  border-radius: 20px;
+  text-align: center;
+}
+
+body footer.footer_burgerhub section.section_footer-contact p span:hover {
+  background-color: var(--yellow);
+  -webkit-transition: all 550ms ease;
+  transition: all 550ms ease;
+}
+
+body footer.footer_burgerhub section.section_footer-contact p span:hover i {
+  color: var(--primary-dark);
+}
+
+body footer.footer_burgerhub section.section_footer-contact p span i {
+  color: var(--secondary-light);
+}
+
+body footer.footer_burgerhub section.section_footer-links ul {
+  list-style-type: none;
+}
+
+body footer.footer_burgerhub section.section_footer-links ul li a {
+  color: var(--secondary-light);
+  font-weight: 300;
+  text-decoration: none;
+  font-size: 14px;
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease;
+}
+
+body footer.footer_burgerhub section.section_footer-links ul li a:hover {
+  color: var(--yellow);
+}
+
+body footer.footer_burgerhub section.section_footer-accounts {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+body footer.footer_burgerhub section.section_footer-accounts ul {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  list-style-type: none;
+}
+
+body footer.footer_burgerhub section.section_footer-accounts ul li {
+  margin-inline: 3px;
+  padding: 3px 0;
+  width: 32px;
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 30px;
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease;
+}
+
+body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(1) {
+  background: var(--facebook);
+}
+
+body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(1):hover {
+  background: var(--facebook-light);
+}
+
+body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(2) {
+  background: var(--twitter);
+}
+
+body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(2):hover {
+  background: var(--twitter-light);
+}
+
+body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(3) {
+  background: var(--instagram);
+}
+
+body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(3):hover {
+  background: var(--instagram-light);
+}
+
+body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4) {
+  background: var(--email);
+}
+
+body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):hover {
+  background: var(--email-light);
+}
+
+@media only screen and (max-width: 750px) {
+  body header.header_burgerhub nav.navigation_burgerhub {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body header.header_burgerhub nav.navigation_burgerhub h1.restaurant-name {
+    font-size: 24px;
+  }
+  body header.header_burgerhub nav.navigation_burgerhub ul.nav_links {
+    display: none;
+    margin: 50px 0;
+    opacity: 0;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 100%;
+    height: 100vh;
+    -webkit-transition: all 750ms ease-in-out;
+    transition: all 750ms ease-in-out;
+  }
+  body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li#signin {
+    display: block;
+  }
+  body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li.links {
+    padding: 8px 0;
+    width: 100%;
+    display: block;
+    font-size: 24px;
+  }
+  body header.header_burgerhub nav.navigation_burgerhub ul.nav_links.open {
+    opacity: 1;
+    display: block !important;
+    -webkit-transition: all 750ms ease-in-out;
+    transition: all 750ms ease-in-out;
+  }
+  body header.header_burgerhub nav.navigation_burgerhub div.navigation_right {
+    width: 50%;
+  }
+  body header.header_burgerhub nav.navigation_burgerhub div.navigation_right button.button_signin, body header.header_burgerhub nav.navigation_burgerhub div.navigation_right p.cart {
+    display: none;
+  }
+  body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive {
+    display: block;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin-left: auto;
+  }
+  body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive input[type="checkbox"] {
+    display: none;
+  }
+  body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive input[type="checkbox"]:checked + div.hamburger-menu div.line-top {
+    top: 50%;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+            transform: translateY(-50%) rotate(45deg);
+  }
+  body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive input[type="checkbox"]:checked + div.hamburger-menu div.line-middle {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive input[type="checkbox"]:checked + div.hamburger-menu div.line-bottom {
+    top: 50%;
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+            transform: translateY(-50%) rotate(-45deg);
+  }
+  body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive div.hamburger-menu {
+    position: relative;
+    height: 23px;
+    width: 30px;
+    overflow: hidden;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    cursor: pointer;
+  }
+  body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive div.hamburger-menu div.line-top, body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive div.hamburger-menu div.line-middle, body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive div.hamburger-menu div.line-bottom {
+    position: absolute;
+    height: 4px;
+    border-radius: 15px;
+    background: var(--yellow);
+    -webkit-transition: all 150ms ease-in;
+    transition: all 150ms ease-in;
+  }
+  body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive div.hamburger-menu div.line-top {
+    top: 0;
+    left: 0px;
+    width: 100%;
+  }
+  body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive div.hamburger-menu div.line-middle {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 20px;
+    -webkit-transition: all 150ms ease-in;
+    transition: all 150ms ease-in;
+  }
+  body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive div.hamburger-menu div.line-bottom {
+    bottom: 0;
+    width: 100%;
+  }
+  body footer.footer_burgerhub {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body footer.footer_burgerhub {
+    margin-bottom: 50px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+  }
+}
+/*# sourceMappingURL=header.css.map */
