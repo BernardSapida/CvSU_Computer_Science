@@ -34,21 +34,29 @@ button {
 body {
     position: relative;
     background: var(--primary-dark);
+    overflow-x: hidden;
 
     & header.header_burgerhub {
-        position: fixed;
         width: 100%;
+        position: fixed;
         top: 0;
-        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
         padding: 15px 40px;
-        background-color: var(--primary-dark);
+        background-color: transparent;
+        transition: all 350ms ease-in-out;
+        z-index: 1;
 
         & nav.navigation_burgerhub {
+            margin: auto;
+            max-width: 1350px;
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
 
             & h1.restaurant-name {
+                margin-bottom: 2px;
                 font-family: 'Grenze Gotisch';
                 font-size: 34px;
                 color: var(--yellow);
@@ -97,15 +105,14 @@ body {
                 & p.cart {
                     position: relative;
                     padding: 3px 7px;
-                    font-size: 14px;
                     background: var(--secondary-dark);
                     border-radius: 50%;
 
                     & span.cart_orders-quantity {
                         position: absolute;
-                        bottom: -7px;
-                        right: -8px;
-                        padding: 2px 8px;
+                        bottom: -6px;
+                        right: -6px;
+                        padding: 0 6px;
                         background: var(--danger);
                         text-align: center;
                         border-radius: 10px;
@@ -121,12 +128,160 @@ body {
     }
 
     & main {
-        margin: 100px;
+        margin: 100px auto 50px auto;
+        max-width: 1350px;
+        width: 95%;
+
+        & .section_landing-page {
+            & .container_landing-page {
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                height: 100vh;
+
+                & .container_giant-burger {
+                    position: absolute;
+                    & img {
+                        position: relative;
+                        display: block;
+                        margin-left: -200px;
+                        height: 570px;
+                    }
+                    & .burger-shadow {
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        height: 1px;
+                        width: 1px;
+                        background: transparent;
+                        box-shadow: 0 0 200px 300px hsla(47, 100%, 54%, 0.10);
+                        border-radius: 50%;
+                        z-index: -1;
+                    }
+                }
+
+                & .container_description {
+                    padding-top: 70px;
+                    position: absolute;
+                    right: 0;
+                    max-width: 800px;
+                    width: 100%;
+                    height: 100%;
+
+                    & div.line {
+                        position: absolute;
+                        right: -80px;
+                        top: 30px;
+                        height: 12px;
+                        width: 120px;
+                        background-color: var(--yellow);
+                        border-radius: 15px;
+
+                        &::before, &::after {
+                            content: "";
+                            position: absolute;
+                            height: 12px;
+                            width: 120px;
+                            background-color: var(--yellow);
+                            border-radius: 15px;
+                        }
+
+                        &::before {
+                            top: -20px;
+                        }
+
+                        &::after {
+                            bottom: -20px;
+                        }
+                    }
+
+                    & h1.tagline {
+                        color: var(--yellow);
+                        font-weight: 900;
+                        font-size: 60px;
+                        line-height: 1.2;
+                        text-align: center;
+                    }
+
+                    & p.description {
+                        margin: 20px auto;
+                        text-align: center;
+                    }
+
+                    & p.discount {
+                        margin-inline: auto;
+                        width: max-content;
+                        padding: 0 30px;
+                        font-size: 34px;
+                        font-weight: 900;
+                        border: 5px solid var(--yellow);
+                    }
+
+                    & div.container_contact-info {
+                        margin-top: 100px;
+                        max-width: 800px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+        
+                        & .accounts {
+                            & ul {
+                                list-style-type: none;
+        
+                                & li {
+                                    margin-inline: 2px;
+                                    display: inline-flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    height: 30px;
+                                    width: 30px;
+                                    border-radius: 15px;
+                                    background: gray;
+    
+                                    &:nth-child(1) {
+                                        background: var(--facebook);
+                
+                                        &:hover {
+                                            background: var(--facebook-light);   
+                                        }
+                                    }
+                
+                                    &:nth-child(2) {
+                                        background: var(--twitter);
+                
+                                        &:hover {
+                                            background: var(--twitter-light);   
+                                        }
+                                    }
+                
+                                    &:nth-child(3) {
+                                        background: var(--instagram);
+                
+                                        &:hover {
+                                            background: var(--instagram-light);   
+                                        }
+                                    }
+                
+                                    &:nth-child(4) {
+                                        background: var(--email);
+                
+                                        &:hover {
+                                            background: var(--email-light);   
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     & footer.footer_burgerhub {
-        margin-bottom: 50px;
-        margin-inline: auto;
+        margin: 50px auto;
         max-width: 1350px;
         width: 95%;
         display: grid;
@@ -150,7 +305,6 @@ body {
 
             & p {
                 margin-top: 12px;
-                font-size: 14px;
                 color: var(--secondary-light);
                 font-weight: 300;
             }
@@ -158,18 +312,20 @@ body {
 
         & section.section_footer-contact {
             & p {
+                margin: 5px 0;
                 padding: 2px 0;
                 color: var(--secondary-light);
                 font-weight: 300;
-                font-size: 14px;
 
                 & span {
-                    display: inline-block;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
                     margin-right: 10px;
-                    width: 30px;
-                    padding: 2px 0;
+                    width: 32px;
+                    height: 32px;
                     background: var(--secondary-dark);
-                    border-radius: 20px;
+                    border-radius: 16px;
                     text-align: center;
 
                     &:hover {
@@ -181,7 +337,7 @@ body {
                         }
                     }
 
-                    & i {
+                    & > i {
                         color: var(--secondary-light);
                     }
                 }
@@ -282,7 +438,6 @@ body {
                     order: 3;
                     width: 100%;
                     height: 100vh;
-                    transition: all 750ms ease-in-out;
                     
                     & li#signin {
                         display: block;
@@ -298,7 +453,6 @@ body {
                     &.open {
                         opacity: 1;
                         display: block !important;
-                        transition: all 750ms ease-in-out;
                     }
                 }
 
@@ -371,6 +525,10 @@ body {
                     }
                 }
             }
+
+            &.dark {
+                background-color: var(--primary-dark) !important;
+            }
         }
 
         & footer.footer_burgerhub {
@@ -384,9 +542,17 @@ body {
 (max-width: 600px) {
     body {
         & footer.footer_burgerhub {
-            margin-bottom: 50px;
             grid-template-columns: 1fr;
             grid-template-rows: auto auto auto;
+
+            & section {
+                & p {
+                    font-size: 14px;
+                }
+                & h1 {
+                    font-size: 24px;
+                }
+            }
         }
     }
 }
@@ -394,6 +560,31 @@ body {
 @media only screen and
 (max-width: 320px) {
     body {
-        
+        & header.header_burgerhub {
+            & nav.navigation_burgerhub {
+                & ul.nav_links {
+                    & li.links {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        & footer.footer_burgerhub {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+
+            & section {
+                & h1 {
+                    font-size: 18px;
+                }
+            }
+
+            & section.section_footer-description {
+                & h1.restaurant-name {
+                    font-size: 24px;
+                }
+            }
+        }
     }
 }

@@ -52,18 +52,27 @@ button {
 body {
   position: relative;
   background: var(--primary-dark);
+  overflow-x: hidden;
 }
 
 body header.header_burgerhub {
-  position: fixed;
   width: 100%;
+  position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   padding: 15px 40px;
-  background-color: var(--primary-dark);
+  background-color: transparent;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+  z-index: 1;
 }
 
 body header.header_burgerhub nav.navigation_burgerhub {
+  margin: auto;
+  max-width: 1350px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,6 +85,7 @@ body header.header_burgerhub nav.navigation_burgerhub {
 }
 
 body header.header_burgerhub nav.navigation_burgerhub h1.restaurant-name {
+  margin-bottom: 2px;
   font-family: 'Grenze Gotisch';
   font-size: 34px;
   color: var(--yellow);
@@ -125,16 +135,15 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_right butto
 body header.header_burgerhub nav.navigation_burgerhub div.navigation_right p.cart {
   position: relative;
   padding: 3px 7px;
-  font-size: 14px;
   background: var(--secondary-dark);
   border-radius: 50%;
 }
 
 body header.header_burgerhub nav.navigation_burgerhub div.navigation_right p.cart span.cart_orders-quantity {
   position: absolute;
-  bottom: -7px;
-  right: -8px;
-  padding: 2px 8px;
+  bottom: -6px;
+  right: -6px;
+  padding: 0 6px;
   background: var(--danger);
   text-align: center;
   border-radius: 10px;
@@ -146,12 +155,177 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navi
 }
 
 body main {
-  margin: 100px;
+  margin: 100px auto 50px auto;
+  max-width: 1350px;
+  width: 95%;
+}
+
+body main .section_landing-page .container_landing-page {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+}
+
+body main .section_landing-page .container_landing-page .container_giant-burger {
+  position: absolute;
+}
+
+body main .section_landing-page .container_landing-page .container_giant-burger img {
+  position: relative;
+  display: block;
+  margin-left: -200px;
+  height: 570px;
+}
+
+body main .section_landing-page .container_landing-page .container_giant-burger .burger-shadow {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 1px;
+  width: 1px;
+  background: transparent;
+  -webkit-box-shadow: 0 0 200px 300px rgba(255, 204, 20, 0.1);
+          box-shadow: 0 0 200px 300px rgba(255, 204, 20, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+body main .section_landing-page .container_landing-page .container_description {
+  padding-top: 70px;
+  position: absolute;
+  right: 0;
+  max-width: 800px;
+  width: 100%;
+  height: 100%;
+}
+
+body main .section_landing-page .container_landing-page .container_description div.line {
+  position: absolute;
+  right: -80px;
+  top: 30px;
+  height: 12px;
+  width: 120px;
+  background-color: var(--yellow);
+  border-radius: 15px;
+}
+
+body main .section_landing-page .container_landing-page .container_description div.line::before, body main .section_landing-page .container_landing-page .container_description div.line::after {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 120px;
+  background-color: var(--yellow);
+  border-radius: 15px;
+}
+
+body main .section_landing-page .container_landing-page .container_description div.line::before {
+  top: -20px;
+}
+
+body main .section_landing-page .container_landing-page .container_description div.line::after {
+  bottom: -20px;
+}
+
+body main .section_landing-page .container_landing-page .container_description h1.tagline {
+  color: var(--yellow);
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+body main .section_landing-page .container_landing-page .container_description p.description {
+  margin: 20px auto;
+  text-align: center;
+}
+
+body main .section_landing-page .container_landing-page .container_description p.discount {
+  margin-inline: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 30px;
+  font-size: 34px;
+  font-weight: 900;
+  border: 5px solid var(--yellow);
+}
+
+body main .section_landing-page .container_landing-page .container_description div.container_contact-info {
+  margin-top: 100px;
+  max-width: 800px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul {
+  list-style-type: none;
+}
+
+body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li {
+  margin-inline: 2px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  background: gray;
+}
+
+body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(1) {
+  background: var(--facebook);
+}
+
+body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(1):hover {
+  background: var(--facebook-light);
+}
+
+body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(2) {
+  background: var(--twitter);
+}
+
+body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(2):hover {
+  background: var(--twitter-light);
+}
+
+body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(3) {
+  background: var(--instagram);
+}
+
+body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(3):hover {
+  background: var(--instagram-light);
+}
+
+body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(4) {
+  background: var(--email);
+}
+
+body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(4):hover {
+  background: var(--email-light);
 }
 
 body footer.footer_burgerhub {
-  margin-bottom: 50px;
-  margin-inline: auto;
+  margin: 50px auto;
   max-width: 1350px;
   width: 95%;
   display: -ms-grid;
@@ -178,25 +352,32 @@ body footer.footer_burgerhub section.section_footer-description h1.restaurant-na
 
 body footer.footer_burgerhub section.section_footer-description p {
   margin-top: 12px;
-  font-size: 14px;
   color: var(--secondary-light);
   font-weight: 300;
 }
 
 body footer.footer_burgerhub section.section_footer-contact p {
+  margin: 5px 0;
   padding: 2px 0;
   color: var(--secondary-light);
   font-weight: 300;
-  font-size: 14px;
 }
 
 body footer.footer_burgerhub section.section_footer-contact p span {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-right: 10px;
-  width: 30px;
-  padding: 2px 0;
+  width: 32px;
+  height: 32px;
   background: var(--secondary-dark);
-  border-radius: 20px;
+  border-radius: 16px;
   text-align: center;
 }
 
@@ -210,7 +391,7 @@ body footer.footer_burgerhub section.section_footer-contact p span:hover i {
   color: var(--primary-dark);
 }
 
-body footer.footer_burgerhub section.section_footer-contact p span i {
+body footer.footer_burgerhub section.section_footer-contact p span > i {
   color: var(--secondary-light);
 }
 
@@ -311,8 +492,6 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
             order: 3;
     width: 100%;
     height: 100vh;
-    -webkit-transition: all 750ms ease-in-out;
-    transition: all 750ms ease-in-out;
   }
   body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li#signin {
     display: block;
@@ -326,8 +505,6 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
   body header.header_burgerhub nav.navigation_burgerhub ul.nav_links.open {
     opacity: 1;
     display: block !important;
-    -webkit-transition: all 750ms ease-in-out;
-    transition: all 750ms ease-in-out;
   }
   body header.header_burgerhub nav.navigation_burgerhub div.navigation_right {
     width: 50%;
@@ -393,6 +570,9 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
     bottom: 0;
     width: 100%;
   }
+  body header.header_burgerhub.dark {
+    background-color: var(--primary-dark) !important;
+  }
   body footer.footer_burgerhub {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -403,11 +583,34 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
 
 @media only screen and (max-width: 600px) {
   body footer.footer_burgerhub {
-    margin-bottom: 50px;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     -ms-grid-rows: auto auto auto;
         grid-template-rows: auto auto auto;
+  }
+  body footer.footer_burgerhub section p {
+    font-size: 14px;
+  }
+  body footer.footer_burgerhub section h1 {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li.links {
+    font-size: 18px;
+  }
+  body footer.footer_burgerhub {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+  }
+  body footer.footer_burgerhub section h1 {
+    font-size: 18px;
+  }
+  body footer.footer_burgerhub section.section_footer-description h1.restaurant-name {
+    font-size: 24px;
   }
 }
 /*# sourceMappingURL=header.css.map */
