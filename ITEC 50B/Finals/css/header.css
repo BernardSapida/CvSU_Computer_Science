@@ -198,7 +198,7 @@ body main .section_landing-page .container_landing-page .container_giant-burger 
 }
 
 body main .section_landing-page .container_landing-page .container_description {
-  margin-top: 50px;
+  margin-top: 80px;
   position: relative;
   max-width: 800px;
   width: 100%;
@@ -552,19 +552,15 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
     height: 520px;
   }
   body main .section_landing-page .container_landing-page .container_giant-burger img {
-    display: block;
     margin-left: -100px;
     width: 100%;
     max-width: 380px;
   }
-  body main .section_landing-page .container_landing-page .container_giant-burger .burger-shadow {
-    bottom: 0;
-  }
   body main .section_landing-page .container_landing-page .container_description {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   body main .section_landing-page .container_landing-page .container_description h1.tagline {
-    font-size: 34px;
+    font-size: 44px;
   }
   body main .section_landing-page .container_landing-page .container_description p.description {
     font-size: 16px;
@@ -606,13 +602,13 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
   body main .section_landing-page .container_landing-page .container_giant-burger img {
     margin-left: -100px;
     width: 100%;
-    max-width: 350px;
+    max-width: 320px;
   }
   body main .section_landing-page .container_landing-page .container_description {
     margin-top: 20px;
   }
   body main .section_landing-page .container_landing-page .container_description h1.tagline {
-    font-size: 24px;
+    font-size: 34px;
   }
   body main .section_landing-page .container_landing-page .container_description p.description {
     font-size: 14px;
@@ -669,6 +665,15 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
 @media only screen and (max-width: 320px) {
   body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li.links {
     font-size: 18px;
+  }
+  body main .section_landing-page .container_landing-page .container_giant-burger img {
+    max-width: 280px;
+  }
+  body main .section_landing-page .container_landing-page .container_description {
+    margin-top: 20px;
+  }
+  body main .section_landing-page .container_landing-page .container_description h1.tagline {
+    font-size: 24px;
   }
   body footer.footer_burgerhub {
     -ms-grid-columns: 1fr;

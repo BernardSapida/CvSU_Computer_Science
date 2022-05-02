@@ -164,7 +164,7 @@ body {
                 }
 
                 & .container_description {
-                    margin-top: 50px;
+                    margin-top: 80px;
                     position: relative;
                     max-width: 800px;
                     width: 100%;
@@ -515,21 +515,17 @@ body {
 
                     & .container_giant-burger {
                         & img {
-                            display: block;
                             margin-left: -100px;
                             width: 100%;
                             max-width: 380px;
                         }
-                        & .burger-shadow {
-                            bottom: 0;
-                        }
                     }
     
                     & .container_description {
-                        margin-top: 20px;
+                        margin-top: 10px;
     
                         & h1.tagline {
-                            font-size: 34px;
+                            font-size: 44px;
                         }
     
                         & p.description {
@@ -584,7 +580,7 @@ body {
                         & img {
                             margin-left: -100px;
                             width: 100%;
-                            max-width: 350px;
+                            max-width: 320px;
                         }
                     }
     
@@ -592,7 +588,7 @@ body {
                         margin-top: 20px;
     
                         & h1.tagline {
-                            font-size: 24px;
+                            font-size: 34px;
                         }
     
                         & p.description {
@@ -654,6 +650,25 @@ body {
                 & ul.nav_links {
                     & li.links {
                         font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        & main {
+            & .section_landing-page {
+                & .container_landing-page {
+                    & .container_giant-burger {
+                        & img {
+                            max-width: 280px;
+                        }
+                    }
+                    & .container_description {
+                        margin-top: 20px;
+    
+                        & h1.tagline {
+                            font-size: 24px;
+                        }
                     }
                 }
             }
