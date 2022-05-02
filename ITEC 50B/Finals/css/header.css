@@ -170,18 +170,16 @@ body main .section_landing-page .container_landing-page {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 100vh;
-}
-
-body main .section_landing-page .container_landing-page .container_giant-burger {
-  position: absolute;
+  height: 580px;
 }
 
 body main .section_landing-page .container_landing-page .container_giant-burger img {
-  position: relative;
+  position: absolute;
+  bottom: 0;
   display: block;
-  margin-left: -200px;
-  height: 570px;
+  margin-left: -180px;
+  width: 100%;
+  max-width: 700px;
 }
 
 body main .section_landing-page .container_landing-page .container_giant-burger .burger-shadow {
@@ -200,39 +198,10 @@ body main .section_landing-page .container_landing-page .container_giant-burger 
 }
 
 body main .section_landing-page .container_landing-page .container_description {
-  padding-top: 70px;
-  position: absolute;
-  right: 0;
+  margin-top: 50px;
+  position: relative;
   max-width: 800px;
   width: 100%;
-  height: 100%;
-}
-
-body main .section_landing-page .container_landing-page .container_description div.line {
-  position: absolute;
-  right: -80px;
-  top: 30px;
-  height: 12px;
-  width: 120px;
-  background-color: var(--yellow);
-  border-radius: 15px;
-}
-
-body main .section_landing-page .container_landing-page .container_description div.line::before, body main .section_landing-page .container_landing-page .container_description div.line::after {
-  content: "";
-  position: absolute;
-  height: 12px;
-  width: 120px;
-  background-color: var(--yellow);
-  border-radius: 15px;
-}
-
-body main .section_landing-page .container_landing-page .container_description div.line::before {
-  top: -20px;
-}
-
-body main .section_landing-page .container_landing-page .container_description div.line::after {
-  bottom: -20px;
 }
 
 body main .section_landing-page .container_landing-page .container_description h1.tagline {
@@ -241,11 +210,14 @@ body main .section_landing-page .container_landing-page .container_description h
   font-size: 60px;
   line-height: 1.2;
   text-align: center;
+  text-shadow: 0 0 15px var(--secondary-dark);
 }
 
 body main .section_landing-page .container_landing-page .container_description p.description {
   margin: 20px auto;
+  width: 90%;
   text-align: center;
+  text-shadow: 0 0 15px var(--secondary-dark);
 }
 
 body main .section_landing-page .container_landing-page .container_description p.discount {
@@ -257,10 +229,13 @@ body main .section_landing-page .container_landing-page .container_description p
   font-size: 34px;
   font-weight: 900;
   border: 5px solid var(--yellow);
+  text-shadow: 0 0 15px var(--secondary-dark);
 }
 
 body main .section_landing-page .container_landing-page .container_description div.container_contact-info {
-  margin-top: 100px;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
   max-width: 800px;
   width: 100%;
   display: -webkit-box;
@@ -573,6 +548,52 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
   body header.header_burgerhub.dark {
     background-color: var(--primary-dark) !important;
   }
+  body main .section_landing-page .container_landing-page {
+    height: 520px;
+  }
+  body main .section_landing-page .container_landing-page .container_giant-burger img {
+    display: block;
+    margin-left: -100px;
+    width: 100%;
+    max-width: 380px;
+  }
+  body main .section_landing-page .container_landing-page .container_giant-burger .burger-shadow {
+    bottom: 0;
+  }
+  body main .section_landing-page .container_landing-page .container_description {
+    margin-top: 20px;
+  }
+  body main .section_landing-page .container_landing-page .container_description h1.tagline {
+    font-size: 34px;
+  }
+  body main .section_landing-page .container_landing-page .container_description p.description {
+    font-size: 16px;
+  }
+  body main .section_landing-page .container_landing-page .container_description p.discount {
+    margin-inline: auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 0 20px;
+    font-size: 24px;
+    font-weight: 900;
+    border: 5px solid var(--yellow);
+  }
+  body main .section_landing-page .container_landing-page .container_description div.container_contact-info {
+    bottom: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li {
+    margin: 5px 0;
+  }
+  body main .section_landing-page .container_landing-page .container_description div.container_contact-info div.tel-number p {
+    font-size: 14px;
+  }
   body footer.footer_burgerhub {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -582,6 +603,55 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
 }
 
 @media only screen and (max-width: 600px) {
+  body main .section_landing-page .container_landing-page .container_giant-burger img {
+    margin-left: -100px;
+    width: 100%;
+    max-width: 350px;
+  }
+  body main .section_landing-page .container_landing-page .container_description {
+    margin-top: 20px;
+  }
+  body main .section_landing-page .container_landing-page .container_description h1.tagline {
+    font-size: 24px;
+  }
+  body main .section_landing-page .container_landing-page .container_description p.description {
+    font-size: 14px;
+  }
+  body main .section_landing-page .container_landing-page .container_description p.discount {
+    margin-inline: auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 800;
+    border: 5px solid var(--yellow);
+  }
+  body main .section_landing-page .container_landing-page .container_description div.container_contact-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul {
+    margin: 15px 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li {
+    margin: 5px 0;
+  }
   body footer.footer_burgerhub {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;

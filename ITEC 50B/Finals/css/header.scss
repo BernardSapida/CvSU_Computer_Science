@@ -138,15 +138,16 @@ body {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
-                height: 100vh;
+                height: 580px;
 
                 & .container_giant-burger {
-                    position: absolute;
                     & img {
-                        position: relative;
+                        position: absolute;
+                        bottom: 0;
                         display: block;
-                        margin-left: -200px;
-                        height: 570px;
+                        margin-left: -180px;
+                        width: 100%;
+                        max-width: 700px;
                     }
                     & .burger-shadow {
                         position: absolute;
@@ -163,39 +164,10 @@ body {
                 }
 
                 & .container_description {
-                    padding-top: 70px;
-                    position: absolute;
-                    right: 0;
+                    margin-top: 50px;
+                    position: relative;
                     max-width: 800px;
                     width: 100%;
-                    height: 100%;
-
-                    & div.line {
-                        position: absolute;
-                        right: -80px;
-                        top: 30px;
-                        height: 12px;
-                        width: 120px;
-                        background-color: var(--yellow);
-                        border-radius: 15px;
-
-                        &::before, &::after {
-                            content: "";
-                            position: absolute;
-                            height: 12px;
-                            width: 120px;
-                            background-color: var(--yellow);
-                            border-radius: 15px;
-                        }
-
-                        &::before {
-                            top: -20px;
-                        }
-
-                        &::after {
-                            bottom: -20px;
-                        }
-                    }
 
                     & h1.tagline {
                         color: var(--yellow);
@@ -203,11 +175,14 @@ body {
                         font-size: 60px;
                         line-height: 1.2;
                         text-align: center;
+                        text-shadow: 0 0 15px var(--secondary-dark);
                     }
 
                     & p.description {
                         margin: 20px auto;
+                        width: 90%;
                         text-align: center;
+                        text-shadow: 0 0 15px var(--secondary-dark);
                     }
 
                     & p.discount {
@@ -217,10 +192,13 @@ body {
                         font-size: 34px;
                         font-weight: 900;
                         border: 5px solid var(--yellow);
+                        text-shadow: 0 0 15px var(--secondary-dark);
                     }
 
                     & div.container_contact-info {
-                        margin-top: 100px;
+                        position: absolute;
+                        bottom: 20px;
+                        right: 0;
                         max-width: 800px;
                         width: 100%;
                         display: flex;
@@ -294,7 +272,6 @@ body {
 
         & section.section_footer-description {
             border-radius: 10px;
-            // background: rgba(0, 0, 0, 0.888);
 
             & h1.restaurant-name {
                 line-height: 1;
@@ -531,6 +508,65 @@ body {
             }
         }
 
+        & main {
+            & .section_landing-page {
+                & .container_landing-page {
+                    height: 520px;
+
+                    & .container_giant-burger {
+                        & img {
+                            display: block;
+                            margin-left: -100px;
+                            width: 100%;
+                            max-width: 380px;
+                        }
+                        & .burger-shadow {
+                            bottom: 0;
+                        }
+                    }
+    
+                    & .container_description {
+                        margin-top: 20px;
+    
+                        & h1.tagline {
+                            font-size: 34px;
+                        }
+    
+                        & p.description {
+                            font-size: 16px;
+                        }
+    
+                        & p.discount {
+                            margin-inline: auto;
+                            width: max-content;
+                            padding: 0 20px;
+                            font-size: 24px;
+                            font-weight: 900;
+                            border: 5px solid var(--yellow);
+                        }
+    
+                        & div.container_contact-info {
+                            bottom: 0;
+                            justify-content: space-between;
+                            align-items: center;
+            
+                            & .accounts {
+                                & ul {
+                                    & li {
+                                        margin: 5px 0;
+                                    }
+                                }
+                            }
+
+                            & div.tel-number p {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         & footer.footer_burgerhub {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
@@ -541,6 +577,59 @@ body {
 @media only screen and
 (max-width: 600px) {
     body {
+        & main {
+            & .section_landing-page {
+                & .container_landing-page {
+                    & .container_giant-burger {
+                        & img {
+                            margin-left: -100px;
+                            width: 100%;
+                            max-width: 350px;
+                        }
+                    }
+    
+                    & .container_description {
+                        margin-top: 20px;
+    
+                        & h1.tagline {
+                            font-size: 24px;
+                        }
+    
+                        & p.description {
+                            font-size: 14px;
+                        }
+    
+                        & p.discount {
+                            margin-inline: auto;
+                            width: max-content;
+                            padding: 0 20px;
+                            font-size: 18px;
+                            font-weight: 800;
+                            border: 5px solid var(--yellow);
+                        }
+    
+                        & div.container_contact-info {
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+            
+                            & .accounts {
+                                & ul {
+                                    margin: 15px 0;
+                                    display: inline-flex;
+                                    flex-direction: column;
+
+                                    & li {
+                                        margin: 5px 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         & footer.footer_burgerhub {
             grid-template-columns: 1fr;
             grid-template-rows: auto auto auto;
