@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   --primary-dark: hsl(0, 0%, 2%);
-  --secondary-dark: hsl(0, 0%, 7%);
+  --secondary-dark: hsl(0, 0%, 3%);
+  --tertiary-dark: hsla(0, 0%, 3%, .9);
   --primary-light: hsl(0, 0%, 100%);
   --secondary-light: hsl(0, 0%, 100%, .5);
   --tertiary-light: hsl(0, 0%, 100%, .1);
@@ -217,12 +218,12 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navi
 }
 
 body main {
-  margin: 100px auto 50px auto;
+  margin: 100px auto;
   max-width: 1350px;
   width: 95%;
 }
 
-body main .section_landing-page .container_landing-page {
+body main section.section_landing-page .container_landing-page {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -235,7 +236,7 @@ body main .section_landing-page .container_landing-page {
   height: 580px;
 }
 
-body main .section_landing-page .container_landing-page .container_giant-burger img {
+body main section.section_landing-page .container_landing-page .container_giant-burger img {
   position: absolute;
   bottom: 0;
   display: block;
@@ -244,29 +245,29 @@ body main .section_landing-page .container_landing-page .container_giant-burger 
   max-width: 700px;
 }
 
-body main .section_landing-page .container_landing-page .container_giant-burger .burger-shadow {
+body main section.section_landing-page .container_landing-page .container_giant-burger .burger-shadow {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 0px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   height: 1px;
   width: 1px;
   background: transparent;
-  -webkit-box-shadow: 0 0 200px 300px rgba(255, 204, 20, 0.1);
-          box-shadow: 0 0 200px 300px rgba(255, 204, 20, 0.1);
+  -webkit-box-shadow: 0 0 200px 300px rgba(255, 204, 20, 0.05);
+          box-shadow: 0 0 200px 300px rgba(255, 204, 20, 0.05);
   border-radius: 50%;
   z-index: -1;
 }
 
-body main .section_landing-page .container_landing-page .container_description {
+body main section.section_landing-page .container_landing-page .container_description {
   margin-top: 80px;
   position: relative;
   max-width: 800px;
   width: 100%;
 }
 
-body main .section_landing-page .container_landing-page .container_description h1.tagline {
+body main section.section_landing-page .container_landing-page .container_description h1.tagline {
   color: var(--yellow);
   font-weight: 900;
   font-size: 60px;
@@ -275,14 +276,14 @@ body main .section_landing-page .container_landing-page .container_description h
   text-shadow: 0 0 15px var(--secondary-dark);
 }
 
-body main .section_landing-page .container_landing-page .container_description p.description {
+body main section.section_landing-page .container_landing-page .container_description p.description {
   margin: 20px auto;
   width: 90%;
   text-align: center;
   text-shadow: 0 0 15px var(--secondary-dark);
 }
 
-body main .section_landing-page .container_landing-page .container_description p.discount {
+body main section.section_landing-page .container_landing-page .container_description p.discount {
   margin-inline: auto;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -294,7 +295,7 @@ body main .section_landing-page .container_landing-page .container_description p
   text-shadow: 0 0 15px var(--secondary-dark);
 }
 
-body main .section_landing-page .container_landing-page .container_description div.container_contact-info {
+body main section.section_landing-page .container_landing-page .container_description div.container_contact-info {
   position: absolute;
   bottom: 20px;
   right: 0;
@@ -308,11 +309,11 @@ body main .section_landing-page .container_landing-page .container_description d
           justify-content: space-between;
 }
 
-body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul {
+body main section.section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul {
   list-style-type: none;
 }
 
-body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li {
+body main section.section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li {
   margin-inline: 2px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -329,36 +330,221 @@ body main .section_landing-page .container_landing-page .container_description d
   background: gray;
 }
 
-body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(1) {
+body main section.section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(1) {
   background: var(--facebook);
 }
 
-body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(1):hover {
+body main section.section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(1):hover {
   background: var(--facebook-light);
 }
 
-body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(2) {
+body main section.section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(2) {
   background: var(--twitter);
 }
 
-body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(2):hover {
+body main section.section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(2):hover {
   background: var(--twitter-light);
 }
 
-body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(3) {
+body main section.section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(3) {
   background: var(--instagram);
 }
 
-body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(3):hover {
+body main section.section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(3):hover {
   background: var(--instagram-light);
 }
 
-body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(4) {
+body main section.section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(4) {
   background: var(--email);
 }
 
-body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(4):hover {
+body main section.section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li:nth-child(4):hover {
   background: var(--email-light);
+}
+
+body main section.section_top-seller-burger {
+  margin: 100px 0 25px 0;
+}
+
+body main section.section_top-seller-burger div.container_top-burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main section.section_top-seller-burger div.container_top-burger div.top-burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin: 50px 10px;
+  padding: 20px;
+  height: 240px;
+  width: 260px;
+  background-color: var(--secondary-dark);
+  border-radius: 10px;
+}
+
+body main section.section_top-seller-burger div.container_top-burger div.top-burger h1, body main section.section_top-seller-burger div.container_top-burger div.top-burger p {
+  text-align: center;
+}
+
+body main section.section_top-seller-burger div.container_top-burger div.top-burger h1 {
+  font-weight: 400;
+}
+
+body main section.section_top-seller-burger div.container_top-burger div.top-burger p {
+  color: var(--secondary-light);
+  font-weight: 300;
+}
+
+body main section.section_top-seller-burger div.container_top-burger div.top-burger img {
+  position: absolute;
+  top: -70px;
+  display: block;
+  margin-inline: auto;
+  margin-bottom: 20px;
+  height: 150px;
+}
+
+body main section.section_burger-layer div.container_burger-layers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main section.section_burger-layer div.container_burger-layers div.container_burger-image {
+  margin: 20px 50px;
+}
+
+body main section.section_burger-layer div.container_burger-layers div.container_burger-image img {
+  display: block;
+  height: 500px;
+}
+
+body main section.section_burger-layer div.container_burger-layers div.container_burger-contents {
+  margin: 20px 50px;
+  width: 350px;
+}
+
+body main section.section_burger-layer div.container_burger-layers div.container_burger-contents h1.burger-name {
+  font-weight: 500;
+}
+
+body main section.section_burger-layer div.container_burger-layers div.container_burger-contents p.burger-description {
+  font-size: 16px;
+  color: var(--secondary-light);
+  font-weight: 300;
+}
+
+body main section.section_burger-layer div.container_burger-layers div.container_burger-contents p.price {
+  color: var(--yellow);
+}
+
+body main section.section_burger-layer div.container_burger-layers div.container_burger-contents button {
+  margin: 10px 0;
+  background-color: var(--yellow);
+  padding: 7px 20px;
+  text-shadow: 0 0 5px var(--secondary-dark);
+}
+
+body main section.section_burger-layer div.container_burger-layers div.container_burger-contents button a {
+  text-decoration: none;
+}
+
+body main section.section_menu-types {
+  margin: 100px 0;
+}
+
+body main section.section_menu-types div.container_menu-types {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main section.section_menu-types div.container_menu-types div.container_menu {
+  position: relative;
+  margin: 10px;
+  height: 300px;
+}
+
+body main section.section_menu-types div.container_menu-types div.container_menu img {
+  height: 100%;
+  max-width: 450px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+body main section.section_menu-types div.container_menu-types div.container_menu .menu-description {
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--tertiary-dark);
+  border-radius: 0 10px 10px 0;
+}
+
+body main section.section_menu-types div.container_menu-types div.container_menu .menu-description h1 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+body main section.section_menu-types div.container_menu-types div.container_menu .menu-description p {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--secondary-light);
+}
+
+body main section.section_menu-types div.container_menu-types div.container_menu .menu-description button {
+  margin: 10px 0;
+  width: 100px;
+  padding: 5px;
+  background-color: var(--yellow);
+  text-shadow: 0 0 5px var(--secondary-dark);
+  font-size: 10px;
 }
 
 body footer.footer_burgerhub {
@@ -518,7 +704,7 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
             align-items: center;
   }
   body header.header_burgerhub nav.navigation_burgerhub h1.restaurant-name {
-    font-size: 24px;
+    font-size: 34px;
   }
   body header.header_burgerhub nav.navigation_burgerhub ul.nav_links {
     display: none;
@@ -578,8 +764,6 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
     height: 23px;
     width: 30px;
     overflow: hidden;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
     cursor: pointer;
   }
   body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive div.hamburger-menu div.line-top, body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive div.hamburger-menu div.line-middle, body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive div.hamburger-menu div.line-bottom {
@@ -610,24 +794,41 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
   body header.header_burgerhub.dark {
     background-color: var(--primary-dark) !important;
   }
-  body main .section_landing-page .container_landing-page {
+  body main section.section_landing-page .container_landing-page {
     height: 520px;
   }
-  body main .section_landing-page .container_landing-page .container_giant-burger img {
+  body main section.section_landing-page .container_landing-page .container_giant-burger {
+    height: 100%;
+  }
+  body main section.section_landing-page .container_landing-page .container_giant-burger img {
     margin-left: -100px;
     width: 100%;
     max-width: 380px;
   }
-  body main .section_landing-page .container_landing-page .container_description {
+  body main section.section_landing-page .container_landing-page .container_giant-burger .burger-shadow {
+    position: absolute;
+    bottom: -150px;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    height: 1px;
+    width: 1px;
+    background: transparent;
+    -webkit-box-shadow: 0 0 100px 100px rgba(255, 204, 20, 0.05);
+            box-shadow: 0 0 100px 100px rgba(255, 204, 20, 0.05);
+    border-radius: 50%;
+    z-index: -1;
+  }
+  body main section.section_landing-page .container_landing-page .container_description {
     margin-top: 10px;
   }
-  body main .section_landing-page .container_landing-page .container_description h1.tagline {
+  body main section.section_landing-page .container_landing-page .container_description h1.tagline {
     font-size: 44px;
   }
-  body main .section_landing-page .container_landing-page .container_description p.description {
+  body main section.section_landing-page .container_landing-page .container_description p.description {
     font-size: 16px;
   }
-  body main .section_landing-page .container_landing-page .container_description p.discount {
+  body main section.section_landing-page .container_landing-page .container_description p.discount {
     margin-inline: auto;
     width: -webkit-max-content;
     width: -moz-max-content;
@@ -637,7 +838,7 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
     font-weight: 900;
     border: 5px solid var(--yellow);
   }
-  body main .section_landing-page .container_landing-page .container_description div.container_contact-info {
+  body main section.section_landing-page .container_landing-page .container_description div.container_contact-info {
     bottom: 0;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -646,11 +847,86 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
         -ms-flex-align: center;
             align-items: center;
   }
-  body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li {
+  body main section.section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li {
     margin: 5px 0;
   }
-  body main .section_landing-page .container_landing-page .container_description div.container_contact-info div.tel-number p {
+  body main section.section_landing-page .container_landing-page .container_description div.container_contact-info div.tel-number p {
     font-size: 14px;
+  }
+  body main section.section_top-seller-burger {
+    margin: 100px 0 25px 0;
+  }
+  body main section.section_top-seller-burger div.container_top-burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body main section.section_top-seller-burger div.container_top-burger div.top-burger {
+    margin: 45px 10px;
+    height: 220px;
+    width: 240px;
+  }
+  body main section.section_top-seller-burger div.container_top-burger div.top-burger h1, body main section.section_top-seller-burger div.container_top-burger div.top-burger p {
+    text-align: center;
+  }
+  body main section.section_top-seller-burger div.container_top-burger div.top-burger h1 {
+    font-size: 18px;
+  }
+  body main section.section_top-seller-burger div.container_top-burger div.top-burger p {
+    font-size: 14px;
+  }
+  body main section.section_top-seller-burger div.container_top-burger div.top-burger img {
+    position: absolute;
+    top: -70px;
+    display: block;
+    margin-inline: auto;
+    margin-bottom: 20px;
+    height: 150px;
+  }
+  body main section.section_burger-layer div.container_burger-layers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body main section.section_burger-layer div.container_burger-layers div.container_burger-image {
+    margin: 0;
+  }
+  body main section.section_burger-layer div.container_burger-layers div.container_burger-image img {
+    display: block;
+    height: 400px;
+  }
+  body main section.section_burger-layer div.container_burger-layers div.container_burger-contents {
+    margin: 20px 50px;
+    width: 350px;
+  }
+  body main section.section_burger-layer div.container_burger-layers div.container_burger-contents h1.burger-name {
+    font-size: 18px;
+  }
+  body main section.section_burger-layer div.container_burger-layers div.container_burger-contents p.burger-description {
+    font-size: 14px;
+  }
+  body main section.section_burger-layer div.container_burger-layers div.container_burger-contents p.price {
+    color: var(--yellow);
+  }
+  body main section.section_burger-layer div.container_burger-layers div.container_burger-contents button {
+    padding: 6px 18px;
+    font-size: 12px;
+  }
+  body main section.section_burger-layer div.container_burger-layers div.container_burger-contents button a {
+    text-decoration: none;
   }
   body footer.footer_burgerhub {
     -ms-grid-columns: 1fr 1fr;
@@ -661,21 +937,26 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
 }
 
 @media only screen and (max-width: 600px) {
-  body main .section_landing-page .container_landing-page .container_giant-burger img {
+  body header.header_burgerhub nav.navigation_burgerhub div.navigation_right {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  body main section.section_landing-page .container_landing-page .container_giant-burger img {
     margin-left: -100px;
     width: 100%;
     max-width: 280px;
   }
-  body main .section_landing-page .container_landing-page .container_description {
+  body main section.section_landing-page .container_landing-page .container_description {
     margin-top: 20px;
   }
-  body main .section_landing-page .container_landing-page .container_description h1.tagline {
+  body main section.section_landing-page .container_landing-page .container_description h1.tagline {
     font-size: 34px;
   }
-  body main .section_landing-page .container_landing-page .container_description p.description {
+  body main section.section_landing-page .container_landing-page .container_description p.description {
     font-size: 14px;
   }
-  body main .section_landing-page .container_landing-page .container_description p.discount {
+  body main section.section_landing-page .container_landing-page .container_description p.discount {
     margin-inline: auto;
     width: -webkit-max-content;
     width: -moz-max-content;
@@ -685,7 +966,7 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
     font-weight: 800;
     border: 5px solid var(--yellow);
   }
-  body main .section_landing-page .container_landing-page .container_description div.container_contact-info {
+  body main section.section_landing-page .container_landing-page .container_description div.container_contact-info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -697,7 +978,7 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
         -ms-flex-align: end;
             align-items: flex-end;
   }
-  body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul {
+  body main section.section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul {
     margin: 15px 0;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -707,8 +988,26 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body main .section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li {
+  body main section.section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li {
     margin: 5px 0;
+  }
+  body main section.section_menu-types div.container_menu-types div.container_menu {
+    height: 200px;
+  }
+  body main section.section_menu-types div.container_menu-types div.container_menu .menu-description h1 {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  body main section.section_menu-types div.container_menu-types div.container_menu .menu-description p {
+    font-size: 10px;
+    font-weight: 300;
+    color: var(--secondary-light);
+  }
+  body main section.section_menu-types div.container_menu-types div.container_menu .menu-description button {
+    margin: 5px 0;
+    width: 80px;
+    padding: 2px;
+    font-size: 8px;
   }
   body footer.footer_burgerhub {
     -ms-grid-columns: 1fr;
@@ -728,13 +1027,13 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
   body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li.links {
     font-size: 18px;
   }
-  body main .section_landing-page .container_landing-page .container_giant-burger img {
+  body main section.section_landing-page .container_landing-page .container_giant-burger img {
     max-width: 280px;
   }
-  body main .section_landing-page .container_landing-page .container_description {
+  body main section.section_landing-page .container_landing-page .container_description {
     margin-top: 20px;
   }
-  body main .section_landing-page .container_landing-page .container_description h1.tagline {
+  body main section.section_landing-page .container_landing-page .container_description h1.tagline {
     font-size: 24px;
   }
   body footer.footer_burgerhub {
