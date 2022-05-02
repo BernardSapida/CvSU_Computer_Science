@@ -127,6 +127,9 @@ body {
             }
 
             & div.navigation_right {
+                width: max-content;
+                display: flex;
+
                 & button.button_signin, & p.cart {
                     display: inline-block;
                 }
@@ -144,9 +147,18 @@ body {
 
                 & p.cart {
                     position: relative;
-                    padding: 3px 7px;
+                    height: 30px;
+                    width: 30px;
                     background: var(--secondary-dark);
                     border-radius: 50%;
+
+                    & .fa-cart-shopping {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 14px;
+                    }
 
                     & span.cart_orders-quantity {
                         position: absolute;
@@ -186,7 +198,7 @@ body {
                         bottom: 0;
                         display: block;
                         margin-left: -180px;
-                        width: 100%;
+                        width: 48vw;
                         max-width: 700px;
                     }
                     & .burger-shadow {
@@ -620,7 +632,7 @@ body {
                         & img {
                             margin-left: -100px;
                             width: 100%;
-                            max-width: 320px;
+                            max-width: 280px;
                         }
                     }
     

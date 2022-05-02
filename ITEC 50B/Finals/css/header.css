@@ -160,6 +160,15 @@ body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li.links a {
   text-decoration: none;
 }
 
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_right {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 body header.header_burgerhub nav.navigation_burgerhub div.navigation_right button.button_signin, body header.header_burgerhub nav.navigation_burgerhub div.navigation_right p.cart {
   display: inline-block;
 }
@@ -177,9 +186,19 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_right butto
 
 body header.header_burgerhub nav.navigation_burgerhub div.navigation_right p.cart {
   position: relative;
-  padding: 3px 7px;
+  height: 30px;
+  width: 30px;
   background: var(--secondary-dark);
   border-radius: 50%;
+}
+
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_right p.cart .fa-cart-shopping {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 14px;
 }
 
 body header.header_burgerhub nav.navigation_burgerhub div.navigation_right p.cart span.cart_orders-quantity {
@@ -221,7 +240,7 @@ body main .section_landing-page .container_landing-page .container_giant-burger 
   bottom: 0;
   display: block;
   margin-left: -180px;
-  width: 100%;
+  width: 48vw;
   max-width: 700px;
 }
 
@@ -645,7 +664,7 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
   body main .section_landing-page .container_landing-page .container_giant-burger img {
     margin-left: -100px;
     width: 100%;
-    max-width: 320px;
+    max-width: 280px;
   }
   body main .section_landing-page .container_landing-page .container_description {
     margin-top: 20px;
