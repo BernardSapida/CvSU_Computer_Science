@@ -356,7 +356,12 @@ body {
         }
 
         & section.section_burger-layer {
+            background-color: var(--secondary-dark);
+            border-radius: 5px;
+
             & div.container_burger-layers {
+                padding-top: 30px;
+                width: 97%;
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
@@ -366,7 +371,7 @@ body {
                     margin: 20px 50px;
                     & img {
                         display: block;
-                        height: 500px;
+                        height: 480px;
                     }
                 }
 
@@ -580,6 +585,29 @@ body {
                         font-size: 14px;
                         color: var(--secondary-light);
                     }
+                }
+            }
+        }
+
+        & section.section_download-menu {
+            padding: 50px 0;
+            background-color: var(--secondary-dark);
+            border-radius: 5px;
+
+            & div.container_download-menu {
+                padding: 0 20px;
+                margin-inline: auto;
+                max-width: 900px;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 100%;
+
+                & button {
+                    padding: 0 20px;
+                    background-color: var(--yellow);
+                    text-shadow: 0 0 5px var(--secondary-dark);
                 }
             }
         }
@@ -1152,6 +1180,33 @@ body {
                             font-size: 14px;
                             color: var(--secondary-light);
                         }
+                    }
+                }
+            }
+
+            & section.section_download-menu {
+                padding: 40px 0;
+                background-color: var(--secondary-dark);
+                border-radius: 5px;
+    
+                & div.container_download-menu {
+                    padding: 0 20px;
+                    margin-inline: auto;
+                    max-width: 900px;
+                    width: 100%;
+                    display: flex;
+
+                    & h1.title {
+                        margin: 5px 0;
+                        font-size: 18px;
+                    }
+    
+                    & button {
+                        margin: 5px 0;
+                        padding: 5px 20px;
+                        background-color: var(--yellow);
+                        text-shadow: 0 0 5px var(--secondary-dark);
+                        font-size: 14px;
                     }
                 }
             }

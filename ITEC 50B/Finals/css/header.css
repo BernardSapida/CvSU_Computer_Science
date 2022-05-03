@@ -422,7 +422,14 @@ body main section.section_top-seller-burger div.container_top-burger div.top-bur
   height: 150px;
 }
 
+body main section.section_burger-layer {
+  background-color: var(--secondary-dark);
+  border-radius: 5px;
+}
+
 body main section.section_burger-layer div.container_burger-layers {
+  padding-top: 30px;
+  width: 97%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -442,7 +449,7 @@ body main section.section_burger-layer div.container_burger-layers div.container
 
 body main section.section_burger-layer div.container_burger-layers div.container_burger-image img {
   display: block;
-  height: 500px;
+  height: 480px;
 }
 
 body main section.section_burger-layer div.container_burger-layers div.container_burger-contents {
@@ -679,6 +686,34 @@ body main section.section_profiles div.container_profiles div.container_profile-
 body main section.section_profiles div.container_profiles div.container_profile-quotes p.our-position {
   font-size: 14px;
   color: var(--secondary-light);
+}
+
+body main section.section_download-menu {
+  padding: 50px 0;
+  background-color: var(--secondary-dark);
+  border-radius: 5px;
+}
+
+body main section.section_download-menu div.container_download-menu {
+  padding: 0 20px;
+  margin-inline: auto;
+  max-width: 900px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 100%;
+}
+
+body main section.section_download-menu div.container_download-menu button {
+  padding: 0 20px;
+  background-color: var(--yellow);
+  text-shadow: 0 0 5px var(--secondary-dark);
 }
 
 body footer.footer_burgerhub {
@@ -1195,6 +1230,31 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
   body main section.section_profiles div.container_profiles div.container_profile-quotes p.our-position {
     font-size: 14px;
     color: var(--secondary-light);
+  }
+  body main section.section_download-menu {
+    padding: 40px 0;
+    background-color: var(--secondary-dark);
+    border-radius: 5px;
+  }
+  body main section.section_download-menu div.container_download-menu {
+    padding: 0 20px;
+    margin-inline: auto;
+    max-width: 900px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body main section.section_download-menu div.container_download-menu h1.title {
+    margin: 5px 0;
+    font-size: 18px;
+  }
+  body main section.section_download-menu div.container_download-menu button {
+    margin: 5px 0;
+    padding: 5px 20px;
+    background-color: var(--yellow);
+    text-shadow: 0 0 5px var(--secondary-dark);
+    font-size: 14px;
   }
   body footer.footer_burgerhub {
     -ms-grid-columns: 1fr;
