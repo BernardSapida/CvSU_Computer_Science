@@ -695,25 +695,35 @@ body main section.section_download-menu {
 }
 
 body main section.section_download-menu div.container_download-menu {
-  padding: 0 20px;
+  padding: 0 40px;
   margin-inline: auto;
-  max-width: 900px;
+  max-width: 1100px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+body main section.section_download-menu div.container_download-menu h1, body main section.section_download-menu div.container_download-menu button {
+  margin-inline: 10px;
 }
 
 body main section.section_download-menu div.container_download-menu button {
-  padding: 0 20px;
+  padding: 10px 20px;
   background-color: var(--yellow);
   text-shadow: 0 0 5px var(--secondary-dark);
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 body footer.footer_burgerhub {
@@ -1232,28 +1242,19 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
     color: var(--secondary-light);
   }
   body main section.section_download-menu {
-    padding: 40px 0;
-    background-color: var(--secondary-dark);
-    border-radius: 5px;
+    padding: 30px 0;
   }
   body main section.section_download-menu div.container_download-menu {
-    padding: 0 20px;
-    margin-inline: auto;
-    max-width: 900px;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    padding: 0 40px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  body main section.section_download-menu div.container_download-menu h1.title {
-    margin: 5px 0;
+  body main section.section_download-menu div.container_download-menu h1 {
     font-size: 18px;
   }
   body main section.section_download-menu div.container_download-menu button {
-    margin: 5px 0;
-    padding: 5px 20px;
-    background-color: var(--yellow);
-    text-shadow: 0 0 5px var(--secondary-dark);
+    padding: 10px 30px;
     font-size: 14px;
   }
   body footer.footer_burgerhub {
