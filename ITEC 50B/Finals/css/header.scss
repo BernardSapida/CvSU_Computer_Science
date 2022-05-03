@@ -66,7 +66,7 @@ body {
                 border: 4px solid #fff;
                 opacity: 1;
                 border-radius: 50%;
-                animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+                animation: ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
             }
     
             & div:nth-child(2) {
@@ -496,6 +496,26 @@ body {
                             width: 120px;
                             background: var(--primary-dark);
                             animation: rotate-center-image 30000ms linear infinite;
+                        }
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            height: 100%;
+                            width: 100%;
+                            border: .2px solid var(--tertiary-light);
+                            border-radius: 50%;
+                            transform: scale(0);
+                            animation: ripple-image 1500ms linear infinite;
+                        }
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            height: 100%;
+                            width: 100%;
+                            border: .2px solid var(--tertiary-light);
+                            border-radius: 50%;
+                            transform: scale(0);
+                            animation: ripple-image 1500ms linear 300ms infinite;
                         }
                     }
 
@@ -1199,7 +1219,7 @@ body {
     }
 }
 
-@keyframes lds-ripple {
+@keyframes ripple {
     0% {
       top: 36px;
       left: 36px;
@@ -1254,6 +1274,15 @@ body {
     }
     100% {
         transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+@keyframes ripple-image {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 
