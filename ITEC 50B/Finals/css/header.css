@@ -581,6 +581,8 @@ body main section.section_profiles div.container_profiles div.container-sphere {
 body main section.section_profiles div.container_profiles div.container-sphere div.image_centered img, body main section.section_profiles div.container_profiles div.container-sphere div.image_circumference img {
   position: absolute;
   border-radius: 50%;
+  -webkit-box-shadow: 0 0 20px var(--tertiary-light);
+          box-shadow: 0 0 20px var(--tertiary-light);
 }
 
 body main section.section_profiles div.container_profiles div.container-sphere div.image_centered img {
