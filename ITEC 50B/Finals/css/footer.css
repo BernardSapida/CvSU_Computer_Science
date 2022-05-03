@@ -1,41 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-:root {
-  --primary-dark: hsl(0, 0%, 2%);
-  --secondary-dark: hsl(0, 0%, 7%);
-  --tertiary-dark: hsla(0, 0%, 3%, .9);
-  --primary-light: hsl(0, 0%, 100%);
-  --secondary-light: hsl(0, 0%, 100%, .5);
-  --tertiary-light: hsl(0, 0%, 100%, .1);
-  --yellow: hsl(47, 100%, 54%);
-  --yellow-darken: hsl(47, 100%, 44%);
-  --danger-light: hsl(349, 100%,64%);
-  --danger: hsl(349, 100%, 54%);
-  --twitter-light: hsl(203, 87%, 65%);
-  --twitter: hsl(203, 87%, 55%);
-  --facebook-light: hsl(221, 44%, 51%);
-  --facebook: hsl(221, 44%, 41%);
-  --instagram-light: hsl(346, 96%, 72%);
-  --instagram: hsl(346, 96%, 62%);
-  --email-light: hsl(353, 92%, 49%);
-  --email: hsl(353, 92%, 39%);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: var(--primary-light);
-  font-family: 'Inter', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  line-height: 1.8;
-  font-weight: 500;
-}
-
 body footer.footer_burgerhub {
-  margin-bottom: 50px;
-  margin-inline: auto;
+  margin: 50px auto;
   max-width: 1350px;
-  width: 95%;
+  width: 97%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1.2fr .4fr .6fr;
@@ -65,18 +31,27 @@ body footer.footer_burgerhub section.section_footer-description p {
 }
 
 body footer.footer_burgerhub section.section_footer-contact p {
+  margin: 5px 0;
   padding: 2px 0;
   color: var(--secondary-light);
   font-weight: 300;
 }
 
 body footer.footer_burgerhub section.section_footer-contact p span {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-right: 10px;
   width: 32px;
-  padding: 2px 0;
+  height: 32px;
   background: var(--secondary-dark);
-  border-radius: 20px;
+  border-radius: 16px;
   text-align: center;
 }
 
@@ -90,7 +65,7 @@ body footer.footer_burgerhub section.section_footer-contact p span:hover i {
   color: var(--primary-dark);
 }
 
-body footer.footer_burgerhub section.section_footer-contact p span i {
+body footer.footer_burgerhub section.section_footer-contact p span > i {
   color: var(--secondary-light);
 }
 
@@ -179,7 +154,6 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
 
 @media only screen and (max-width: 600px) {
   body footer.footer_burgerhub {
-    margin-bottom: 50px;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     -ms-grid-rows: auto auto auto;
@@ -195,7 +169,6 @@ body footer.footer_burgerhub section.section_footer-accounts ul li:nth-child(4):
 
 @media only screen and (max-width: 320px) {
   body footer.footer_burgerhub {
-    margin-bottom: 50px;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     -ms-grid-rows: auto auto auto;

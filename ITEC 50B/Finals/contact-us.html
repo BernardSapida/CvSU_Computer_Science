@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="BERNARD V. SAPIDA, JAN MARICHIE Z. MOJICA, ZILDJIAN LEE G. LOREN, JOHN HERSON L. RADONES">
+    <link rel="icon" type="image/any-icon" href="images/burgerhub.ico">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <title>BurgerHub</title>
 </head>
@@ -22,9 +25,9 @@
         <nav class="navigation_burgerhub">
             <h1 class="restaurant-name">BurgerHub</h1>
             <ul class="nav_links" id="nav_links">
-                <li class="links active"><a href="">Home</a></li>
+                <li class="links active"><a href="index.html">Home</a></li>
                 <li class="links"><a href="">About</a></li>
-                <li class="links"><a href="">Contact</a></li>
+                <li class="links"><a href="contact-us.html">Contact</a></li>
                 <li class="links"><a href="">Menu</a></li>
                 <li class="links" id="signin"><a href="">Sign In</a></li>
             </ul>
@@ -42,81 +45,56 @@
             </div>
         </nav>
     </header>
-    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
     <!-- BurgerHub Index Page -->
     <main>
-        <section class="section_landing-page">
-            <div class="container_landing-page">
-                <div class="container_giant-burger">
-                    <img src="images/home/landing-page-burger.png" alt="">
-                    <div class="burger-shadow"></div>
+        <!-- BurgerHub Contact Map -->
+        <section class="section_contact-page">
+            <div class="container_map">
+                <h1>Contact Us</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61831.420441104514!2d120.90147162171846!3d14.400407872058466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d252b84f3c11%3A0x38b0f2e1f833e8df!2sImus%2C%20Cavite!5e0!3m2!1sen!2sph!4v1651582995336!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <!-- BurgerHub Contact Form -->
+        <section class="section_contact-form">
+            <div class="container_contact">
+                <div class="container_form">
+                    <form action="" method="POST">
+                        <h1>Get in Touch</h1>
+                        <div class="container_name-and-email">
+                            <label for="name">
+                                <p>Name <span>*</span></p>
+                                <input type="text" name="name" id="name" placeholder="Enter your name">
+                            </label>
+                            <label for="email">
+                                <p>Email <span>*</span></p>
+                                <input type="text" name="email" id="email" placeholder="Enter your email">
+                            </label>
+                        </div>
+                        <label for="subject">
+                            <p>Subject <span>*</span></p>
+                            <input type="text" name="subject" id="subject" placeholder="Enter your subject">
+                        </label>
+                        <label for="message">
+                            <p>Message <span>*</span></p>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
+                        </label>
+                        <button type="submit" id="submit" name="submit" value="submit"><span><i class="fa-solid fa-paper-plane"></i></span> SEND</button>
+                    </form>
                 </div>
-                <div class="container_description">
-                    <div class="line"></div>
-                    <h1 class="tagline">RAIN OR SHINE<br>IT'S TIME TO DINE</h1>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna sit amet purus gravida.</p>
-                    <p class="discount">50% OFF</p>
-                    <div class="container_contact-info">
-                        <div class="accounts">
-                            <ul>
-                                <li><a href="https://www.facebook.com/wuzzupZo/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="https://www.facebook.com/wuzzupZo/"><i class="fa-brands fa-twitter"></i></a></li>
-                                <li><a href="https://www.facebook.com/wuzzupZo/"><i class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href="https://www.facebook.com/wuzzupZo/"><i class="fa-solid fa-at"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="tel-number">
-                            <p>1234-567-8910</p>
-                        </div>
-                    </div>
+                <div class="container_info">
+                    <h1>Contact Information</h1>
+                    <p class="primary-info">Region 4-A, Philippines</p>
+                    <p class="secondary-info">Malagasang 1-F, City of Imus, Cavite</p>
+                    <p class="primary-info">0947-212-6029</p>
+                    <p class="secondary-info">Mon to Fri 9am to 6pm</p>
+                    <p class="primary-info">burgerhub@gmail.com</p>
+                    <p class="secondary-info">Send us your query anytime!</p>
                 </div>
             </div>
         </section>
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- BurgerHub Footer -->
     <footer class="footer_burgerhub">
