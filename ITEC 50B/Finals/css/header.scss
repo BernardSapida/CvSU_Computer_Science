@@ -462,24 +462,26 @@ body {
         }
 
         & section.section_profiles {
+            margin: 50px 0;
+
             & div.container_profiles {
-                margin: 20px 50px;
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
 
                 & div.container-sphere {
+                    margin: 30px 50px;
                     position: relative;
                     border: 2px solid var(--tertiary-light);
                     height: 350px;
                     width: 350px;
                     border-radius: 50%;
+                    animation: rotate-sphere 30000ms linear infinite;
 
                     & div.image_centered, & div.image_circumference {
                         & img {
                             position: absolute;
-                            height: 80px;
-                            width: 80px;
                             border-radius: 50%;
                         }
                     }
@@ -489,46 +491,74 @@ body {
                             position: absolute;
                             top: 50%;
                             left: 50%; 
-                            transform: translate(-50%, -50%);
                             height: 120px;
                             width: 120px;
+                            background: var(--primary-dark);
+                            animation: rotate-center-image 30000ms linear infinite;
                         }
                     }
 
                     & div.image_circumference {
                         &:nth-child(2) {
                             & img {
-                                position: absolute;
                                 top: 0;
-                                right: 0;
-                                height: 80px;
-                                width: 80px;
-                                animation: rotate-image 5s linear infinite;
+                                left: 0;
+                                height: 90px;
+                                width: 90px;
+                                background: var(--primary-dark);
+                                animation: rotate-image 30000ms linear infinite;
                             }
                         }
 
-                        // &:nth-child(3) {
-                        //     & img {
-                        //         bottom: 0;
-                        //         left: 20px;
-                        //         height: 80px;
-                        //         width: 80px;
-                        //     }
-                        // }
+                        &:nth-child(3) {
+                            & img {
+                                bottom: -30px;
+                                transform: translateX(-20%);
+                                left: 30%;
+                                height: 80px;
+                                width: 80px;
+                                background: var(--primary-dark);
+                                animation: rotate-image 30000ms linear infinite;
+                            }
+                        }
 
-                        // &:nth-child(4) {
-                        //     & img {
-                        //         height: 80px;
-                        //         width: 80px;
-                        //         // animation: rotate-image 100000ms cubic-bezier(0, 0.2, 0.8, 1) infinite;
-                        //     }
-                        // }
+                        &:nth-child(4) {
+                            & img {
+                                top: 30%;
+                                transform: translateY(-50%);
+                                right: -50px;
+                                height: 100px;
+                                width: 100px;
+                                background: var(--primary-dark);
+                                animation: rotate-image 30000ms linear infinite;
+                            }
+                        }
                     }
                 }
 
                 & div.container_profile-quotes {
-                    margin: 20px 50px;
-                    width: 500px;
+                    margin: 50px;
+                    width: 400px;
+
+                    & :is(.favicon-quote, .our-quote, .our-name, .our-position) {
+                        text-align: center;
+                        font-weight: 300;
+                    }
+
+                    & p.favicon-quote i {
+                        color: var(--yellow);
+                        font-size: 48px;
+                    }
+
+                    & p.our-quote {
+                        margin: 25px 0;
+                        color: var(--secondary-light);
+                    }
+
+                    & p.our-position {
+                        font-size: 14px;
+                        color: var(--secondary-light);
+                    }
                 }
             }
         }
@@ -1028,6 +1058,82 @@ body {
                     }
                 }
             }
+
+            & section.section_profiles {
+                & div.container_profiles {
+                    & div.container-sphere {
+                        height: 220px;
+                        width: 220px;
+    
+                        & div.image_centered {
+                            & img {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%; 
+                                height: 80px;
+                                width: 80px;
+                                background: var(--primary-dark);
+                                animation: rotate-center-image 30000ms linear infinite;
+                            }
+                        }
+    
+                        & div.image_circumference {
+                            &:nth-child(2) {
+                                & img {
+                                    top: 0;
+                                    left: 0;
+                                    height: 60px;
+                                    width: 60px;
+                                }
+                            }
+    
+                            &:nth-child(3) {
+                                & img {
+                                    bottom: -30px;
+                                    transform: translateX(-20%);
+                                    left: 30%;
+                                    height: 60px;
+                                    width: 60px;
+                                }
+                            }
+    
+                            &:nth-child(4) {
+                                & img {
+                                    top: 30%;
+                                    transform: translateY(-50%);
+                                    right: -30px;
+                                    height: 60px;
+                                    width: 60px;
+                                }
+                            }
+                        }
+                    }
+    
+                    & div.container_profile-quotes {
+                        & :is(.favicon-quote, .our-quote, .our-name, .our-position) {
+                            text-align: center;
+                        }
+    
+                        & p.favicon-quote i {
+                            color: var(--yellow);
+                            font-size: 34px;
+                        }
+
+                        & p.our-quote {
+                            margin: 10px 0;
+                        }
+
+                        & h1.our-name {
+                            font-size: 18px;
+                        }
+    
+                        & p.our-position {
+                            font-size: 14px;
+                            color: var(--secondary-light);
+                        }
+                    }
+                }
+            }
         }
 
         & footer.footer_burgerhub {
@@ -1062,8 +1168,6 @@ body {
         & main {
             & section.section_landing-page {
                 & .container_landing-page {
-                    & .container_giant-burger {
-                    }
                     & .container_description {
                         margin-top: 20px;
     
@@ -1127,24 +1231,28 @@ body {
 
 @keyframes rotate-image {
     0% {
-        top: 0;
-        right: 100%;
-    }
-    25% {
-        top: 100%;
-        right: 100%;
-    }
-    50% {
-        top: 100%;
-        right: 0%;
-    }
-    75% {
-        top: 0%;
-        right: 0%;
+        transform: rotate(0deg);
     }
     100% {
-        top: 0%;
-        right: 100%;
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes rotate-sphere {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-center-image {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg);
     }
 }
 
