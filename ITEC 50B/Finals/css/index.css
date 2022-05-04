@@ -209,7 +209,7 @@ body main section.section_burger-layer {
 }
 
 body main section.section_burger-layer div.container_burger-layers {
-  padding-top: 30px;
+  padding: 30px 0;
   width: 97%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -222,10 +222,6 @@ body main section.section_burger-layer div.container_burger-layers {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-body main section.section_burger-layer div.container_burger-layers div.container_burger-image {
-  margin: 20px 50px;
 }
 
 body main section.section_burger-layer div.container_burger-layers div.container_burger-image img {
@@ -257,6 +253,10 @@ body main section.section_burger-layer div.container_burger-layers div.container
   background-color: var(--yellow);
   padding: 7px 20px;
   text-shadow: 0 0 5px var(--secondary-dark);
+}
+
+body main section.section_burger-layer div.container_burger-layers div.container_burger-contents button:hover {
+  background-color: var(--yellow-darken);
 }
 
 body main section.section_burger-layer div.container_burger-layers div.container_burger-contents button a {
@@ -335,6 +335,10 @@ body main section.section_menu-types div.container_menu-types div.container_menu
   background-color: var(--yellow);
   text-shadow: 0 0 5px var(--secondary-dark);
   font-size: 10px;
+}
+
+body main section.section_menu-types div.container_menu-types div.container_menu .menu-description button:hover {
+  background-color: var(--yellow-darken);
 }
 
 body main section.section_profiles {
@@ -505,6 +509,10 @@ body main section.section_download-menu div.container_download-menu button {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+body main section.section_download-menu div.container_download-menu button:hover {
+  background-color: var(--yellow-darken);
 }
 
 @media only screen and (max-width: 750px) {

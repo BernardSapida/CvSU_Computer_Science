@@ -7,7 +7,7 @@
     <meta name="author" content="BERNARD V. SAPIDA, JAN MARICHIE Z. MOJICA, ZILDJIAN LEE G. LOREN, JOHN HERSON L. RADONES">
     <link rel="icon" type="image/any-icon" href="images/burgerhub.ico">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/signin.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <title>BurgerHub</title>
@@ -27,9 +27,9 @@
             <ul class="nav_links" id="nav_links">
                 <li class="links"><a href="index.html">Home</a></li>
                 <li class="links"><a href="">About</a></li>
-                <li class="links active"><a href="contact-us.html">Contact</a></li>
+                <li class="links"><a href="contact-us.html">Contact</a></li>
                 <li class="links"><a href="">Menu</a></li>
-                <li class="links" id="signin"><a href="signin.html">Sign In</a></li>
+                <li class="links active" id="signin"><a href="signin.html">Sign In</a></li>
             </ul>
             <div class="navigation_right">
                 <button type="button" class="button_signin">SIGN IN</button>
@@ -48,43 +48,47 @@
 
     <!-- BurgerHub Index Page -->
     <main>
-        <!-- BurgerHub Contact Map -->
-        <section class="section_contact-page">
-            <div class="container_map">
-                <h1>Contact Us</h1>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61831.420441104514!2d120.90147162171846!3d14.400407872058466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d252b84f3c11%3A0x38b0f2e1f833e8df!2sImus%2C%20Cavite!5e0!3m2!1sen!2sph!4v1651582995336!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </section>
-
-        <!-- BurgerHub Contact Form -->
-        <section class="section_contact-form">
-            <div class="container_contact">
+        <!-- BurgerHub Sign In -->
+        <section class="section_signin">
+            <div class="container_signin">
+                <div class="container_title">
+                    <h1>Sign In to BurgerHub</h1>
+                    <p>New user? <a href="">Create an account</a></p>
+                </div>
                 <div class="container_form">
                     <form action="" method="POST">
-                        <h1>Get in Touch</h1>
-                        <div class="container_name-and-email">
-                            <label for="name">
-                                <p>Name</p>
-                                <input type="text" name="name" id="name" placeholder="Enter your name">
-                                <p class="error_message">Name is required!</p>
+                        <label for="signin_email">
+                            <p>Email Address</p>
+                            <input type="text" name="signin_email" id="signin_email" placeholder="Enter your email address">
+                            <!-- <p id="error_message-required">Email address is required!</p> -->
+                            <p id="error_message-invalid">Email address is invalid!</p>
+                        </label>
+                        <label for="signin_password">
+                            <p>Password</p>
+                            <div class="signin_password">
+                                <input type="text" name="signin_password" id="signin_password" placeholder="Enter your password">
+                                <span class="checkbox_password">
+                                    <label for="checkbox_toggle-password">
+                                        <input type="checkbox" name="checkbox_toggle-password" id="checkbox_toggle-password">
+                                        <i class="fa-solid fa-eye-slash icon_hide-password"></i>
+                                    </label>
+                                </span>
+                                <!-- remove slash -->
+                            </div>
+                            <!-- <p id="error_message-required">Password is required!</p> -->
+                            <p id="error_message-incorrect">Password is incorrect!</p>
+                        </label>
+                        <button type="submit" name="signin_btn" id="signin_btn">Sign In</button>
+                        <div class="signin_keep-logged">
+                            <label for="keep-logged">
+                                <p>
+                                    <input type="checkbox" name="keep-logged" id="keep-logged"> Keep me logged in
+                                </p>
                             </label>
-                            <label for="email">
-                                <p>Email</p>
-                                <input type="text" name="email" id="email" placeholder="Enter your email">
-                                <p class="error_message">Email is required!</p>
-                            </label>
+                            <p>
+                                <a href="">Forgot Password?</a>
+                            </p>
                         </div>
-                        <label for="subject">
-                            <p>Subject</p>
-                            <input type="text" name="subject" id="subject" placeholder="Enter your subject">
-                            <p class="error_message">Subject is required!</p>
-                        </label>
-                        <label for="message">
-                            <p>Message</p>
-                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
-                            <p class="error_message">Message is required!</p>
-                        </label>
-                        <button type="submit" id="submit" name="submit" value="submit"><span><i class="fa-solid fa-paper-plane"></i></span> SEND</button>
                     </form>
                 </div>
             </div>
