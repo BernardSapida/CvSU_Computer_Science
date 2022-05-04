@@ -107,6 +107,7 @@ body main section.section_signin div.container_signin div.container_form form la
 }
 
 body main section.section_signin div.container_signin div.container_form form button#signin_btn {
+  margin-top: 10px;
   padding: 7px;
   width: 100%;
   background-color: var(--yellow);
@@ -186,10 +187,10 @@ body main section.section_signin div.container_signin div.container_form form di
     font-size: 10px !important;
   }
   body main section.section_signin div.container_signin .container_form form div.signin_keep-logged label p {
-    font-size: 12px !important;
+    font-size: 10px !important;
   }
   body main section.section_signin div.container_signin .container_form form div.signin_keep-logged p a {
-    font-size: 12px !important;
+    font-size: 10px !important;
   }
 }
 /*# sourceMappingURL=signin.css.map */
