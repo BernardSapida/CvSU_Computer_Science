@@ -5,7 +5,7 @@ body {
         width: 96%;
 
         & section.section_contact-page {
-            margin: 100px auto 50px auto;
+            margin: 150px auto 50px auto;
             & div.container_map {
                 & h1 {
                     margin: 20px 0;
@@ -80,6 +80,8 @@ body {
                                 border: 2px solid var(--secondary-dark);
                                 border-radius: 5px;
                                 font-weight: 500;
+                                color: var(--secondary-light);
+                                font-weight: 300;
                             }
     
                             & textarea {
