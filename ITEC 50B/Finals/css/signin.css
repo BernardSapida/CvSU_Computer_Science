@@ -59,7 +59,7 @@ body main section.section_signin div.container_signin div.container_form form la
   font-weight: 300;
 }
 
-body main section.section_signin div.container_signin div.container_form form label input[type="text"] {
+body main section.section_signin div.container_signin div.container_form form label input[type="text"], body main section.section_signin div.container_signin div.container_form form label input[type="password"] {
   padding: 7px 15px;
   width: 100%;
   border: none;
@@ -76,7 +76,7 @@ body main section.section_signin div.container_signin div.container_form form la
 
 body main section.section_signin div.container_signin div.container_form form label .signin_password span.checkbox_password {
   position: absolute;
-  right: 10px;
+  right: 15px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
