@@ -16,7 +16,7 @@ body {
                 border-radius: 5px;
 
                 & div.container_title {
-                    margin-bottom: 20px;
+                    margin-bottom: 15px;
 
                     & h1, & p {
                         padding: 5px 0;
@@ -62,8 +62,11 @@ body {
                                 padding: 7px 15px;
                                 width: 100%;
                                 border: none;
-                                border-bottom: 1.5px solid var(--tertiary-light);
+                                border: 2px solid var(--tertiary-light);
+                                border-radius: 5px;
                                 background: transparent;
+                                font-weight: 300;
+                                color: var(--secondary-light);
                             }
 
                             & .signin_password {
@@ -97,7 +100,7 @@ body {
                             }
 
                             & #error_message-required, & #error_message-invalid, & #error_message-incorrect {
-                                // display: none;
+                                display: none;
                                 margin: 0;
                                 color: var(--danger);
                                 font-size: 14px;

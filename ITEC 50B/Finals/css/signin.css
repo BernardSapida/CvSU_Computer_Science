@@ -18,7 +18,7 @@ body main section.section_signin div.container_signin {
 }
 
 body main section.section_signin div.container_signin div.container_title {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 body main section.section_signin div.container_signin div.container_title h1, body main section.section_signin div.container_signin div.container_title p {
@@ -63,8 +63,11 @@ body main section.section_signin div.container_signin div.container_form form la
   padding: 7px 15px;
   width: 100%;
   border: none;
-  border-bottom: 1.5px solid var(--tertiary-light);
+  border: 2px solid var(--tertiary-light);
+  border-radius: 5px;
   background: transparent;
+  font-weight: 300;
+  color: var(--secondary-light);
 }
 
 body main section.section_signin div.container_signin div.container_form form label .signin_password {
@@ -100,6 +103,7 @@ body main section.section_signin div.container_signin div.container_form form la
 }
 
 body main section.section_signin div.container_signin div.container_form form label #error_message-required, body main section.section_signin div.container_signin div.container_form form label #error_message-invalid, body main section.section_signin div.container_signin div.container_form form label #error_message-incorrect {
+  display: none;
   margin: 0;
   color: var(--danger);
   font-size: 14px;
