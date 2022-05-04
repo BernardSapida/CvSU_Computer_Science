@@ -1,0 +1,141 @@
+body {
+    & main {
+        margin: 100px auto;
+        max-width: 1350px;
+        width: 96%;
+
+        & section.section_featured-products {
+            margin: 150px auto 50px auto;
+            width: 100%;
+            
+            & > h1 {
+                margin: 20px 0;
+                text-align: center;
+                color: var(--yellow);
+                font-weight: 800;
+            }
+
+            & div.container_featured-products {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                width: 100%;
+
+                & div.container_products {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 20px;
+                    max-width: 330px;
+                    width: 100%;
+                    height: 360px;
+                    background-color: var(--secondary-dark);
+                    border-radius: 5px;
+
+                    & div.container_image {
+                        & img {
+                            display: block;
+                            margin-inline: auto;
+                            max-width: 250px;
+                            width: 100%;
+                        }
+                    }
+                    & div.container_description {
+                        & h1 {
+                            font-size: 18px;
+                        }
+
+                        & p {
+                            font-size: 14px;
+                            color: var(--secondary-light);
+                            font-weight: 300;
+
+                            &.price {
+                                color: var(--primary-light);
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        & section.section_burgers-menu, & section.section_pizza-menu, & section.section_fries-menu, & section.section_drinks-menu {
+            margin: 50px auto;
+            width: 100%;
+            
+            & > h1 {
+                margin: 20px 0;
+                text-align: center;
+                color: var(--yellow);
+                font-weight: 800;
+            }
+
+            & div.container_burgers-menu, & div.container_pizza-menu, & div.container_fries-menu, & div.container_drinks-menu {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                width: 100%;
+
+                & div.container_burgers, & div.container_pizza, & div.container_fries, & div.container_drinks {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 20px;
+                    max-width: 330px;
+                    width: 100%;
+                    height: 360px;
+                    background-color: var(--secondary-dark);
+                    border-radius: 5px;
+
+                    & div.container_image {
+                        & img {
+                            display: block;
+                            margin-inline: auto;
+                            max-width: 250px;
+                            width: 100%;
+                        }
+                    }
+                    & div.container_description {
+                        & h1 {
+                            font-size: 18px;
+                        }
+
+                        & p {
+                            font-size: 14px;
+                            color: var(--secondary-light);
+                            font-weight: 300;
+
+                            &.price {
+                                color: var(--primary-light);
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and
+(max-width: 600px) {
+    body {
+        & main {
+            
+        }
+    }
+}
+
+
+@media only screen and 
+(max-width: 320px) {
+    body {
+        & main {
+        }
+    }
+}
