@@ -10,10 +10,27 @@ body main section.section_featured-products {
 }
 
 body main section.section_featured-products > h1 {
-  margin: 20px 0;
+  padding: 7px 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+  margin: 20px auto;
   text-align: center;
-  color: var(--yellow);
   font-weight: 800;
+}
+
+body main section.section_featured-products > h1::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 3px;
+  width: 30px;
+  background-color: var(--yellow);
+  border-radius: 5px;
 }
 
 body main section.section_featured-products div.container_featured-products {
@@ -90,15 +107,11 @@ body main section.section_featured-products div.container_featured-products div.
 }
 
 body main section.section_featured-products div.container_featured-products div.container_products div.container_description div.container_price-order button {
-  padding: 5px 14px;
+  padding: 5px 12px;
   background-color: var(--yellow);
   font-size: 12px;
   text-shadow: 0 0 5px var(--tertiary-dark);
   font-weight: 300;
-}
-
-body main section.section_featured-products div.container_featured-products div.container_products div.container_description div.container_price-order button:hover {
-  background-color: var(--yellow-darken);
 }
 
 body main section.section_featured-products div.container_featured-products div.container_products div.container_description div.container_price-order button:hover {
@@ -119,10 +132,27 @@ body main section.section_burgers-menu {
 }
 
 body main section.section_burgers-menu > h1 {
-  margin: 20px 0;
+  padding: 7px 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+  margin: 20px auto;
   text-align: center;
-  color: var(--yellow);
   font-weight: 800;
+}
+
+body main section.section_burgers-menu > h1::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 3px;
+  width: 30px;
+  background-color: var(--yellow);
+  border-radius: 5px;
 }
 
 body main section.section_burgers-menu div.container_burgers-menu {
@@ -224,10 +254,27 @@ body main section.section_pizza-menu {
 }
 
 body main section.section_pizza-menu > h1 {
-  margin: 20px 0;
+  padding: 7px 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+  margin: 20px auto;
   text-align: center;
-  color: var(--yellow);
   font-weight: 800;
+}
+
+body main section.section_pizza-menu > h1::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 3px;
+  width: 30px;
+  background-color: var(--yellow);
+  border-radius: 5px;
 }
 
 body main section.section_pizza-menu div.container_pizza-menu {
@@ -329,10 +376,27 @@ body main section.section_fries-menu {
 }
 
 body main section.section_fries-menu > h1 {
-  margin: 20px 0;
+  padding: 7px 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+  margin: 20px auto;
   text-align: center;
-  color: var(--yellow);
   font-weight: 800;
+}
+
+body main section.section_fries-menu > h1::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 3px;
+  width: 30px;
+  background-color: var(--yellow);
+  border-radius: 5px;
 }
 
 body main section.section_fries-menu div.container_fries-menu {
@@ -436,10 +500,27 @@ body main section.section_drinks-menu {
 }
 
 body main section.section_drinks-menu > h1 {
-  margin: 20px 0;
+  padding: 7px 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+  margin: 20px auto;
   text-align: center;
-  color: var(--yellow);
   font-weight: 800;
+}
+
+body main section.section_drinks-menu > h1::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 3px;
+  width: 30px;
+  background-color: var(--yellow);
+  border-radius: 5px;
 }
 
 body main section.section_drinks-menu div.container_drinks-menu {

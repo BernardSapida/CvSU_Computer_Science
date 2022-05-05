@@ -9,10 +9,24 @@ body {
             width: 100%;
             
             & > h1 {
-                margin: 20px 0;
+                padding: 7px 0;
+                width: max-content;
+                position: relative;
+                margin: 20px auto;
                 text-align: center;
-                color: var(--yellow);
                 font-weight: 800;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    height: 3px;
+                    width: 30px;
+                    background-color: var(--yellow);
+                    border-radius: 5px;
+                }
             }
 
             & div.container_featured-products {
@@ -67,15 +81,11 @@ body {
                             }
 
                             & button {
-                                padding: 5px 14px;
+                                padding: 5px 12px;
                                 background-color: var(--yellow);
                                 font-size: 12px;
                                 text-shadow: 0 0 5px var(--tertiary-dark);
                                 font-weight: 300;
-
-                                &:hover {
-                                    background-color: var(--yellow-darken);
-                                }
 
                                 &:hover {
                                     background-color: var(--yellow-darken);
@@ -100,10 +110,24 @@ body {
             width: 100%;
             
             & > h1 {
-                margin: 20px 0;
+                padding: 7px 0;
+                width: max-content;
+                position: relative;
+                margin: 20px auto;
                 text-align: center;
-                color: var(--yellow);
                 font-weight: 800;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    height: 3px;
+                    width: 30px;
+                    background-color: var(--yellow);
+                    border-radius: 5px;
+                }
             }
 
             & div.container_burgers-menu {
@@ -187,10 +211,24 @@ body {
             width: 100%;
             
             & > h1 {
-                margin: 20px 0;
+                padding: 7px 0;
+                width: max-content;
+                position: relative;
+                margin: 20px auto;
                 text-align: center;
-                color: var(--yellow);
                 font-weight: 800;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    height: 3px;
+                    width: 30px;
+                    background-color: var(--yellow);
+                    border-radius: 5px;
+                }
             }
 
             & div.container_pizza-menu {
@@ -274,10 +312,24 @@ body {
             width: 100%;
             
             & > h1 {
-                margin: 20px 0;
+                padding: 7px 0;
+                width: max-content;
+                position: relative;
+                margin: 20px auto;
                 text-align: center;
-                color: var(--yellow);
                 font-weight: 800;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    height: 3px;
+                    width: 30px;
+                    background-color: var(--yellow);
+                    border-radius: 5px;
+                }
             }
 
             & div.container_fries-menu {
@@ -363,10 +415,24 @@ body {
             width: 100%;
             
             & > h1 {
-                margin: 20px 0;
+                padding: 7px 0;
+                width: max-content;
+                position: relative;
+                margin: 20px auto;
                 text-align: center;
-                color: var(--yellow);
                 font-weight: 800;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    height: 3px;
+                    width: 30px;
+                    background-color: var(--yellow);
+                    border-radius: 5px;
+                }
             }
 
             & div.container_drinks-menu {
