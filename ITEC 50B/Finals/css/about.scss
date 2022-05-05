@@ -34,6 +34,10 @@ body {
                         padding: 8px 15px;
                         background-color: var(--yellow);
                         text-shadow: 0 0 5px var(--tertiary-dark);
+
+                        & a {
+                            text-decoration: none;
+                        }
                         
                         &:hover {
                             background-color: var(--yellow-darken);

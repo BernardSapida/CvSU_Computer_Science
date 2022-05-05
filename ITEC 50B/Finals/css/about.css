@@ -46,6 +46,10 @@ body main section.section_about-story div.container_story div.container_story-de
   text-shadow: 0 0 5px var(--tertiary-dark);
 }
 
+body main section.section_about-story div.container_story div.container_story-description button a {
+  text-decoration: none;
+}
+
 body main section.section_about-story div.container_story div.container_story-description button:hover {
   background-color: var(--yellow-darken);
 }
