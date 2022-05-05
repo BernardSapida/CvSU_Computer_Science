@@ -1,0 +1,269 @@
+body main {
+  margin: 100px auto;
+  max-width: 1350px;
+  width: 96%;
+}
+
+body main section.section_cart-acc {
+  margin: 150px 0 100px 0;
+}
+
+body main section.section_cart-acc > h1 {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 48px;
+}
+
+body main section.section_cart-acc div.container_cart-acc {
+  margin-inline: auto;
+  max-width: 1300px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart-form {
+  max-width: 760px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form-header {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: var(--secondary-dark);
+  border-radius: 5px;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form-header h1 {
+  font-size: 18px;
+  color: var(--secondary-light);
+  font-weight: 400;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form-header div.container_user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5px;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form-header div.container_user-info p {
+  font-size: 16px;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form > h1 {
+  margin: 15px 0;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form form label {
+  margin: 20px 0;
+  display: block;
+  max-width: 760px;
+  width: 100%;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form form label p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form form label p span {
+  color: var(--danger);
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form form label input[type="text"] {
+  padding: 8px 20px;
+  width: 100%;
+  background-color: var(--secondary-dark);
+  border: none;
+  border-radius: 5px;
+  font-weight: 300;
+  color: var(--secondary-light);
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form form div.container_fullname, body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form form div.container_city-country {
+  margin: -20px 0 !important;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form form div.container_cart-btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form form div.container_cart-btn button {
+  margin-top: 30px;
+  padding: 7px 20px;
+  width: 100%;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form form div.container_cart-btn button[type="button"] a {
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form form div.container_cart-btn button[type="submit"] {
+  background-color: var(--yellow);
+  text-shadow: 0 0 5px var(--tertiary-dark);
+  font-weight: 400;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form form div.container_cart-btn button[type="submit"]:hover {
+  background-color: var(--yellow-darken);
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart {
+  padding: 30px;
+  max-width: 440px;
+  width: 100%;
+  background-color: var(--secondary-dark);
+  border-radius: 5px;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart hr {
+  margin: 10px auto;
+  border: none;
+  height: 1.5px;
+  width: 100%;
+  background: var(--tertiary-dark);
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_cart-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_cart-header h1, body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_cart-header .edit {
+  font-size: 18px;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_cart-items div.container_items-added {
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_cart-items div.container_items-added div.container_items-image {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_cart-items div.container_items-added div.container_items-image img {
+  max-width: 120px;
+  width: 100%;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_cart-items div.container_items-added div.container_items-description {
+  max-width: 280px;
+  width: 100%;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_cart-items div.container_items-added div.container_items-description h1.item-name {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--yellow);
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_cart-items div.container_items-added div.container_items-description p.item-info {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--secondary-light);
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_cart-items div.container_items-added div.container_items-description p.item-price {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_cart-items div.container_items-added div.container_items-description p.item-price span.item-quantity {
+  color: var(--secondary-light);
+  font-size: 12px;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_delivery-discount div.container_delivery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_delivery-discount div.container_delivery p.title-delivery, body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_delivery-discount div.container_delivery p.delivery-fee {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_delivery-discount div.container_delivery p.delivery-fee {
+  width: 124px;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_delivery-discount div.container_delivery p.delivery-fee span {
+  font-weight: 300;
+  color: var(--secondary-light);
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_delivery-discount div.container_discount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_delivery-discount div.container_discount p.title-discount, body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_delivery-discount div.container_discount p.discount {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_delivery-discount div.container_discount p.discount {
+  width: 131px;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_total-amount div.container_total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_total-amount div.container_total p.title-total, body main section.section_cart-acc div.container_cart-acc div.container_cart div.container_total-amount div.container_total p.total-amount {
+  font-size: 20px;
+}
+/*# sourceMappingURL=cart-acc.css.map */

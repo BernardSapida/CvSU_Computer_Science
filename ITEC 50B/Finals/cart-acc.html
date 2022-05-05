@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="BERNARD V. SAPIDA, JAN MARICHIE Z. MOJICA, ZILDJIAN LEE G. LOREN, JOHN HERSON L. RADONES">
+    <link rel="icon" type="image/any-icon" href="images/burgerhub.ico">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/cart-acc.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <title>BurgerHub</title>
+</head>
+<body>
+    <div class="loader_burgerhub">
+        <div class="container">
+            <div></div><div></div>
+            <p>Loading</p>
+        </div>
+    </div>
+
+    <!-- BurgerHub Header -->
+    <header class="header_burgerhub">
+        <nav class="navigation_burgerhub">
+            <h1 class="restaurant-name">BurgerHub</h1>
+            <ul class="nav_links" id="nav_links">
+                <li class="links"><a href="index.html">Home</a></li>
+                <li class="links"><a href="about.html">About</a></li>
+                <li class="links"><a href="contact-us.html">Contact</a></li>
+                <li class="links"><a href="menu.html">Menu</a></li>
+                <li class="links active" id="signin"><a href="signin.html">Sign In</a></li>
+            </ul>
+            <div class="navigation_right">
+                <button type="button" class="button_signin"><a href="signin.html">SIGN IN</a></button>
+                <p class="cart"><a href="menu-acc.html"><i class="fa-solid fa-cart-shopping"></i></a><span class="cart_orders-quantity">0</span></p>
+                <label for="hamburger-menu" class="navigation_responsive" id="navigation_responsive">
+                    <input type="checkbox" id="hamburger-menu">
+                    <div class="hamburger-menu">
+                        <div class="line-top"></div>
+                        <div class="line-middle"></div>
+                        <div class="line-bottom"></div>
+                    </div>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+    <!-- BurgerHub Cart -->
+    <main>
+        <!-- BurgerHub Cart Users -->
+        <section class="section_cart-acc">
+            <h1>Order Cart</h1>
+            <div class="container_cart-acc">
+                <div class="container_cart-form">
+                    <div class="container_form-header">
+                        <h1>LOGIN</h1>
+                        <div class="container_user-info">
+                            <p class="user-name">Bernard Sapida</p>
+                            <p class="user-contact">+63 947-212-6029</p>
+                        </div>
+                    </div>
+                    <div class="container_form">
+                        <h1>Personal Information</h1>
+                        <form action="" method="POST">
+                            <div class="container_fullname">
+                                <label for="user-firstname">
+                                    <p>First Name <span>*</span></p>
+                                    <input type="text" name="user-firstname" id="user-firstname" placeholder="Enter your first name" autocomplete="given-name">
+                                </label>
+                                <label for="user-lastname">
+                                    <p>Last Name <span>*</span></p>
+                                    <input type="text" name="user-lastname" id="user-lastname" placeholder="Enter your last name" autocomplete="family-name">
+                                </label>
+                            </div>
+                            <label for="user-address">
+                                <p>Address <span>*</span></p>
+                                <input type="text" name="user-address" id="user-address" placeholder="Enter your address" autocomplete="street-address">
+                            </label>
+                            <div class="container_city-country">
+                                <label for="user-city">
+                                    <p>City <span>*</span></p>
+                                    <input type="text" name="user-city" id="user-city" placeholder="Enter your first name" autocomplete="given-name">
+                                </label>
+                                <label for="user-country">
+                                    <p>Country <span>*</span></p>
+                                    <input type="text" name="user-country" id="user-country" placeholder="Enter your last name" autocomplete="family-name">
+                                </label>
+                            </div>
+                            <div class="container_cart-btn">
+                                <button type="button"><a href="index.html">Cancel</a></button>
+                                <button type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="container_cart">
+                    <div class="container_cart-header">
+                        <h1>Your Order</h1>
+                        <p class="edit"><i class="fa-solid fa-pen-to-square"></i> Edit</p>
+                    </div>
+                    <hr>
+                    <div class="container_cart-items">
+                        <div class="container_items-added">
+                            <div class="container_items-image">
+                                <img src="images/menu/burger/burger_1.png" alt="burger">
+                            </div>
+                            <div class="container_items-description">
+                                <h1 class="item-name">Burger Name</h1>
+                                <p class="item-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, quasi!</p>
+                                <p class="item-price">₱381.00 <span class="item-quantity">x 02</span></p>
+                            </div>
+                        </div>
+                        <div class="container_items-added">
+                            <div class="container_items-image">
+                                <img src="images/menu/burger/burger_1.png" alt="burger">
+                            </div>
+                            <div class="container_items-description">
+                                <h1 class="item-name">Burger Name</h1>
+                                <p class="item-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, quasi!</p>
+                                <p class="item-price">₱381.00 <span class="item-quantity">x 02</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="container_delivery-discount">
+                        <div class="container_delivery">
+                            <p class="title-delivery">Delivery</p>
+                            <p class="delivery-fee">₱50 <span>Food Panda</span></p>
+                        </div>
+                        <div class="container_discount">
+                            <p class="title-discount">Discount</p>
+                            <p class="discount">-₱40</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="container_total-amount">
+                        <div class="container_total">
+                            <p class="title-total">Total:</p>
+                            <p class="total-amount">₱1,564</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- BurgerHub Footer -->
+    <footer class="footer_burgerhub">
+        <section class="section_footer-description">
+            <h1 class="restaurant-name">BurgerHub</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quos ad possimus aut rerum id molestiae.</p>
+        </section>
+        <section class="section_footer-contact">
+            <h1>Contact</h1>
+            <p><span><i class="fa-solid fa-location-dot"></i></span>City of Imus, Cavite, Region IV-A Calabarzon, Philippines</p>
+            <p><span><i class="fa-solid fa-phone-flip"></i></span>0947-212-6029</p>
+            <p><span><i class="fa-solid fa-envelope"></i></span>burgerhub@gmail.com</p>
+        </section>
+        <section class="section_footer-links">
+            <h1>Links</h1>
+            <ul>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <li><a href="menu.php">Menu</a></li>
+                <li><a href="sigin.php">Sign In</a></li>
+            </ul>
+        </section>
+        <section class="section_footer-accounts">
+            <h1>Social Accounts</h1>
+            <ul>
+                <li><a href="https://www.facebook.com/wuzzupZo/"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="https://www.facebook.com/wuzzupZo/"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/wuzzupZo/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/wuzzupZo/"><i class="fa-solid fa-at"></i></a></li>
+            </ul>
+        </section>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="js/header.js"></script>
+</body>
+</html>
