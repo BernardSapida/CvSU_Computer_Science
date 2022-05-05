@@ -59,17 +59,17 @@
                     <form action="" method="POST">
                         <label for="signin_email">
                             <p>Email Address</p>
-                            <input type="text" name="signin_email" id="signin_email" placeholder="Enter your email address">
+                            <input type="text" name="signin_email" id="signin_email" placeholder="Enter your email address" autocomplete="username">
                             <!-- <p id="error_message-required">Email address is required!</p> -->
                             <p id="error_message-invalid">Email address is invalid!</p>
                         </label>
                         <label for="signin_password">
                             <p>Password</p>
                             <div class="signin_password">
-                                <input type="password" name="signin_password" id="signin_password" placeholder="Enter your password">
+                                <input type="password" name="signin_password" id="signin_password" placeholder="Enter your password" autocomplete="current-password">
                                 <span class="checkbox_password">
                                     <label for="checkbox_toggle-password">
-                                        <input type="checkbox" name="checkbox_toggle-password" id="checkbox_toggle-password">
+                                        <input type="checkbox" name="checkbox_toggle-password" id="checkbox_toggle-password" >
                                         <i class="fa-solid fa-eye-slash icon_hide-password" id="eye"></i>
                                     </label>
                                 </span>
