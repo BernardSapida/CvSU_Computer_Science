@@ -67,6 +67,10 @@ body main section.section_featured-products div.container_featured-products div.
   gap: 20px;
 }
 
+body main section.section_featured-products div.container_featured-products div.container_products div.container_image {
+  width: 150px;
+}
+
 body main section.section_featured-products div.container_featured-products div.container_products div.container_image img {
   display: block;
   margin-inline: auto;
@@ -75,7 +79,7 @@ body main section.section_featured-products div.container_featured-products div.
 }
 
 body main section.section_featured-products div.container_featured-products div.container_products div.container_description {
-  width: 350px;
+  width: 250px;
 }
 
 body main section.section_featured-products div.container_featured-products div.container_products div.container_description h1 {
@@ -189,6 +193,10 @@ body main section.section_burgers-menu div.container_burgers-menu div.container_
   gap: 20px;
 }
 
+body main section.section_burgers-menu div.container_burgers-menu div.container_burgers div.container_image {
+  width: 150px;
+}
+
 body main section.section_burgers-menu div.container_burgers-menu div.container_burgers div.container_image img {
   display: block;
   margin-inline: auto;
@@ -197,7 +205,7 @@ body main section.section_burgers-menu div.container_burgers-menu div.container_
 }
 
 body main section.section_burgers-menu div.container_burgers-menu div.container_burgers div.container_description {
-  width: 350px;
+  width: 250px;
 }
 
 body main section.section_burgers-menu div.container_burgers-menu div.container_burgers div.container_description h1 {
@@ -311,6 +319,10 @@ body main section.section_pizza-menu div.container_pizza-menu div.container_pizz
   gap: 20px;
 }
 
+body main section.section_pizza-menu div.container_pizza-menu div.container_pizza div.container_image {
+  width: 150px;
+}
+
 body main section.section_pizza-menu div.container_pizza-menu div.container_pizza div.container_image img {
   display: block;
   margin-inline: auto;
@@ -319,7 +331,7 @@ body main section.section_pizza-menu div.container_pizza-menu div.container_pizz
 }
 
 body main section.section_pizza-menu div.container_pizza-menu div.container_pizza div.container_description {
-  width: 350px;
+  width: 250px;
 }
 
 body main section.section_pizza-menu div.container_pizza-menu div.container_pizza div.container_description h1 {
@@ -433,6 +445,10 @@ body main section.section_fries-menu div.container_fries-menu div.container_frie
   gap: 20px;
 }
 
+body main section.section_fries-menu div.container_fries-menu div.container_fries div.container_image {
+  width: 150px;
+}
+
 body main section.section_fries-menu div.container_fries-menu div.container_fries div.container_image img {
   display: block;
   margin-inline: auto;
@@ -443,7 +459,7 @@ body main section.section_fries-menu div.container_fries-menu div.container_frie
 }
 
 body main section.section_fries-menu div.container_fries-menu div.container_fries div.container_description {
-  width: 350px;
+  width: 250px;
 }
 
 body main section.section_fries-menu div.container_fries-menu div.container_fries div.container_description h1 {
@@ -557,6 +573,10 @@ body main section.section_drinks-menu div.container_drinks-menu div.container_dr
   gap: 20px;
 }
 
+body main section.section_drinks-menu div.container_drinks-menu div.container_drinks div.container_image {
+  width: 150px;
+}
+
 body main section.section_drinks-menu div.container_drinks-menu div.container_drinks div.container_image img {
   display: block;
   margin-inline: auto;
@@ -567,7 +587,7 @@ body main section.section_drinks-menu div.container_drinks-menu div.container_dr
 }
 
 body main section.section_drinks-menu div.container_drinks-menu div.container_drinks div.container_description {
-  width: 350px;
+  width: 250px;
 }
 
 body main section.section_drinks-menu div.container_drinks-menu div.container_drinks div.container_description h1 {
