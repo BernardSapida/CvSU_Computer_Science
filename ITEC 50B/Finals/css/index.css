@@ -362,7 +362,8 @@ body main section.section_profiles div.container_profiles {
 body main section.section_profiles div.container_profiles div.container-sphere {
   margin: 30px 50px;
   position: relative;
-  border: 2px solid var(--tertiary-light);
+  -webkit-box-shadow: 0 0 5px var(--tertiary-light);
+          box-shadow: 0 0 5px var(--tertiary-light);
   height: 350px;
   width: 350px;
   border-radius: 50%;
@@ -393,12 +394,14 @@ body main section.section_profiles div.container_profiles div.container-sphere d
   position: absolute;
   height: 100%;
   width: 100%;
-  border: 0.2px solid var(--tertiary-light);
+  -webkit-box-shadow: 0 0 5px var(--tertiary-light);
+          box-shadow: 0 0 5px var(--tertiary-light);
   border-radius: 50%;
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-animation: ripple-image 1500ms linear infinite;
           animation: ripple-image 1500ms linear infinite;
+  z-index: -1;
 }
 
 body main section.section_profiles div.container_profiles div.container-sphere div.image_centered::after {
@@ -406,12 +409,14 @@ body main section.section_profiles div.container_profiles div.container-sphere d
   position: absolute;
   height: 100%;
   width: 100%;
-  border: 0.2px solid var(--tertiary-light);
+  -webkit-box-shadow: 0 0 5px var(--tertiary-light);
+          box-shadow: 0 0 5px var(--tertiary-light);
   border-radius: 50%;
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-animation: ripple-image 1500ms linear 300ms infinite;
           animation: ripple-image 1500ms linear 300ms infinite;
+  z-index: -1;
 }
 
 body main section.section_profiles div.container_profiles div.container-sphere div.image_circumference:nth-child(2) img {

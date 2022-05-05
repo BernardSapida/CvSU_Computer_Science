@@ -305,7 +305,7 @@ body {
                 & div.container-sphere {
                     margin: 30px 50px;
                     position: relative;
-                    border: 2px solid var(--tertiary-light);
+                    box-shadow: 0 0 5px var(--tertiary-light);
                     height: 350px;
                     width: 350px;
                     border-radius: 50%;
@@ -334,20 +334,22 @@ body {
                             position: absolute;
                             height: 100%;
                             width: 100%;
-                            border: .2px solid var(--tertiary-light);
+                            box-shadow: 0 0 5px var(--tertiary-light);
                             border-radius: 50%;
                             transform: scale(0);
                             animation: ripple-image 1500ms linear infinite;
+                            z-index: -1;
                         }
                         &::after {
                             content: "";
                             position: absolute;
                             height: 100%;
                             width: 100%;
-                            border: .2px solid var(--tertiary-light);
+                            box-shadow: 0 0 5px var(--tertiary-light);
                             border-radius: 50%;
                             transform: scale(0);
                             animation: ripple-image 1500ms linear 300ms infinite;
+                            z-index: -1;
                         }
                     }
 
