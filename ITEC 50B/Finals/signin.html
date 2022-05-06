@@ -32,10 +32,10 @@
                 <li class="links active" id="signin"><a href="signin.html">Sign In</a></li>
             </ul>
             <div class="navigation_right">
-                <button type="button" class="button_signin"><a href="signin.html">SIGN IN</a></button>
-                <p class="cart"><a href="menu-acc.html"><i class="fa-solid fa-cart-shopping"></i></a><span class="cart_orders-quantity">0</span></p>
+                <button type="button" class="button_signin">SIGN IN</button>
+                <p class="cart"><a href="menu-acc.html" aria-label="Redirect to cart"><i class="fa-solid fa-cart-shopping"></i></a><span class="cart_orders-quantity">0</span></p>
                 <label for="hamburger-menu" class="navigation_responsive" id="navigation_responsive">
-                    <input type="checkbox" id="hamburger-menu">
+                    <input type="checkbox" id="hamburger-menu" aria-label="Hamburger Navigation">
                     <div class="hamburger-menu">
                         <div class="line-top"></div>
                         <div class="line-middle"></div>
@@ -59,8 +59,7 @@
                     <form action="" method="POST">
                         <label for="signin_email">
                             <p>Email Address</p>
-                            <input type="text" name="signin_email" id="signin_email" placeholder="Enter your email address" autocomplete="email">
-                            <!-- <p id="error_message-required">Email address is required!</p> -->
+                            <input type="text" name="signin_email" id="signin_email" placeholder="Enter your email address" aria-label="Email" autocomplete="email">
                             <p id="error_message-invalid">Email address is invalid!</p>
                         </label>
                         <label for="signin_password">
@@ -69,7 +68,7 @@
                                 <input type="password" name="signin_password" id="signin_password" placeholder="Enter your password" autocomplete="current-password">
                                 <span class="checkbox_password">
                                     <label for="checkbox_toggle-password">
-                                        <input type="checkbox" name="checkbox_toggle-password" id="checkbox_toggle-password" >
+                                        <input type="checkbox" name="checkbox_toggle-password" id="checkbox_toggle-password" aria-label="Password">
                                         <i class="fa-solid fa-eye-slash icon_hide-password" id="eye"></i>
                                     </label>
                                 </span>
@@ -120,10 +119,10 @@
         <section class="section_footer-accounts">
             <h1>Social Accounts</h1>
             <ul>
-                <li><a href="https://www.facebook.com/wuzzupZo/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                <li><a href="https://www.facebook.com/wuzzupZo/"><i class="fa-brands fa-twitter"></i></a></li>
-                <li><a href="https://www.facebook.com/wuzzupZo/"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://www.facebook.com/wuzzupZo/"><i class="fa-solid fa-at"></i></a></li>
+                <li><a href="https://www.facebook.com/wuzzupZo/" aria-label="Redirect to Bernard Sapida facebook account"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="https://www.facebook.com/wuzzupZo/" aria-label="Redirect to Bernard Sapida facebook account"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/wuzzupZo/" aria-label="Redirect to Bernard Sapida facebook account"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/wuzzupZo/" aria-label="Redirect to Bernard Sapida facebook account"><i class="fa-solid fa-at"></i></a></li>
             </ul>
         </section>
     </footer>

@@ -32,10 +32,10 @@
                 <li class="links active" id="signin"><a href="signin.html">Sign In</a></li>
             </ul>
             <div class="navigation_right">
-                <button type="button" class="button_signin"><a href="signin.html">SIGN IN</a></button>
-                <p class="cart"><a href="menu-acc.html"><i class="fa-solid fa-cart-shopping"></i></a><span class="cart_orders-quantity">0</span></p>
+                <button type="button" class="button_signin">SIGN IN</button>
+                <p class="cart"><a href="menu-acc.html" aria-label="Redirect to menu page"><i class="fa-solid fa-cart-shopping"></i></a><span class="cart_orders-quantity">0</span></p>
                 <label for="hamburger-menu" class="navigation_responsive" id="navigation_responsive">
-                    <input type="checkbox" id="hamburger-menu">
+                    <input type="checkbox" name="hamburger-menu" id="hamburger-menu" aria-label="Hamburger Navigation">
                     <div class="hamburger-menu">
                         <div class="line-top"></div>
                         <div class="line-middle"></div>
@@ -55,13 +55,18 @@
                 <h1>Order Status</h1>
             </div>
             <form action="" method="POST">
-                <select name="order_status" id="order_status">
-                    <option value="Processing">Processing</option>
-                    <option value="Delivering">Delivering</option>
-                    <option value="Completed">Completed</option>
-                </select>
+                <label for="order_status">
+                    <select name="order_status" id="order_status" name="order_status" aria-label="Order Status">
+                        <option value="Processing">Processing</option>
+                        <option value="Delivering">Delivering</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                </label>
             </form>
             <div class="container_order-status" id="container_order-status">
+                <div class="empty-status" id="empty-status">
+                    <h1>No orders processing</h1>
+                </div>
                 <div class="container_order-status-entry">
                     <div class="container_orderNo-Date">
                         <p class="orderNo">Order No. 1954874974</p>
@@ -133,16 +138,16 @@
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <li><a href="menu.php">Menu</a></li>
-                <li><a href="sigin.php">Sign In</a></li>
+                <li><a href="signin.php">Sign In</a></li>
             </ul>
         </section>
         <section class="section_footer-accounts">
             <h1>Social Accounts</h1>
             <ul>
-                <li><a href="https://www.facebook.com/wuzzupZo/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                <li><a href="https://www.facebook.com/wuzzupZo/"><i class="fa-brands fa-twitter"></i></a></li>
-                <li><a href="https://www.facebook.com/wuzzupZo/"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://www.facebook.com/wuzzupZo/"><i class="fa-solid fa-at"></i></a></li>
+                <li><a href="https://www.facebook.com/wuzzupZo/" aria-label="Redirect to Bernard Sapida facebook account"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="https://www.facebook.com/wuzzupZo/" aria-label="Redirect to Bernard Sapida facebook account"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/wuzzupZo/" aria-label="Redirect to Bernard Sapida facebook account"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/wuzzupZo/" aria-label="Redirect to Bernard Sapida facebook account"><i class="fa-solid fa-at"></i></a></li>
             </ul>
         </section>
     </footer>

@@ -41,7 +41,7 @@ body {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
-                max-height: 425px;
+                max-height: 415px;
                 height: 100%;
                 overflow-y: scroll;
 
@@ -58,7 +58,28 @@ body {
                     border-radius: 4px;
                 }
 
+                & div#empty-status {
+                    display: none;
+                }
+
+                & div.empty-status {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 129px;
+                    border-radius: 5px;
+                    background-color: var(--secondary-dark);
+    
+                    & h1 {
+                        text-align: center;
+                        font-weight: 300;
+                        color: var(--secondary-light);
+                        font-size: 16px;
+                    }
+                }
+
                 & div.container_order-status-entry {
+                    display: grid;
                     padding: 7px 20px;
                     background-color: var(--secondary-dark);
                     border-radius: 5px;
@@ -118,7 +139,6 @@ body {
         }
     }
 }
-
 
 @media only screen and 
 (max-width: 320px) {
