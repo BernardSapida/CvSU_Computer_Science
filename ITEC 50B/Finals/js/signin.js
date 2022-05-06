@@ -1,6 +1,6 @@
-document.querySelector("#eye").addEventListener("click", test);
+document.querySelector("#eye").addEventListener("click", showPassword);
 
-function test() {
+function showPassword() {
     let eye = document.getElementById("eye");
     let password = document.getElementById("signin_password");
 

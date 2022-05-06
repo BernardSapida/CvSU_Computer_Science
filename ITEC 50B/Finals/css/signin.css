@@ -70,6 +70,10 @@ body main section.section_signin div.container_signin div.container_form form la
   color: var(--secondary-light);
 }
 
+body main section.section_signin div.container_signin div.container_form form label input[type="text"]::-ms-reveal, body main section.section_signin div.container_signin div.container_form form label input[type="text"]::-ms-clear, body main section.section_signin div.container_signin div.container_form form label input[type="password"]::-ms-reveal, body main section.section_signin div.container_signin div.container_form form label input[type="password"]::-ms-clear {
+  display: none;
+}
+
 body main section.section_signin div.container_signin div.container_form form label .signin_password {
   position: relative;
 }

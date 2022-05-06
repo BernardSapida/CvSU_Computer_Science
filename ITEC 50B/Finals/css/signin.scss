@@ -67,6 +67,10 @@ body {
                                 background: transparent;
                                 font-weight: 300;
                                 color: var(--secondary-light);
+
+                                &::-ms-reveal, &::-ms-clear {
+                                    display: none;
+                                }
                             }
 
                             & .signin_password {

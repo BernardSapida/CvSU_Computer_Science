@@ -1,0 +1,188 @@
+body main {
+  margin: 100px auto;
+  max-width: 1350px;
+  width: 96%;
+}
+
+body main section.section_user-account {
+  margin: 150px auto 50px auto;
+  max-width: 700px;
+  width: 100%;
+}
+
+body main section.section_user-account h1 {
+  text-align: center;
+  font-weight: 700;
+}
+
+body main section.section_user-account hr {
+  margin: 10px auto;
+  border: none;
+  height: 1.5px;
+  width: 100%;
+  background: var(--tertiary-dark);
+}
+
+body main section.section_user-account div.container_user-account form label {
+  display: block;
+  margin: 15px 0;
+  width: 100%;
+}
+
+body main section.section_user-account div.container_user-account form label p {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--secondary-light);
+}
+
+body main section.section_user-account div.container_user-account form label p span {
+  color: var(--danger);
+}
+
+body main section.section_user-account div.container_user-account form label input[type="text"] {
+  padding: 7px 20px;
+  width: 100%;
+  background-color: var(--secondary-dark);
+  border: none;
+  border-radius: 5px;
+}
+
+body main section.section_user-account div.container_user-account form div.container_user-account-fullname {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  margin-bottom: -15px;
+}
+
+body main section.section_user-account div.container_user-account form button#user-account-submit {
+  margin-top: 15px;
+  padding: 7px 0;
+  width: 100%;
+  background-color: var(--yellow);
+  text-shadow: 0 0 5px var(--tertiary-dark);
+}
+
+body main section.section_user-account div.container_user-account form button#user-account-submit:hover {
+  background-color: var(--yellow-darken);
+}
+
+body main section.section_user-password {
+  margin: 50px auto;
+  max-width: 700px;
+  width: 100%;
+}
+
+body main section.section_user-password h1 {
+  text-align: center;
+  font-weight: 700;
+}
+
+body main section.section_user-password hr {
+  margin: 10px auto;
+  border: none;
+  height: 1.5px;
+  width: 100%;
+  background: var(--tertiary-dark);
+}
+
+body main section.section_user-password div.container_user-password form > label {
+  display: none;
+}
+
+body main section.section_user-password div.container_user-password form > label p {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--secondary-light);
+}
+
+body main section.section_user-password div.container_user-password form > label p span {
+  color: var(--danger);
+}
+
+body main section.section_user-password div.container_user-password form > label input[type="text"]#user-email-hidden {
+  padding: 7px 20px;
+  width: 100%;
+  background-color: var(--secondary-dark);
+  border: none;
+  border-radius: 5px;
+  font-weight: 300;
+  color: var(--secondary-light);
+}
+
+body main section.section_user-password div.container_user-password form > label input[type="text"]#user-email-hidden::-ms-reveal, body main section.section_user-password div.container_user-password form > label input[type="text"]#user-email-hidden::-ms-clear {
+  display: none;
+}
+
+body main section.section_user-password div.container_user-password form div.container_user-password label {
+  display: block;
+  margin: 15px 0;
+  width: 100%;
+}
+
+body main section.section_user-password div.container_user-password form div.container_user-password label p {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--secondary-light);
+}
+
+body main section.section_user-password div.container_user-password form div.container_user-password label p span {
+  color: var(--danger);
+}
+
+body main section.section_user-password div.container_user-password form div.container_user-password label div:is(.container_user-password-current, .container_user-password-new, .container_user-password-confirm) {
+  position: relative;
+}
+
+body main section.section_user-password div.container_user-password form div.container_user-password label div:is(.container_user-password-current, .container_user-password-new, .container_user-password-confirm) input[type="password"], body main section.section_user-password div.container_user-password form div.container_user-password label div:is(.container_user-password-current, .container_user-password-new, .container_user-password-confirm) input[type="text"] {
+  padding: 7px 20px;
+  width: 100%;
+  background-color: var(--secondary-dark);
+  border: none;
+  border-radius: 5px;
+  font-weight: 300;
+  color: var(--secondary-light);
+}
+
+body main section.section_user-password div.container_user-password form div.container_user-password label div:is(.container_user-password-current, .container_user-password-new, .container_user-password-confirm) input[type="password"]::-ms-reveal, body main section.section_user-password div.container_user-password form div.container_user-password label div:is(.container_user-password-current, .container_user-password-new, .container_user-password-confirm) input[type="password"]::-ms-clear, body main section.section_user-password div.container_user-password form div.container_user-password label div:is(.container_user-password-current, .container_user-password-new, .container_user-password-confirm) input[type="text"]::-ms-reveal, body main section.section_user-password div.container_user-password form div.container_user-password label div:is(.container_user-password-current, .container_user-password-new, .container_user-password-confirm) input[type="text"]::-ms-clear {
+  display: none;
+}
+
+body main section.section_user-password div.container_user-password form div.container_user-password label div:is(.container_user-password-current, .container_user-password-new, .container_user-password-confirm) i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 12px;
+  color: var(--secondary-light);
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+  cursor: pointer;
+}
+
+body main section.section_user-password div.container_user-password form div.container_user-password label div:is(.container_user-password-current, .container_user-password-new, .container_user-password-confirm) i:hover {
+  color: var(--primary-light);
+}
+
+body main section.section_user-password div.container_user-password form div.container_user-password button#user-password-submit {
+  margin-top: 15px;
+  padding: 7px 0;
+  width: 100%;
+  background-color: var(--yellow);
+  text-shadow: 0 0 5px var(--tertiary-dark);
+}
+
+body main section.section_user-password div.container_user-password form div.container_user-password button#user-password-submit:hover {
+  background-color: var(--yellow-darken);
+}
+
+@media only screen and (max-width: 320px) {
+  body main section.section_user-account {
+    margin-top: 120px;
+  }
+}
+/*# sourceMappingURL=user-acc.css.map */
