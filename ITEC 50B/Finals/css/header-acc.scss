@@ -81,7 +81,7 @@ body {
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        padding: 15px 40px;
+        padding: 20px 40px;
         background-color: transparent;
         transition: all 350ms ease-in-out;
         z-index: 1;
@@ -369,7 +369,7 @@ body {
 (max-width: 600px) {
     body {
         & header.header_burgerhub {
-            padding: 15px 20px;
+            padding: 20px 20px;
 
             & nav.navigation_burgerhub {
                 & div.navigation_logo {

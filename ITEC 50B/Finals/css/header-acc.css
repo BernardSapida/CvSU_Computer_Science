@@ -111,7 +111,7 @@ body header.header_burgerhub {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  padding: 15px 40px;
+  padding: 20px 40px;
   background-color: transparent;
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
@@ -417,7 +417,7 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navi
 
 @media only screen and (max-width: 600px) {
   body header.header_burgerhub {
-    padding: 15px 20px;
+    padding: 20px 20px;
   }
   body header.header_burgerhub nav.navigation_burgerhub div.navigation_logo h1.restaurant-name {
     display: none;
