@@ -94,11 +94,22 @@ body {
             align-items: center;
             justify-content: space-between;
 
-            & h1.restaurant-name {
-                margin-bottom: 2px;
-                font-family: 'Grenze Gotisch';
-                font-size: 34px;
-                color: var(--yellow);
+            & div.navigation_logo {
+                display: flex;
+                align-items: center;
+
+                & img {
+                    max-width: 70px;
+                    width: 100%;
+                }
+
+                & h1.restaurant-name {
+                    margin-bottom: 2px;
+                    font-family: 'Grenze Gotisch';
+                    font-size: 34px;
+                    color: var(--yellow);
+                    line-height: 1;
+                }
             }
 
             & ul.nav_links {
@@ -314,7 +325,15 @@ body {
 (max-width: 600px) {
     body {
         & header.header_burgerhub {
+            padding: 15px 20px;
+
             & nav.navigation_burgerhub {
+                & div.navigation_logo {
+                    & h1.restaurant-name {
+                        display: none;
+                    }
+                }
+
                 & div.navigation_right {
                     width: max-content;
                 }

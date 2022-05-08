@@ -133,11 +133,26 @@ body header.header_burgerhub nav.navigation_burgerhub {
           justify-content: space-between;
 }
 
-body header.header_burgerhub nav.navigation_burgerhub h1.restaurant-name {
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_logo img {
+  max-width: 70px;
+  width: 100%;
+}
+
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_logo h1.restaurant-name {
   margin-bottom: 2px;
   font-family: 'Grenze Gotisch';
   font-size: 34px;
   color: var(--yellow);
+  line-height: 1;
 }
 
 body header.header_burgerhub nav.navigation_burgerhub ul.nav_links {
@@ -346,6 +361,12 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navi
 }
 
 @media only screen and (max-width: 600px) {
+  body header.header_burgerhub {
+    padding: 15px 20px;
+  }
+  body header.header_burgerhub nav.navigation_burgerhub div.navigation_logo h1.restaurant-name {
+    display: none;
+  }
   body header.header_burgerhub nav.navigation_burgerhub div.navigation_right {
     width: -webkit-max-content;
     width: -moz-max-content;
