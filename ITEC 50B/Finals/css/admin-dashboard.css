@@ -220,6 +220,7 @@ body main section.section_tabular-orders div.container_tabular-order table tbody
 }
 
 body main section.section_tabular-orders div.container_tabular-order table tbody tr td:nth-child(9) {
+  min-width: 115px;
   line-height: 1;
 }
 
