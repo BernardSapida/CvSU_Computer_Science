@@ -9,8 +9,7 @@ body {
 
             & div.container_dashboard-header {
                 margin: 20px auto;
-                max-width: 1340px;
-                width: 100%;
+                text-align: center;
                 
                 & h1 {
                     font-weight: 400;
@@ -192,6 +191,46 @@ body {
 
                     & thead tr th {
                         font-weight: 400;
+
+                        &:nth-child(1) {
+                            min-width: 52px;
+                        }
+
+                        &:nth-child(2) {
+                            min-width: 93px;
+                        }
+
+                        &:nth-child(3) {
+                            min-width: 150px;
+                        }
+
+                        &:nth-child(4) {
+                            min-width: 181px;
+                        }
+
+                        &:nth-child(5) {
+                            min-width: 121px;
+                        }
+
+                        &:nth-child(6) {
+                            min-width: 105px;
+                        }
+
+                        &:nth-child(7) {
+                            min-width: 105px;
+                        }
+
+                        &:nth-child(8) {
+                            min-width: 185px;
+                        }
+
+                        &:nth-child(9) {
+                            min-width: 115px;
+                        }
+
+                        &:nth-child(10) {
+                            min-width: 160px;
+                        }
                     }
 
                     & tbody tr td {
@@ -208,7 +247,6 @@ body {
                         }
                         
                         &:nth-child(9) {
-                            min-width: 115px;
                             line-height: 1;
 
                             & div.status {
