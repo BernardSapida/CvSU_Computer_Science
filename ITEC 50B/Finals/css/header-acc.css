@@ -251,6 +251,12 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.n
   transition: all 350ms ease-in-out;
 }
 
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.navigation_profile div.navigation_profile-dropdown div.active p.icon i, body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.navigation_profile div.navigation_profile-dropdown div.active p.links a {
+  color: var(--yellow);
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
 body header.header_burgerhub nav.navigation_burgerhub div.navigation_right p.cart {
   margin-left: 5px;
   display: inline-block;

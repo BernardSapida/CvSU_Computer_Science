@@ -190,6 +190,13 @@ body {
                                 transition: all 350ms ease-in-out;
                             }
                         }
+
+                        & div.active {
+                            & p.icon i, & p.links a {
+                                color: var(--yellow);
+                                transition: all 350ms ease-in-out;
+                            }
+                        }
                     }
                 }
 
