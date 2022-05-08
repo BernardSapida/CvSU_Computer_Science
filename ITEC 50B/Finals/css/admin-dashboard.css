@@ -1,0 +1,263 @@
+body main {
+  margin: 100px auto;
+  max-width: 1350px;
+  width: 96%;
+}
+
+body main section.section_dashboard {
+  margin: 150px 0 50px 0;
+}
+
+body main section.section_dashboard div.container_dashboard-header {
+  margin: 20px auto;
+  max-width: 1340px;
+  width: 100%;
+}
+
+body main section.section_dashboard div.container_dashboard-header h1 {
+  font-weight: 400;
+}
+
+body main section.section_dashboard div.container_dashboard-header p {
+  font-weight: 300;
+  color: var(--secondary-light);
+}
+
+body main section.section_dashboard div.container_dashboard {
+  margin: auto;
+  max-width: 1340px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+body main section.section_dashboard div.container_dashboard div.container_cards {
+  padding: 20px;
+  max-width: 320px;
+  width: 100%;
+  background: var(--secondary-dark);
+  border-radius: 20px;
+}
+
+body main section.section_dashboard div.container_dashboard div.container_cards div.card-title-header, body main section.section_dashboard div.container_dashboard div.container_cards div.card-track {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.section_dashboard div.container_dashboard div.container_cards div.card-title-header p.title {
+  font-weight: 300;
+  line-height: 1;
+}
+
+body main section.section_dashboard div.container_dashboard div.container_cards div.card-title-header p.badges {
+  padding: 5px 8px;
+  font-size: 12px;
+  line-height: 1;
+  border-radius: 5px;
+}
+
+body main section.section_dashboard div.container_dashboard div.container_cards div.card-title-header p {
+  text-shadow: 0 0 5px var(--tertiary-dark);
+}
+
+body main section.section_dashboard div.container_dashboard div.container_cards div.card-title-header p.income {
+  background: var(--yellow);
+}
+
+body main section.section_dashboard div.container_dashboard div.container_cards div.card-title-header p.clients {
+  background: var(--danger);
+}
+
+body main section.section_dashboard div.container_dashboard div.container_cards div.card-title-header p.pending-orders {
+  background: var(--blue);
+}
+
+body main section.section_dashboard div.container_dashboard div.container_cards div.card-title-header p.completed-orders {
+  background: var(--green);
+}
+
+body main section.section_dashboard div.container_dashboard div.container_cards div.card-track p.track-label, body main section.section_dashboard div.container_dashboard div.container_cards div.card-track p.track-percentage {
+  font-weight: 200;
+  line-height: 1;
+  color: var(--secondary-light);
+}
+
+body main section.section_dashboard div.container_dashboard div.container_cards div.card-track p.track-percentage {
+  color: var(--yellow);
+}
+
+body main section.section_dashboard div.container_dashboard div.container_cards p.amount {
+  margin: 15px 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+body main section.section_dashboard div.container_dashboard div.container_cards div.progress-line {
+  width: 100%;
+  height: 7px;
+  background: var(--tertiary-light);
+  border-radius: 5px;
+}
+
+body main section.section_dashboard div.container_dashboard div.container_cards div.progress-line div.progress-line-amount {
+  height: 100%;
+  width: 55%;
+  border-radius: 5px;
+  background: var(--yellow);
+}
+
+body main section.section_dashboard div.container_dashboard div.container_cards div.progress-line div.progress-line-clients {
+  height: 100%;
+  width: 65%;
+  border-radius: 5px;
+  background: var(--danger);
+}
+
+body main section.section_dashboard div.container_dashboard div.container_cards div.progress-line div.progress-line-pending-orders {
+  height: 100%;
+  width: 65%;
+  border-radius: 5px;
+  background: var(--blue);
+}
+
+body main section.section_dashboard div.container_dashboard div.container_cards div.progress-line div.progress-line-total-orders {
+  height: 100%;
+  width: 65%;
+  border-radius: 5px;
+  background: var(--green);
+}
+
+body main section.section_tabular-orders {
+  margin: 50px auto;
+  max-width: 1340px;
+  width: 100%;
+}
+
+body main section.section_tabular-orders div.container_tabular-order {
+  position: relative;
+  height: 414px;
+  width: 100%;
+  background: var(--secondary-dark);
+  border-radius: 5px;
+  overflow-y: scroll;
+}
+
+body main section.section_tabular-orders div.container_tabular-order::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+body main section.section_tabular-orders div.container_tabular-order::-webkit-scrollbar-track {
+  background: var(--tertiary-light);
+}
+
+body main section.section_tabular-orders div.container_tabular-order::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+  border-radius: 10px;
+}
+
+body main section.section_tabular-orders div.container_tabular-order table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+body main section.section_tabular-orders div.container_tabular-order table caption {
+  padding: 10px 15px;
+  text-align: left;
+}
+
+body main section.section_tabular-orders div.container_tabular-order table thead {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: var(--table-head);
+}
+
+body main section.section_tabular-orders div.container_tabular-order table thead tr th, body main section.section_tabular-orders div.container_tabular-order table tbody tr td {
+  padding: 8px 15px;
+  text-align: left;
+}
+
+body main section.section_tabular-orders div.container_tabular-order table thead tr, body main section.section_tabular-orders div.container_tabular-order table tbody tr:not(:last-child) {
+  border-bottom: 1px solid var(--tertiary-light);
+}
+
+body main section.section_tabular-orders div.container_tabular-order table thead tr th {
+  font-weight: 400;
+}
+
+body main section.section_tabular-orders div.container_tabular-order table tbody tr td {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: var(--secondary-light);
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 1;
+}
+
+body main section.section_tabular-orders div.container_tabular-order table tbody tr td img {
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+}
+
+body main section.section_tabular-orders div.container_tabular-order table tbody tr td:nth-child(9) {
+  line-height: 1;
+}
+
+body main section.section_tabular-orders div.container_tabular-order table tbody tr td:nth-child(9) div.status {
+  margin-right: 5px;
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+}
+
+body main section.section_tabular-orders div.container_tabular-order table tbody tr td:nth-child(9) div.pending {
+  background: var(--danger);
+}
+
+body main section.section_tabular-orders div.container_tabular-order table tbody tr td:nth-child(9) div.processing {
+  background: var(--yellow);
+}
+
+body main section.section_tabular-orders div.container_tabular-order table tbody tr td:nth-child(9) div.delivering {
+  background: #0444f5;
+}
+
+body main section.section_tabular-orders div.container_tabular-order table tbody tr td:nth-child(9) div.completed {
+  background: #04f504;
+}
+
+body main section.section_tabular-orders div.container_tabular-order table tbody tr td:last-child button {
+  padding: 5px 15px;
+  border: 1px solid var(--secondary-light);
+  background-color: transparent;
+  color: var(--secondary-light);
+  font-size: 14px;
+}
+
+body main section.section_tabular-orders div.container_tabular-order table tbody tr td:last-child button:hover {
+  border: 1px solid var(--primary-light);
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+}
+/*# sourceMappingURL=admin-dashboard.css.map */
