@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="BERNARD V. SAPIDA, JAN MARICHIE Z. MOJICA, ZILDJIAN LEE G. LOREN, JOHN HERSON L. RADONES">
     <link rel="icon" type="image/any-icon" href="images/burgerhub.ico">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/header-acc.css">
     <link rel="stylesheet" href="css/user-acc.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
@@ -23,17 +23,49 @@
     <!-- BurgerHub Header -->
     <header class="header_burgerhub">
         <nav class="navigation_burgerhub">
-            <h1 class="restaurant-name">BurgerHub</h1>
+            <div class="navigation_logo">
+                <img src="images/logo/burger-logo.png" alt="BurgerHub Logo">
+                <h1 class="restaurant-name">BurgerHub</h1>
+            </div>
             <ul class="nav_links" id="nav_links">
                 <li class="links"><a href="index.html">Home</a></li>
                 <li class="links"><a href="about.html">About</a></li>
                 <li class="links"><a href="contact-us.html">Contact</a></li>
-                <li class="links"><a href="menu.html">Menu</a></li>
-                <li class="links active" id="signin"><a href="signin.html">Sign In</a></li>
+                <li class="links active"><a href="menu-acc.html">Menu</a></li>
+                <li class="links hide"><a href="user-acc.html">My Account</a></li>
+                <li class="links hide"><a href="cart-acc.html">My Cart</a></li>
+                <li class="links hide"><a href="order_status-acc.html">Order Status</a></li>
+                <li class="links hide"><a href="user-terms.html">Legal Terms</a></li>
+                <li class="links" id="signin"><a href="signout.html">Sign Out</a></li>
             </ul>
             <div class="navigation_right">
-                <button type="button" class="button_signin">SIGN IN</button>
-                <p class="cart"><a href="menu-acc.html" aria-label="Redirect to cart"><i class="fa-solid fa-cart-shopping"></i></a><span class="cart_orders-quantity">0</span></p>
+                <div class="navigation_profile">
+                    <p>Hi, Bernard!</p>
+                    <img src="images/profiles/Profile.png" alt="Profile" id="img-profile">
+                    <div class="navigation_profile-dropdown">
+                        <div class="dropdown_links">
+                            <p class="icon"><i class="fa-solid fa-user"></i></p>
+                            <p class="links"><a href="user-acc.html">My Account</a></p>
+                        </div>
+                        <div class="dropdown_links">
+                            <p class="icon"><i class="fa-solid fa-cart-shopping"></i></p>
+                            <p class="links"><a href="cart-acc.html">My Cart</a></p>
+                        </div>
+                        <div class="dropdown_links">
+                            <p class="icon"><i class="fa-solid fa-burger"></i></p>
+                            <p class="links"><a href="order_status-acc.html">Order Status</a></p>
+                        </div>
+                        <div class="dropdown_links">
+                            <p class="icon"><i class="fa-solid fa-circle-info"></i></p>
+                            <p class="links"><a href="">Legal Terms</a></p>
+                        </div>
+                        <div class="dropdown_links">
+                            <p class="icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></p>
+                            <p class="links"><a href="">Sign Out</a></p>
+                        </div>
+                    </div>
+                </div>
+                <p class="cart"><i class="fa-solid fa-cart-shopping"></i><span class="cart_orders-quantity">0</span></p>
                 <label for="hamburger-menu" class="navigation_responsive" id="navigation_responsive">
                     <input type="checkbox" id="hamburger-menu" aria-label="Hamburger Navigation">
                     <div class="hamburger-menu">
@@ -123,7 +155,10 @@
     <!-- BurgerHub Footer -->
     <footer class="footer_burgerhub">
         <section class="section_footer-description">
-            <h1 class="restaurant-name">BurgerHub</h1>
+            <div class="footer_logo">
+                <img src="images/logo/burger-logo.png" alt="">
+                <h1 class="restaurant-name"> BurgerHub</h1>
+            </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quos ad possimus aut rerum id molestiae.</p>
         </section>
         <section class="section_footer-contact">

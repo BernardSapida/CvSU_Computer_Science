@@ -23,17 +23,20 @@
     <!-- BurgerHub Header -->
     <header class="header_burgerhub">
         <nav class="navigation_burgerhub">
-            <h1 class="restaurant-name">BurgerHub</h1>
+            <div class="navigation_logo">
+                <img src="images/logo/burger-logo.png" alt="BurgerHub Logo">
+                <h1 class="restaurant-name">BurgerHub</h1>
+            </div>
             <ul class="nav_links" id="nav_links">
                 <li class="links"><a href="index.html">Home</a></li>
                 <li class="links"><a href="about.html">About</a></li>
                 <li class="links"><a href="contact-us.html">Contact</a></li>
                 <li class="links"><a href="menu.html">Menu</a></li>
-                <li class="links active" id="signin"><a href="signin.html">Sign In</a></li>
+                <li class="links" id="signin"><a href="signin.html">Sign In</a></li>
             </ul>
             <div class="navigation_right">
                 <button type="button" class="button_signin">SIGN IN</button>
-                <p class="cart"><a href="menu-acc.html" aria-label="Redirect to cart"><i class="fa-solid fa-cart-shopping"></i></a><span class="cart_orders-quantity">0</span></p>
+                <p class="cart"><i class="fa-solid fa-cart-shopping"></i><span class="cart_orders-quantity">0</span></p>
                 <label for="hamburger-menu" class="navigation_responsive" id="navigation_responsive">
                     <input type="checkbox" id="hamburger-menu" aria-label="Hamburger Navigation">
                     <div class="hamburger-menu">
@@ -63,7 +66,7 @@
                     <p class="amount">₱99,500</p>
                     <div class="card-track">
                         <p class="track-label">Total Income</p>
-                        <p class="track-percentage">55%</p>
+                        <p class="track-percentage income">55%</p>
                     </div>
                     <div class="progress-line">
                         <div class="progress-line-amount"></div>
@@ -77,7 +80,7 @@
                     <p class="amount">155,200</p>
                     <div class="card-track">
                         <p class="track-label">Total Clients</p>
-                        <p class="track-percentage">65%</p>
+                        <p class="track-percentage clients">65%</p>
                     </div>
                     <div class="progress-line">
                         <div class="progress-line-clients"></div>
@@ -91,7 +94,7 @@
                     <p class="amount">264</p>
                     <div class="card-track">
                         <p class="track-label">Total Pending Orders</p>
-                        <p class="track-percentage">30%</p>
+                        <p class="track-percentage pending-orders">30%</p>
                     </div>
                     <div class="progress-line">
                         <div class="progress-line-pending-orders"></div>
@@ -105,7 +108,7 @@
                     <p class="amount">53,000</p>
                     <div class="card-track">
                         <p class="track-label">Total Orders</p>
-                        <p class="track-percentage">85%</p>
+                        <p class="track-percentage completed-orders">85%</p>
                     </div>
                     <div class="progress-line">
                         <div class="progress-line-total-orders"></div>
@@ -261,7 +264,10 @@
     <!-- BurgerHub Footer -->
     <footer class="footer_burgerhub">
         <section class="section_footer-description">
-            <h1 class="restaurant-name">BurgerHub</h1>
+            <div class="footer_logo">
+                <img src="images/logo/burger-logo.png" alt="">
+                <h1 class="restaurant-name"> BurgerHub</h1>
+            </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quos ad possimus aut rerum id molestiae.</p>
         </section>
         <section class="section_footer-contact">

@@ -91,14 +91,26 @@ body main section.section_dashboard div.container_dashboard div.container_cards 
   background: var(--green);
 }
 
-body main section.section_dashboard div.container_dashboard div.container_cards div.card-track p.track-label, body main section.section_dashboard div.container_dashboard div.container_cards div.card-track p.track-percentage {
+body main section.section_dashboard div.container_dashboard div.container_cards div.card-track p.track-label {
   font-weight: 200;
   line-height: 1;
   color: var(--secondary-light);
 }
 
-body main section.section_dashboard div.container_dashboard div.container_cards div.card-track p.track-percentage {
+body main section.section_dashboard div.container_dashboard div.container_cards div.card-track p.income {
   color: var(--yellow);
+}
+
+body main section.section_dashboard div.container_dashboard div.container_cards div.card-track p.clients {
+  color: var(--danger);
+}
+
+body main section.section_dashboard div.container_dashboard div.container_cards div.card-track p.pending-orders {
+  color: var(--blue);
+}
+
+body main section.section_dashboard div.container_dashboard div.container_cards div.card-track p.completed-orders {
+  color: var(--green);
 }
 
 body main section.section_dashboard div.container_dashboard div.container_cards p.amount {

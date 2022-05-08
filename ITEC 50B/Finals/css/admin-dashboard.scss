@@ -80,14 +80,26 @@ body {
                     }
 
                     & div.card-track {
-                        & p.track-label, & p.track-percentage {
+                        & p.track-label {
                             font-weight: 200;
                             line-height: 1;
                             color: var(--secondary-light);
                         }
 
-                        & p.track-percentage {
+                        & p.income {
                             color: var(--yellow);
+                        }
+
+                        & p.clients {
+                            color: var(--danger);
+                        }
+
+                        & p.pending-orders {
+                            color: var(--blue);
+                        }
+
+                        & p.completed-orders {
+                            color: var(--green);
                         }
                     }
 

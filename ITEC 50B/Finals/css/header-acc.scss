@@ -115,6 +115,10 @@ body {
             & ul.nav_links {
                 width: max-content;
 
+                & li.hide {
+                    display: none !important;
+                }
+
                 & li.active a {
                     color: var(--yellow);
                 }
@@ -144,29 +148,59 @@ body {
             & div.navigation_right {
                 width: max-content;
                 display: flex;
-                align-items: center;
 
-                & button.button_signin, & p.cart {
-                    display: inline-block;
-                }
+                & div.navigation_profile {
+                    position: relative;
+                    display: flex;
+                    gap: 5px;
 
-                & button.button_signin {
-                    margin: 5px;
-                    padding: 3px 15px;
-                    background-color: var(--yellow);
-                    text-shadow: 0 0 5px var(--tertiary-dark);
-
-                    & a {
-                        text-decoration: none;
+                    & img {
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 50%;
+                        cursor: pointer;
                     }
 
-                    &:hover {
-                        background-color: var(--yellow-darken);
+                    & div.navigation_profile-dropdown {
+                        display: none;
+                        width: 120px;
+                        position: absolute;
+                        top: 40px;
+                        right: 0;
+                        background: var(--secondary-dark);
+                        border: 1px solid var(--tertiary-light);
+                        border-radius: 5px;
+
+                        & div.dropdown_links {
+                            padding: 5px 10px;
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+
+                            & p.links {
+                                font-size: 12px;
+
+                                & a {
+                                    text-decoration: none;
+                                }
+                            }
+
+                            &:hover p.icon i, &:hover p.links a {
+                                color: var(--yellow);
+                                transition: all 350ms ease-in-out;
+                            }
+                        }
+                    }
+
+                    & div.show-dropdown {
+                        display: block !important;
+                        transition: all 350ms ease-in-out;
                     }
                 }
 
                 & p.cart {
                     margin-left: 5px;
+                    display: inline-block;
                     position: relative;
                     height: 30px;
                     width: 30px;
@@ -217,6 +251,10 @@ body {
                 justify-content: space-between;
                 align-items: center;
 
+                & div.navigation_logo {
+                    display: none;
+                }
+
                 & ul.nav_links {
                     display: none;
                     margin: 50px 0;
@@ -243,16 +281,23 @@ body {
                 }
 
                 & div.navigation_right {
-                    width: 50%;
+                    width: 100%;
 
-                    & button.button_signin, & p.cart {
+                    & div.navigation_profile {
+                        display: flex;
+                        gap: 5px;
+                        order: 2;
+                    }
+
+                    & p.cart {
                         display: none;
                     }
 
                     & .navigation_responsive {
                         display: block;
                         width: max-content;
-                        margin-left: auto;
+                        margin-right: auto;
+                        order: 1;
 
                         & input[type="checkbox"] {
                             display: none;
@@ -326,18 +371,9 @@ body {
 
             & nav.navigation_burgerhub {
                 & div.navigation_logo {
-                    & img {
-                        max-width: 50px;
-                        width: 100%;
-                    }
-    
                     & h1.restaurant-name {
                         display: none;
                     }
-                }
-
-                & div.navigation_right {
-                    width: max-content;
                 }
             }
         }

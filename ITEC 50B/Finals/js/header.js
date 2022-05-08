@@ -9,6 +9,10 @@ $(document).ready(function(){
       $("header.header_burgerhub").toggleClass("dark", $('#hamburger-menu')[0].checked);
     });
 
+    $("#img-profile").click(function(){
+      $("div.navigation_profile-dropdown").toggleClass("show-dropdown");
+    });
+
     $(".button_signin").click(function() {
       window.location.assign("signin.html");
     });
