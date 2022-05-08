@@ -10,7 +10,7 @@ $(document).ready(function(){
     });
 
     $("#img-profile").click(function(){
-      $("div.navigation_profile-dropdown").toggleClass("show-dropdown");
+      $("div.navigation_profile-dropdown").fadeToggle();
     });
 
     $(".button_signin").click(function() {
