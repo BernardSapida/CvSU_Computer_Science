@@ -44,6 +44,7 @@ body main section.section_dashboard div.container_dashboard div.container_cards 
   width: 100%;
   background: var(--secondary-dark);
   border-radius: 20px;
+  border: 1px solid var(--tertiary-light);
 }
 
 body main section.section_dashboard div.container_dashboard div.container_cards div.card-title-header, body main section.section_dashboard div.container_dashboard div.container_cards div.card-track {

@@ -37,6 +37,7 @@ body {
                     width: 100%;
                     background: var(--secondary-dark);
                     border-radius: 20px;
+                    border: 1px solid var(--tertiary-light);
 
                     & div.card-title-header, & div.card-track {
                         margin-bottom: 15px;
