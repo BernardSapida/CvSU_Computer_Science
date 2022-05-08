@@ -10,7 +10,7 @@ body main section.section_signin {
 
 body main section.section_signin div.container_signin {
   padding: 50px;
-  margin-inline: auto;
+  margin: auto;
   background-color: var(--secondary-dark);
   max-width: 600px;
   width: 90%;

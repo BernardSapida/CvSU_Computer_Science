@@ -100,7 +100,7 @@ body footer.footer_burgerhub section.section_footer-accounts ul {
 }
 
 body footer.footer_burgerhub section.section_footer-accounts ul li {
-  margin-inline: 3px;
+  margin: 3px;
   padding: 3px 0;
   width: 32px;
   display: inline-block;

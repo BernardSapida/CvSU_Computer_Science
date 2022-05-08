@@ -65,7 +65,7 @@ body main section.section_landing-page .container_landing-page .container_descri
 }
 
 body main section.section_landing-page .container_landing-page .container_description p.discount {
-  margin-inline: auto;
+  margin: auto;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -95,7 +95,7 @@ body main section.section_landing-page .container_landing-page .container_descri
 }
 
 body main section.section_landing-page .container_landing-page .container_description div.container_contact-info .accounts ul li {
-  margin-inline: 2px;
+  margin: 2px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -198,7 +198,7 @@ body main section.section_top-seller-burger div.container_top-burger div.top-bur
   position: absolute;
   top: -70px;
   display: block;
-  margin-inline: auto;
+  margin: auto;
   margin-bottom: 20px;
   height: 150px;
 }
@@ -486,7 +486,7 @@ body main section.section_download-menu {
 
 body main section.section_download-menu div.container_download-menu {
   padding: 0 40px;
-  margin-inline: auto;
+  margin: auto;
   max-width: 1100px;
   width: 100%;
   display: -webkit-box;
@@ -504,7 +504,7 @@ body main section.section_download-menu div.container_download-menu {
 }
 
 body main section.section_download-menu div.container_download-menu h1, body main section.section_download-menu div.container_download-menu button {
-  margin-inline: 10px;
+  margin: 0 10px;
 }
 
 body main section.section_download-menu div.container_download-menu button {
@@ -556,7 +556,7 @@ body main section.section_download-menu div.container_download-menu button:hover
     font-size: 16px;
   }
   body main section.section_landing-page .container_landing-page .container_description p.discount {
-    margin-inline: auto;
+    margin: auto;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
@@ -611,7 +611,7 @@ body main section.section_download-menu div.container_download-menu button:hover
     position: absolute;
     top: -70px;
     display: block;
-    margin-inline: auto;
+    margin: auto;
     margin-bottom: 20px;
     height: 150px;
   }
@@ -673,7 +673,7 @@ body main section.section_download-menu div.container_download-menu button:hover
     font-size: 14px;
   }
   body main section.section_landing-page .container_landing-page .container_description p.discount {
-    margin-inline: auto;
+    margin: auto;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;

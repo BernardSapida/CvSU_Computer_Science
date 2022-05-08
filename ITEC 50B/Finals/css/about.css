@@ -69,7 +69,7 @@ body main section.section_mvv {
 }
 
 body main section.section_mvv hr {
-  margin-inline: auto;
+  margin: auto;
   border: none;
   height: 1.5px;
   width: 96%;
@@ -130,7 +130,7 @@ body main section.section_products-services {
 }
 
 body main section.section_products-services hr {
-  margin-inline: auto;
+  margin: auto;
   border: none;
   height: 1.5px;
   width: 96%;
