@@ -352,7 +352,12 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navi
     display: none;
   }
   body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
