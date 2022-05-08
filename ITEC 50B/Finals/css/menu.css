@@ -73,7 +73,7 @@ body main section.section_featured-products div.container_featured-products div.
 
 body main section.section_featured-products div.container_featured-products div.container_products div.container_image img {
   display: block;
-  margin-inline: auto;
+  margin: auto;
   max-width: 220px;
   width: 100%;
 }
@@ -199,7 +199,7 @@ body main section.section_burgers-menu div.container_burgers-menu div.container_
 
 body main section.section_burgers-menu div.container_burgers-menu div.container_burgers div.container_image img {
   display: block;
-  margin-inline: auto;
+  margin: auto;
   max-width: 200px;
   width: 100%;
 }
@@ -325,7 +325,7 @@ body main section.section_pizza-menu div.container_pizza-menu div.container_pizz
 
 body main section.section_pizza-menu div.container_pizza-menu div.container_pizza div.container_image img {
   display: block;
-  margin-inline: auto;
+  margin: auto;
   max-width: 200px;
   width: 100%;
 }
@@ -451,7 +451,7 @@ body main section.section_fries-menu div.container_fries-menu div.container_frie
 
 body main section.section_fries-menu div.container_fries-menu div.container_fries div.container_image img {
   display: block;
-  margin-inline: auto;
+  margin: auto;
   max-height: 140px;
   height: 100%;
   max-width: 200px;
@@ -579,7 +579,7 @@ body main section.section_drinks-menu div.container_drinks-menu div.container_dr
 
 body main section.section_drinks-menu div.container_drinks-menu div.container_drinks div.container_image img {
   display: block;
-  margin-inline: auto;
+  margin: auto;
   max-height: 200px;
   height: 100%;
   max-width: 200px;

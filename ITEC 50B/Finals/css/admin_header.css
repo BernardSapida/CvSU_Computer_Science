@@ -155,42 +155,6 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_logo h1.res
   line-height: 1;
 }
 
-body header.header_burgerhub nav.navigation_burgerhub ul.nav_links {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
-
-body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li.hide {
-  display: none !important;
-}
-
-body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li.active a {
-  color: var(--yellow);
-}
-
-body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li#signin {
-  display: none;
-}
-
-body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li.links {
-  padding: 0 8px;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 300;
-  text-align: center;
-}
-
-body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li.links a {
-  text-decoration: none;
-  -webkit-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
-}
-
-body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li.links a:hover {
-  color: var(--yellow);
-}
-
 body header.header_burgerhub nav.navigation_burgerhub div.navigation_right {
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -217,7 +181,7 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.n
 
 body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.navigation_profile div.navigation_profile-dropdown {
   display: none;
-  width: 120px;
+  width: 160px;
   position: absolute;
   top: 40px;
   right: 0;
@@ -237,6 +201,14 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.n
   gap: 5px;
 }
 
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.navigation_profile div.navigation_profile-dropdown div.dropdown_links p.icon {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 20px;
+  width: 20px;
+}
+
 body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.navigation_profile div.navigation_profile-dropdown div.dropdown_links p.links {
   font-size: 12px;
 }
@@ -253,46 +225,6 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.n
 
 body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.navigation_profile div.navigation_profile-dropdown div.active p.icon i, body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.navigation_profile div.navigation_profile-dropdown div.active p.links a {
   color: var(--yellow);
-  -webkit-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
-}
-
-body header.header_burgerhub nav.navigation_burgerhub div.navigation_right p.cart {
-  margin-left: 5px;
-  display: inline-block;
-  position: relative;
-  height: 30px;
-  width: 30px;
-  background-color: var(--secondary-dark);
-  border-radius: 50%;
-  cursor: pointer;
-  -webkit-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
-}
-
-body header.header_burgerhub nav.navigation_burgerhub div.navigation_right p.cart:hover {
-  background-color: var(--secondary-light);
-}
-
-body header.header_burgerhub nav.navigation_burgerhub div.navigation_right p.cart .fa-cart-shopping {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 12px;
-}
-
-body header.header_burgerhub nav.navigation_burgerhub div.navigation_right p.cart span.cart_orders-quantity {
-  position: absolute;
-  bottom: -6px;
-  right: -6px;
-  height: 16px;
-  width: 16px;
-  background: var(--danger);
-  text-align: center;
-  border-radius: 10px;
-  font-size: 10px;
 }
 
 body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive {
@@ -313,29 +245,6 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navi
   body header.header_burgerhub nav.navigation_burgerhub div.navigation_logo {
     display: none;
   }
-  body header.header_burgerhub nav.navigation_burgerhub ul.nav_links {
-    display: none;
-    margin: 50px 0;
-    opacity: 0;
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-    width: 100%;
-    height: 100vh;
-  }
-  body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li#signin {
-    display: block;
-  }
-  body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li.links {
-    padding: 8px 0;
-    width: 100%;
-    display: block;
-    font-size: 24px;
-  }
-  body header.header_burgerhub nav.navigation_burgerhub ul.nav_links.open {
-    opacity: 1;
-    display: block !important;
-  }
   body header.header_burgerhub nav.navigation_burgerhub div.navigation_right {
     width: 100%;
   }
@@ -347,9 +256,6 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navi
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-  }
-  body header.header_burgerhub nav.navigation_burgerhub div.navigation_right p.cart {
-    display: none;
   }
   body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive {
     display: -webkit-box;
@@ -426,12 +332,6 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navi
   }
   body header.header_burgerhub nav.navigation_burgerhub div.navigation_logo h1.restaurant-name {
     display: none;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li.links {
-    font-size: 18px;
   }
 }
 
@@ -584,4 +484,4 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navi
             transform: scale(1);
   }
 }
-/*# sourceMappingURL=header-acc.css.map */
+/*# sourceMappingURL=admin_header.css.map */

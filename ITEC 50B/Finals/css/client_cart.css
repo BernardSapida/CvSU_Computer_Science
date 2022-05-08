@@ -16,7 +16,7 @@ body main section.section_cart-acc > h1 {
 }
 
 body main section.section_cart-acc div.container_cart-acc {
-  margin-inline: auto;
+  margin: auto;
   max-width: 1300px;
   width: 100%;
   display: -webkit-box;
@@ -362,4 +362,4 @@ body main section.section_cart-acc div.container_cart-acc div.container_cart div
     margin-bottom: 20px !important;
   }
 }
-/*# sourceMappingURL=cart-acc.css.map */
+/*# sourceMappingURL=client_cart.css.map */

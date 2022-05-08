@@ -111,11 +111,11 @@ body header.header_burgerhub {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  padding: 15px 40px;
+  padding: 20px 40px;
   background-color: transparent;
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
-  z-index: 5;
+  z-index: 1;
 }
 
 body header.header_burgerhub nav.navigation_burgerhub {
@@ -161,6 +161,10 @@ body header.header_burgerhub nav.navigation_burgerhub ul.nav_links {
   width: max-content;
 }
 
+body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li.hide {
+  display: none !important;
+}
+
 body header.header_burgerhub nav.navigation_burgerhub ul.nav_links li.active a {
   color: var(--yellow);
 }
@@ -194,32 +198,66 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.navigation_profile {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.navigation_profile img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.navigation_profile div.navigation_profile-dropdown {
+  display: none;
+  width: 120px;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: var(--secondary-dark);
+  border: 1px solid var(--tertiary-light);
+  border-radius: 5px;
+}
+
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.navigation_profile div.navigation_profile-dropdown div.dropdown_links {
+  padding: 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 5px;
 }
 
-body header.header_burgerhub nav.navigation_burgerhub div.navigation_right button.button_signin, body header.header_burgerhub nav.navigation_burgerhub div.navigation_right p.cart {
-  display: inline-block;
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.navigation_profile div.navigation_profile-dropdown div.dropdown_links p.links {
+  font-size: 12px;
 }
 
-body header.header_burgerhub nav.navigation_burgerhub div.navigation_right button.button_signin {
-  margin: 5px;
-  padding: 3px 15px;
-  background-color: var(--yellow);
-  text-shadow: 0 0 5px var(--tertiary-dark);
-}
-
-body header.header_burgerhub nav.navigation_burgerhub div.navigation_right button.button_signin a {
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.navigation_profile div.navigation_profile-dropdown div.dropdown_links p.links a {
   text-decoration: none;
 }
 
-body header.header_burgerhub nav.navigation_burgerhub div.navigation_right button.button_signin:hover {
-  background-color: var(--yellow-darken);
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.navigation_profile div.navigation_profile-dropdown div.dropdown_links:hover p.icon i, body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.navigation_profile div.navigation_profile-dropdown div.dropdown_links:hover p.links a {
+  color: var(--yellow);
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.navigation_profile div.navigation_profile-dropdown div.active p.icon i, body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.navigation_profile div.navigation_profile-dropdown div.active p.links a {
+  color: var(--yellow);
 }
 
 body header.header_burgerhub nav.navigation_burgerhub div.navigation_right p.cart {
   margin-left: 5px;
+  display: inline-block;
   position: relative;
   height: 30px;
   width: 30px;
@@ -270,6 +308,9 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navi
         -ms-flex-align: center;
             align-items: center;
   }
+  body header.header_burgerhub nav.navigation_burgerhub div.navigation_logo {
+    display: none;
+  }
   body header.header_burgerhub nav.navigation_burgerhub ul.nav_links {
     display: none;
     margin: 50px 0;
@@ -294,17 +335,34 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navi
     display: block !important;
   }
   body header.header_burgerhub nav.navigation_burgerhub div.navigation_right {
-    width: 50%;
+    width: 100%;
   }
-  body header.header_burgerhub nav.navigation_burgerhub div.navigation_right button.button_signin, body header.header_burgerhub nav.navigation_burgerhub div.navigation_right p.cart {
+  body header.header_burgerhub nav.navigation_burgerhub div.navigation_right div.navigation_profile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  body header.header_burgerhub nav.navigation_burgerhub div.navigation_right p.cart {
     display: none;
   }
   body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
   body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navigation_responsive input[type="checkbox"] {
     display: none;
@@ -362,19 +420,10 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navi
 
 @media only screen and (max-width: 600px) {
   body header.header_burgerhub {
-    padding: 15px 20px;
-  }
-  body header.header_burgerhub nav.navigation_burgerhub div.navigation_logo img {
-    max-width: 50px;
-    width: 100%;
+    padding: 20px 20px;
   }
   body header.header_burgerhub nav.navigation_burgerhub div.navigation_logo h1.restaurant-name {
     display: none;
-  }
-  body header.header_burgerhub nav.navigation_burgerhub div.navigation_right {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
   }
 }
 
@@ -533,4 +582,4 @@ body header.header_burgerhub nav.navigation_burgerhub div.navigation_right .navi
             transform: scale(1);
   }
 }
-/*# sourceMappingURL=header.css.map */
+/*# sourceMappingURL=client_header.css.map */
