@@ -131,14 +131,14 @@ body main section.section_dashboard div.container_dashboard div.container_cards 
 
 body main section.section_dashboard div.container_dashboard div.container_cards div.progress-line div.progress-line-pending-orders {
   height: 100%;
-  width: 65%;
+  width: 30%;
   border-radius: 5px;
   background: var(--blue);
 }
 
 body main section.section_dashboard div.container_dashboard div.container_cards div.progress-line div.progress-line-total-orders {
   height: 100%;
-  width: 65%;
+  width: 85%;
   border-radius: 5px;
   background: var(--green);
 }
