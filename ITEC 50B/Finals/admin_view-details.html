@@ -41,7 +41,7 @@
                     <div class="navigation_profile-dropdown">
                         <div class="dropdown_links">
                             <p class="icon"><i class="fa-solid fa-user"></i></p>
-                            <p class="links"><a href="client_account.html">My Account</a></p>
+                            <p class="links"><a href="client_user.html">My Account</a></p>
                         </div>
                         <div class="dropdown_links active">
                             <p class="icon"><i class="fa-solid fa-cart-shopping"></i></p>
@@ -78,7 +78,7 @@
     <main>
         <!-- BurgerHub Cart Users -->
         <section class="section_cart-acc">
-            <h1>Order Cart</h1>
+            <h1>Order Details</h1>
             <div class="container_cart-acc">
                 <div class="container_cart-form">
                     <div class="container_form-header">
@@ -93,31 +93,37 @@
                         <form action="" method="POST">
                             <div class="container_fullname">
                                 <label for="client_firstname">
-                                    <p>First Name <span>*</span></p>
-                                    <input type="text" name="client_firstname" id="client_firstname" placeholder="Enter your first name" autocomplete="given-name">
+                                    <p>First Name</p>
+                                    <input type="text" name="client_firstname" id="client_firstname" value="Bernard" disabled>
                                 </label>
                                 <label for="client_lastname">
-                                    <p>Last Name <span>*</span></p>
-                                    <input type="text" name="client_lastname" id="client_lastname" placeholder="Enter your last name" autocomplete="family-name">
+                                    <p>Last Name</p>
+                                    <input type="text" name="client_lastname" id="client_lastname" value="Sapida" disabled>
                                 </label>
                             </div>
                             <label for="client_address">
-                                <p>Street Address <span>*</span></p>
-                                <input type="text" name="client_address" id="client_address" placeholder="Enter your address" autocomplete="street-address">
+                                <p>Street Address</p>
+                                <input type="text" name="client_address" id="client_address" value="B12 L24 Phase-C The Istana Subdivision" disabled>
                             </label>
                             <div class="container_city-country">
                                 <label for="client_city">
-                                    <p>City <span>*</span></p>
-                                    <input type="text" name="client_city" id="client_city" placeholder="Enter your city" autocomplete="address-line1">
+                                    <p>City</p>
+                                    <input type="text" name="client_city" id="client_city" value="Imus" disabled>
                                 </label>
                                 <label for="client_country">
-                                    <p>Barangay <span>*</span></p>
-                                    <input type="text" name="client_country" id="client_country" placeholder="Enter your barangay" autocomplete="address-line2">
+                                    <p>Barangay</p>
+                                    <input type="text" name="client_country" id="client_country" value="Malagasang 1-F" disabled>
                                 </label>
                             </div>
-                            <div class="container_cart-btn">
-                                <button type="button">Cancel</button>
-                                <button type="submit">Submit</button>
+                            <div class="container_orderNumber-trackingNumber">
+                                <label for="client_orderNumber">
+                                    <p>Order No</p>
+                                    <input type="text" name="client_orderNumber" id="client_orderNumber" value="1954874974" disabled>
+                                </label>
+                                <label for="client_trackingNumber">
+                                    <p>Tracking Number</p>
+                                    <input type="text" name="client_trackingNumber" id="client_trackingNumber" value="AN2AS9DAF212SA" disabled>
+                                </label>
                             </div>
                         </form>
                     </div>
@@ -125,7 +131,6 @@
                 <div class="container_cart">
                     <div class="container_cart-header">
                         <h1>Your Order</h1>
-                        <p class="edit"><i class="fa-solid fa-pen-to-square"></i> Edit</p>
                     </div>
                     <hr>
                     <div class="container_cart-items">

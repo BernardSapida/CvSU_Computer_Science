@@ -92,7 +92,7 @@ body main section.section_cart-acc div.container_cart-acc div.container_cart-for
   color: var(--secondary-light);
 }
 
-body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form form div.container_fullname, body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form form div.container_city-country {
+body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form form div.container_fullname, body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form form div.container_city-country, body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form form div.container_orderNumber-trackingNumber {
   margin: -20px 0 !important;
   width: 100%;
   display: -webkit-box;
