@@ -64,11 +64,15 @@ body {
                                 font-weight: 300;
                                 color: var(--secondary-light);
 
-                                &.error_message {
+                                &.err_name, &.err_email, &.err_subject, &.err_message {
                                     display: none;
                                     padding: 0;
-                                    color: var(--danger);
+                                    color: var(--danger) !important;
                                     font-size: 12px;
+                                }
+
+                                &.display_err {
+                                    display: block !important;
                                 }
                             }
 

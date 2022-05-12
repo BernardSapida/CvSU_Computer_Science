@@ -70,11 +70,15 @@ body main section.section_contact-form div.container_contact div.container_form 
   color: var(--secondary-light);
 }
 
-body main section.section_contact-form div.container_contact div.container_form form label p.error_message {
+body main section.section_contact-form div.container_contact div.container_form form label p.err_name, body main section.section_contact-form div.container_contact div.container_form form label p.err_email, body main section.section_contact-form div.container_contact div.container_form form label p.err_subject, body main section.section_contact-form div.container_contact div.container_form form label p.err_message {
   display: none;
   padding: 0;
-  color: var(--danger);
+  color: var(--danger) !important;
   font-size: 12px;
+}
+
+body main section.section_contact-form div.container_contact div.container_form form label p.display_err {
+  display: block !important;
 }
 
 body main section.section_contact-form div.container_contact div.container_form form label input[type="text"], body main section.section_contact-form div.container_contact div.container_form form label textarea {

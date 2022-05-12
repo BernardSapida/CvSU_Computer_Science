@@ -15,6 +15,19 @@ body main section.section_cart-acc > h1 {
   font-weight: 700;
 }
 
+body main section.section_cart-acc div.error_empty-cart {
+  margin: 20px auto;
+  max-width: 1250px;
+  width: 100%;
+  background-color: var(--danger);
+  border-radius: 5px;
+}
+
+body main section.section_cart-acc div.error_empty-cart p {
+  padding: 20px;
+  line-height: 1;
+}
+
 body main section.section_cart-acc div.container_cart-acc {
   margin: auto;
   max-width: 1300px;
@@ -80,6 +93,12 @@ body main section.section_cart-acc div.container_cart-acc div.container_cart-for
 
 body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form form label p span {
   color: var(--danger);
+}
+
+body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form form label p.err_message {
+  padding: 0;
+  color: var(--danger) !important;
+  font-size: 12px;
 }
 
 body main section.section_cart-acc div.container_cart-acc div.container_cart-form div.container_form form label input[type="text"] {

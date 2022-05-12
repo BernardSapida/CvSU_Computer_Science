@@ -21,6 +21,7 @@ CREATE TABLE `client_messages` (
   `image` varchar(255) NOT NULL,
   `fullname` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `subject` varchar(255) NOT NULL,
   `message` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -30,8 +31,8 @@ CREATE TABLE `client_accounts` (
   `image` varchar(255) NOT NULL,
   `fullname` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `client_password` varchar(255) NOT NULL,
-  `client_type` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL,
   `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -40,9 +41,12 @@ CREATE TABLE `client_orders` (
   `clientid` varchar(255) NOT NULL,
   `firstname` varchar(255) NOT NULL,
   `lastname` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
   `street address` varchar(255) NOT NULL,
   `city` varchar(255) NOT NULL,
   `barangay` varchar(255) NOT NULL,
+  `trackingNo` varchar(255) NOT NULL,
+  `orderNo` varchar(255) NOT NULL,
   `item1` int(100) NOT NULL,
   `item2` int(100) NOT NULL,
   `item3` int(100) NOT NULL,
@@ -72,13 +76,17 @@ CREATE TABLE `client_orders` (
   `item27` int(100) NOT NULL,
   `quantity` int(100) NOT NULL,
   `total` double NOT NULL,
-  `order_status` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL,
   `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `client_accounts` (`id`, `clientid`, `image`, `fullname`, `email`, `client_password`, `client_type`, `date`) VALUES
-(1, '638916278d630b6121', 'default.jpg', 'Bernard Sapida', 'burgerhub@gmail.com', 'burgerhub07', 'admin', '2022-05-09 12:50:57'),
-(2, '297196278d6238832f', 'default.jpg', 'Bernard Sapida', 'bernard.sapida@cvsu.edu.ph', 'password123', 'client', '2022-05-09 14:39:41');
+INSERT INTO `client_information` (`id`, `clientid`, `image`, `firstname`, `lastname`, `email`, `mobile`, `street address`, `city`, `barangay`) VALUES
+(1, '638916278d630b6121', 'default.jpg', 'Bernard', 'Sapida', 'burgerhub@gmail.com', '', '', '', ''),
+(2, '297196278d6238832f', 'default.jpg', 'Bernard', 'Sapida', 'bernard.sapida@cvsu.edu.ph', '', '', '', '');
+
+INSERT INTO `client_accounts` (`id`, `clientid`, `image`, `fullname`, `email`, `password`, `type`, `date`) VALUES
+(1, '638916278d630b6121', 'default.jpg', 'Bernard Sapida', 'burgerhub@gmail.com', '$2y$10$uAZNcNZonOAGcZFiVnYCsOWWa7Dy8afLmgGac5iboe/PFZtMuNzyW', 'admin', '2022-05-09 12:50:57'),
+(2, '297196278d6238832f', 'default.jpg', 'Bernard Sapida', 'bernard.sapida@cvsu.edu.ph', '$2y$10$FKMuc5MuVh5dGhPKmtUPeemOvTd9thIFwjZKuR0WuLiWh6Aqy5OfG', 'client', '2022-05-09 14:39:41');
 
 ALTER TABLE `client_information`
   ADD PRIMARY KEY (`id`);

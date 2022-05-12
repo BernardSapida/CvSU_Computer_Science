@@ -4,7 +4,7 @@ body {
         max-width: 1350px;
         width: 96%;
 
-        & section.section_user-account {
+        & section.section_client-account {
             margin: 150px auto 50px auto;
             max-width: 700px;
             width: 100%;
@@ -22,11 +22,49 @@ body {
                 background: var(--tertiary-dark);
             }
 
-            & div.container_user-account {
+            & div.container_client-account {
                 & form {
+                    & div.profile_image {
+                        margin: auto;
+                        position: relative;
+                        width: max-content;
+                        border-radius: 50%;
+                        
+                        & div.camera-icon {
+                            position: absolute;
+                            display: grid;
+                            place-items: center;
+                            right: 0;
+                            bottom: 0;
+                            height: 40px;
+                            width: 40px;
+                            background: var(--secondary-dark);
+                            border: 1px solid var(--secondary-light);
+                            border-radius: 50%;
+                            cursor: pointer;
+                            transition: all 350ms ease-in-out;
+
+                            &:hover {
+                                background: var(--table-head);
+                            }
+                        }
+
+                        & input[type="file"] {
+                            display: none;
+                        }
+
+                        & img {
+                            display: block;
+                            margin: auto;
+                            max-width: 120px;
+                            width: 100%;
+                            border-radius: 50%;
+                        }
+                    }
+
                     & label {
                         display: block;
-                        margin: 15px 0;
+                        margin-top: 15px;
                         width: 100%;
 
                         & p {
@@ -37,6 +75,12 @@ body {
                             & span {
                                 color: var(--danger);
                             }
+
+                            &.err_message {
+                                padding: 0;
+                                color: var(--danger) !important;
+                                font-size: 12px;
+                            }
                         }
 
                         & input[type="text"] {
@@ -45,18 +89,19 @@ body {
                             background-color: var(--secondary-dark);
                             border: none;
                             border-radius: 5px;
+                            font-weight: 300;
+                            color: var(--secondary-light);
                         }
 
                     }
 
-                    & div.container_user-account-fullname {
+                    & div.container_client-account-fullname, & div.container_client-account-city-barangay {
                         display: flex;
                         justify-content: center;
                         gap: 10px;
-                        margin-bottom: -15px;
                     }
 
-                    & button#user-account-submit {
+                    & button#client-account-submit {
                         margin-top: 15px;
                         padding: 7px 0;
                         width: 100%;
@@ -71,7 +116,7 @@ body {
             }
         }
 
-        & section.section_user-password {
+        & section.section_client-password {
             margin: 50px auto;
             max-width: 700px;
             width: 100%;
@@ -89,7 +134,7 @@ body {
                 background: var(--tertiary-dark);
             }
 
-            & div.container_user-password {
+            & div.container_client-password {
                 & form {
                     & > label {
                         display: none;
@@ -104,7 +149,7 @@ body {
                             }
                         }
 
-                        & input[type="text"]#user-email-hidden{
+                        & input[type="text"]#client-email-hidden{
                             padding: 7px 20px;
                             width: 100%;
                             background-color: var(--secondary-dark);
@@ -119,10 +164,10 @@ body {
                         }
                     }
 
-                    & div.container_user-password {
+                    & div.container_password {
                         & label {
                             display: block;
-                            margin: 15px 0;
+                            margin-top: 15px;
                             width: 100%;
     
                             & p {
@@ -133,9 +178,15 @@ body {
                                 & span {
                                     color: var(--danger);
                                 }
+
+                                &.err_message {
+                                    padding: 0;
+                                    color: var(--danger) !important;
+                                    font-size: 12px;
+                                }
                             }
     
-                            & div:is(.container_user-password-current, .container_user-password-new, .container_user-password-confirm) {
+                            & div:is(.container_client-password-current, .container_client-password-new, .container_client-password-confirm) {
                                 position: relative;
 
                                 & input[type="password"], & input[type="text"] {
@@ -169,7 +220,7 @@ body {
                             }
                         }
 
-                        & button#user-password-submit {
+                        & button#client-password-submit {
                             margin-top: 15px;
                             padding: 7px 0;
                             width: 100%;
@@ -191,7 +242,7 @@ body {
 (max-width: 320px) {
     body {
         & main {
-            & section.section_user-account {
+            & section.section_client-account {
                 margin-top: 120px;
             }
         }

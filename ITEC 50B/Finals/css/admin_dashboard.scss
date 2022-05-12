@@ -69,7 +69,7 @@ body {
                                 background: var(--danger);
                             }
 
-                            &.pending-orders {
+                            &.incomplete-orders {
                                 background: var(--blue);
                             }
 
@@ -94,7 +94,7 @@ body {
                             color: var(--danger);
                         }
 
-                        & p.pending-orders {
+                        & p.incomplete-orders {
                             color: var(--blue);
                         }
 
@@ -130,7 +130,7 @@ body {
                             background: var(--danger);
                         }
 
-                        & div.progress-line-pending-orders {
+                        & div.progress-line-incomplete-orders {
                             height: 100%;
                             width: 30%;
                             border-radius: 5px;

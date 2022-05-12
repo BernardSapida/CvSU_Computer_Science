@@ -4,18 +4,18 @@ body main {
   width: 96%;
 }
 
-body main section.section_user-account {
+body main section.section_client-account {
   margin: 150px auto 50px auto;
   max-width: 700px;
   width: 100%;
 }
 
-body main section.section_user-account h1 {
+body main section.section_client-account h1 {
   text-align: center;
   font-weight: 700;
 }
 
-body main section.section_user-account hr {
+body main section.section_client-account hr {
   margin: 10px auto;
   border: none;
   height: 1.5px;
@@ -23,31 +23,81 @@ body main section.section_user-account hr {
   background: var(--tertiary-dark);
 }
 
-body main section.section_user-account div.container_user-account form label {
+body main section.section_client-account div.container_client-account form div.profile_image {
+  margin: auto;
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 50%;
+}
+
+body main section.section_client-account div.container_client-account form div.profile_image div.camera-icon {
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  right: 0;
+  bottom: 0;
+  height: 40px;
+  width: 40px;
+  background: var(--secondary-dark);
+  border: 1px solid var(--secondary-light);
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+body main section.section_client-account div.container_client-account form div.profile_image div.camera-icon:hover {
+  background: var(--table-head);
+}
+
+body main section.section_client-account div.container_client-account form div.profile_image input[type="file"] {
+  display: none;
+}
+
+body main section.section_client-account div.container_client-account form div.profile_image img {
   display: block;
-  margin: 15px 0;
+  margin: auto;
+  max-width: 120px;
+  width: 100%;
+  border-radius: 50%;
+}
+
+body main section.section_client-account div.container_client-account form label {
+  display: block;
+  margin-top: 15px;
   width: 100%;
 }
 
-body main section.section_user-account div.container_user-account form label p {
+body main section.section_client-account div.container_client-account form label p {
   font-size: 14px;
   font-weight: 300;
   color: var(--secondary-light);
 }
 
-body main section.section_user-account div.container_user-account form label p span {
+body main section.section_client-account div.container_client-account form label p span {
   color: var(--danger);
 }
 
-body main section.section_user-account div.container_user-account form label input[type="text"] {
+body main section.section_client-account div.container_client-account form label p.err_message {
+  padding: 0;
+  color: var(--danger) !important;
+  font-size: 12px;
+}
+
+body main section.section_client-account div.container_client-account form label input[type="text"] {
   padding: 7px 20px;
   width: 100%;
   background-color: var(--secondary-dark);
   border: none;
   border-radius: 5px;
+  font-weight: 300;
+  color: var(--secondary-light);
 }
 
-body main section.section_user-account div.container_user-account form div.container_user-account-fullname {
+body main section.section_client-account div.container_client-account form div.container_client-account-fullname, body main section.section_client-account div.container_client-account form div.container_client-account-city-barangay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,10 +105,9 @@ body main section.section_user-account div.container_user-account form div.conta
       -ms-flex-pack: center;
           justify-content: center;
   gap: 10px;
-  margin-bottom: -15px;
 }
 
-body main section.section_user-account div.container_user-account form button#user-account-submit {
+body main section.section_client-account div.container_client-account form button#client-account-submit {
   margin-top: 15px;
   padding: 7px 0;
   width: 100%;
@@ -66,22 +115,22 @@ body main section.section_user-account div.container_user-account form button#us
   text-shadow: 0 0 5px var(--tertiary-dark);
 }
 
-body main section.section_user-account div.container_user-account form button#user-account-submit:hover {
+body main section.section_client-account div.container_client-account form button#client-account-submit:hover {
   background-color: var(--yellow-darken);
 }
 
-body main section.section_user-password {
+body main section.section_client-password {
   margin: 50px auto;
   max-width: 700px;
   width: 100%;
 }
 
-body main section.section_user-password h1 {
+body main section.section_client-password h1 {
   text-align: center;
   font-weight: 700;
 }
 
-body main section.section_user-password hr {
+body main section.section_client-password hr {
   margin: 10px auto;
   border: none;
   height: 1.5px;
@@ -89,21 +138,21 @@ body main section.section_user-password hr {
   background: var(--tertiary-dark);
 }
 
-body main section.section_user-password div.container_user-password form > label {
+body main section.section_client-password div.container_client-password form > label {
   display: none;
 }
 
-body main section.section_user-password div.container_user-password form > label p {
+body main section.section_client-password div.container_client-password form > label p {
   font-size: 14px;
   font-weight: 300;
   color: var(--secondary-light);
 }
 
-body main section.section_user-password div.container_user-password form > label p span {
+body main section.section_client-password div.container_client-password form > label p span {
   color: var(--danger);
 }
 
-body main section.section_user-password div.container_user-password form > label input[type="text"]#user-email-hidden {
+body main section.section_client-password div.container_client-password form > label input[type="text"]#client-email-hidden {
   padding: 7px 20px;
   width: 100%;
   background-color: var(--secondary-dark);
@@ -113,31 +162,37 @@ body main section.section_user-password div.container_user-password form > label
   color: var(--secondary-light);
 }
 
-body main section.section_user-password div.container_user-password form > label input[type="text"]#user-email-hidden::-ms-reveal, body main section.section_user-password div.container_user-password form > label input[type="text"]#user-email-hidden::-ms-clear {
+body main section.section_client-password div.container_client-password form > label input[type="text"]#client-email-hidden::-ms-reveal, body main section.section_client-password div.container_client-password form > label input[type="text"]#client-email-hidden::-ms-clear {
   display: none;
 }
 
-body main section.section_user-password div.container_user-password form div.container_user-password label {
+body main section.section_client-password div.container_client-password form div.container_password label {
   display: block;
-  margin: 15px 0;
+  margin-top: 15px;
   width: 100%;
 }
 
-body main section.section_user-password div.container_user-password form div.container_user-password label p {
+body main section.section_client-password div.container_client-password form div.container_password label p {
   font-size: 14px;
   font-weight: 300;
   color: var(--secondary-light);
 }
 
-body main section.section_user-password div.container_user-password form div.container_user-password label p span {
+body main section.section_client-password div.container_client-password form div.container_password label p span {
   color: var(--danger);
 }
 
-body main section.section_user-password div.container_user-password form div.container_user-password label div:is(.container_user-password-current, .container_user-password-new, .container_user-password-confirm) {
+body main section.section_client-password div.container_client-password form div.container_password label p.err_message {
+  padding: 0;
+  color: var(--danger) !important;
+  font-size: 12px;
+}
+
+body main section.section_client-password div.container_client-password form div.container_password label div:is(.container_client-password-current, .container_client-password-new, .container_client-password-confirm) {
   position: relative;
 }
 
-body main section.section_user-password div.container_user-password form div.container_user-password label div:is(.container_user-password-current, .container_user-password-new, .container_user-password-confirm) input[type="password"], body main section.section_user-password div.container_user-password form div.container_user-password label div:is(.container_user-password-current, .container_user-password-new, .container_user-password-confirm) input[type="text"] {
+body main section.section_client-password div.container_client-password form div.container_password label div:is(.container_client-password-current, .container_client-password-new, .container_client-password-confirm) input[type="password"], body main section.section_client-password div.container_client-password form div.container_password label div:is(.container_client-password-current, .container_client-password-new, .container_client-password-confirm) input[type="text"] {
   padding: 7px 20px;
   width: 100%;
   background-color: var(--secondary-dark);
@@ -147,11 +202,11 @@ body main section.section_user-password div.container_user-password form div.con
   color: var(--secondary-light);
 }
 
-body main section.section_user-password div.container_user-password form div.container_user-password label div:is(.container_user-password-current, .container_user-password-new, .container_user-password-confirm) input[type="password"]::-ms-reveal, body main section.section_user-password div.container_user-password form div.container_user-password label div:is(.container_user-password-current, .container_user-password-new, .container_user-password-confirm) input[type="password"]::-ms-clear, body main section.section_user-password div.container_user-password form div.container_user-password label div:is(.container_user-password-current, .container_user-password-new, .container_user-password-confirm) input[type="text"]::-ms-reveal, body main section.section_user-password div.container_user-password form div.container_user-password label div:is(.container_user-password-current, .container_user-password-new, .container_user-password-confirm) input[type="text"]::-ms-clear {
+body main section.section_client-password div.container_client-password form div.container_password label div:is(.container_client-password-current, .container_client-password-new, .container_client-password-confirm) input[type="password"]::-ms-reveal, body main section.section_client-password div.container_client-password form div.container_password label div:is(.container_client-password-current, .container_client-password-new, .container_client-password-confirm) input[type="password"]::-ms-clear, body main section.section_client-password div.container_client-password form div.container_password label div:is(.container_client-password-current, .container_client-password-new, .container_client-password-confirm) input[type="text"]::-ms-reveal, body main section.section_client-password div.container_client-password form div.container_password label div:is(.container_client-password-current, .container_client-password-new, .container_client-password-confirm) input[type="text"]::-ms-clear {
   display: none;
 }
 
-body main section.section_user-password div.container_user-password form div.container_user-password label div:is(.container_user-password-current, .container_user-password-new, .container_user-password-confirm) i {
+body main section.section_client-password div.container_client-password form div.container_password label div:is(.container_client-password-current, .container_client-password-new, .container_client-password-confirm) i {
   position: absolute;
   right: 15px;
   top: 50%;
@@ -164,11 +219,11 @@ body main section.section_user-password div.container_user-password form div.con
   cursor: pointer;
 }
 
-body main section.section_user-password div.container_user-password form div.container_user-password label div:is(.container_user-password-current, .container_user-password-new, .container_user-password-confirm) i:hover {
+body main section.section_client-password div.container_client-password form div.container_password label div:is(.container_client-password-current, .container_client-password-new, .container_client-password-confirm) i:hover {
   color: var(--primary-light);
 }
 
-body main section.section_user-password div.container_user-password form div.container_user-password button#user-password-submit {
+body main section.section_client-password div.container_client-password form div.container_password button#client-password-submit {
   margin-top: 15px;
   padding: 7px 0;
   width: 100%;
@@ -176,12 +231,12 @@ body main section.section_user-password div.container_user-password form div.con
   text-shadow: 0 0 5px var(--tertiary-dark);
 }
 
-body main section.section_user-password div.container_user-password form div.container_user-password button#user-password-submit:hover {
+body main section.section_client-password div.container_client-password form div.container_password button#client-password-submit:hover {
   background-color: var(--yellow-darken);
 }
 
 @media only screen and (max-width: 320px) {
-  body main section.section_user-account {
+  body main section.section_client-account {
     margin-top: 120px;
   }
 }

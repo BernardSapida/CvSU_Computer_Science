@@ -13,6 +13,19 @@ body {
                 font-size: 48px;
                 font-weight: 700;
             }
+
+            & div.error_empty-cart {
+                margin: 20px auto;
+                max-width: 1250px;
+                width: 100%; 
+                background-color: var(--danger);
+                border-radius: 5px;
+
+                & p {
+                    padding: 20px;
+                    line-height: 1;
+                }
+            }
             
             & div.container_cart-acc {
                 margin: auto;
@@ -69,6 +82,12 @@ body {
 
                                     & span {
                                         color: var(--danger);
+                                    }
+
+                                    &.err_message {
+                                        padding: 0;
+                                        color: var(--danger) !important;
+                                        font-size: 12px;
                                     }
                                 }
 
@@ -306,7 +325,7 @@ body {
                 & > h1 {
                     margin-bottom: 30px !important;
                     font-size: 34px;
-                }
+                }                
 
                 & div.container_cart-acc {
                     & div.container_cart {

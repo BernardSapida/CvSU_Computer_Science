@@ -83,7 +83,7 @@ body main section.section_dashboard div.container_dashboard div.container_cards 
   background: var(--danger);
 }
 
-body main section.section_dashboard div.container_dashboard div.container_cards div.card-title-header p.pending-orders {
+body main section.section_dashboard div.container_dashboard div.container_cards div.card-title-header p.incomplete-orders {
   background: var(--blue);
 }
 
@@ -105,7 +105,7 @@ body main section.section_dashboard div.container_dashboard div.container_cards 
   color: var(--danger);
 }
 
-body main section.section_dashboard div.container_dashboard div.container_cards div.card-track p.pending-orders {
+body main section.section_dashboard div.container_dashboard div.container_cards div.card-track p.incomplete-orders {
   color: var(--blue);
 }
 
@@ -141,7 +141,7 @@ body main section.section_dashboard div.container_dashboard div.container_cards 
   background: var(--danger);
 }
 
-body main section.section_dashboard div.container_dashboard div.container_cards div.progress-line div.progress-line-pending-orders {
+body main section.section_dashboard div.container_dashboard div.container_cards div.progress-line div.progress-line-incomplete-orders {
   height: 100%;
   width: 30%;
   border-radius: 5px;

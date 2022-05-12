@@ -9,12 +9,17 @@ $(document).ready(function(){
       $("header.header_burgerhub").toggleClass("dark", $('#hamburger-menu')[0].checked);
     });
 
+    $("li.links").click(function() {
+      $(this).addClass("active");
+      console.log(this);
+    });
+
     $("#img-profile").click(function(){
       $("div.navigation_profile-dropdown").fadeToggle();
     });
 
     $(".button_signin").click(function() {
-      window.location.assign("signin.html");
+      window.location.assign("signin.php");
     });
 
     $(window).scroll(function(){

@@ -20,8 +20,7 @@ $(document).ready(function(){
     #btn_cart-pizza-1, #btn_cart-pizza-2, #btn_cart-pizza-3, #btn_cart-pizza-4, #btn_cart-pizza-5, #btn_cart-pizza-6,\
     #btn_cart-fries-1, #btn_cart-fries-2, #btn_cart-fries-3, #btn_cart-fries-4, #btn_cart-fries-5, #btn_cart-fries-6,\
     #btn_cart-drinks-1, #btn_cart-drinks-2, #btn_cart-drinks-3, #btn_cart-drinks-4, #btn_cart-drinks-5, #btn_cart-drinks-6").click(function(e){
-        e.preventDefault();
-        console.log($(`#${$(this).attr('id').slice(9,)}`).val());
+        // console.log($(`#${$(this).attr('id').slice(9,)}`).val());
     });
 });
   

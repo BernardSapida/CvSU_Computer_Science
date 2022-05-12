@@ -115,7 +115,7 @@ body header.header_burgerhub {
   background-color: transparent;
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
-  z-index: 1;
+  z-index: 3;
 }
 
 body header.header_burgerhub nav.navigation_burgerhub {
