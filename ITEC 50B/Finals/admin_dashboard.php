@@ -131,7 +131,7 @@
                             while($row = mysqli_fetch_array($sql)) {
                                 echo "<tr>";
                                     echo "<td>" . $row['id'] . "</td>";
-                                    echo "<td><img src='images/profiles/Profile.png' alt='Profile Image'></td>";
+                                    echo "<td><img src='profile/Profile.png' alt='Profile Image'></td>";
                                     echo "<td>" . $row['firstname'] . " " . $row['lastname'] . "</td>";
                                     echo "<td>" . $row['trackingNo'] . "</td>";
                                     echo "<td>" .$row['orderNo'] . "</td>";
