@@ -1,15 +1,15 @@
 import java.util.UUID; 
 
 public class Card {
-    private int creditBalance = 0; // Should be positive
-    private int ticketBalance = 0; // Game reward tickets
+    private int creditBalance; // Should be positive
+    private int ticketBalance; // Game reward tickets
     private UUID cardNumber;   // Player Unique Card
 
     // Instantiating Card Class
-    Card(int creditBalance, int ticketBalance) {
+    Card() {
         UUID uuid = UUID.randomUUID(); 
-        this.creditBalance += creditBalance;
-        this.ticketBalance += ticketBalance;  
+        this.creditBalance = 0;
+        this.ticketBalance = 0;  
         this.cardNumber = uuid;
     }
     

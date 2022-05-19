@@ -2,8 +2,8 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class Test {
-    private Card card1 = new Card(0, 0);
-    private Card card2 = new Card(0, 0);
+    private Card card1 = new Card();
+    private Card card2 = new Card();
     private Card currentCard = card1;
     private String[] playerPrizeInventoryName = new String[3];
     private int[] playerPrizeInventoryQuantity = new int[3];
@@ -24,11 +24,9 @@ public class Test {
 
     public static void main(String[] args) throws Exception {
         Test test = new Test();
-        
+
         // Loop
-        while(true) {
-            test.playArcade();
-        }
+        while(true) test.playArcade();
     }
 
     // Invoke player's chosen action
@@ -64,18 +62,20 @@ public class Test {
         Scanner inArcadeGame = new Scanner(System.in);
         System.out.println("\n########################################################################################################\n");
         System.out.println("Select your game: ");
-        System.out.println("[1] => Rock, Paper, and Scissor!");
-        System.out.println("[2] => Number Guessing");
-        System.out.println("[3] => Back");
+        System.out.println("[1] => Rock, Paper, and Scissor! (5 Credits)");
+        System.out.println("[2] => Guess Number! (3 Credits)");
+        System.out.println("[3] => Color Game! (4 Credits)");
+        System.out.println("[4] => Back");
         System.out.print("Choose a number: ");
         String game = inArcadeGame.nextLine();
 
-        while(!Pattern.compile("^(1|2|3)$").matcher(game).find()) {
+        while(!Pattern.compile("^(1|2|3|4)$").matcher(game).find()) {
             System.out.println("Your input is invalid!\n");
             System.out.println("Select your game: ");
             System.out.println("[1] => Rock, Paper, and Scissor! (5 Credits)");
-            System.out.println("[2] => Number Guessing! (3 Credits)");
-            System.out.println("[3] => Back");
+            System.out.println("[2] => Guess Number! (3 Credits)");
+            System.out.println("[3] => Color Game! (4 Credits)");
+            System.out.println("[4] => Back");
             System.out.print("Choose a number: ");
             game = inArcadeGame.nextLine();
         }
@@ -83,7 +83,8 @@ public class Test {
         switch(game) {
             case "1" -> { startRPS(); }
             case "2" -> { startNumberGuessing(); }
-            case "3" -> { playArcade(); }
+            case "3" -> { startColorGame(); }
+            case "4" -> { playArcade(); }
         }
     }
 
@@ -103,13 +104,26 @@ public class Test {
         }
     }
 
-    // Number Guessing Game
+    // Color Game
     public void startNumberGuessing() {
         if(currentCard.getCurrentCredit() > 3) {
             currentCard.reduceCredit(3);
-            GuessNumber guessNumberGame = new GuessNumber();
-            guessNumberGame.startGuessNumber();
-            currentCard.setTransferredTickets(guessNumberGame.getTicket());
+            GuessNumber guessNumber = new GuessNumber();
+            guessNumber.startGuessNumber();
+            currentCard.setTransferredTickets(guessNumber.getTicket());
+            currentCard.getCardDetails();
+        } else {
+            System.out.println("You have insufficient credit balance, please top-up!");
+        }
+    }
+
+    // Color Game
+    public void startColorGame() {
+        if(currentCard.getCurrentCredit() > 4) {
+            currentCard.reduceCredit(4);
+            ColorGame colorGame = new ColorGame();
+            colorGame.startColorGame();
+            currentCard.setTransferredTickets(colorGame.getTicket());
             currentCard.getCardDetails();
         } else {
             System.out.println("You have insufficient credit balance, please top-up!");

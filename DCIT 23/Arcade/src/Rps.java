@@ -104,15 +104,15 @@ public class Rps {
             System.out.println("\nCongratulations! You are the winner!");
             System.out.println("You won 10 tickets!");
             winnerPlayer = "Player";
+            System.out.print("\n########################################################################################################\n");
         }
 
         if(this.scoreComputer == 3) {
             System.out.println("\nBetter luck next time! The winner is Computer");
             System.out.println("You won 5 tickets!");
             winnerPlayer = "Computer";
+            System.out.print("\n########################################################################################################\n");
         }
-
-        System.out.print("\n########################################################################################################\n");
     }
     
     // Get the prize ticket
