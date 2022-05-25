@@ -41,7 +41,7 @@ public class Cards {
         if (this.ticketBalance >= amount) this.ticketBalance -= amount;
     }
 
-    // Add Credit -> Set credit by inputing amount of money
+    // Add Credit -> Set credit by inputting amount of money
     // $1 -> 2credits
     public void setCredit(double amount){
         if (amount >= 0) creditBalance += (amount * 2);
