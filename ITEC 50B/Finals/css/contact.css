@@ -70,15 +70,10 @@ body main section.section_contact-form div.container_contact div.container_form 
   color: var(--secondary-light);
 }
 
-body main section.section_contact-form div.container_contact div.container_form form label p.err_name, body main section.section_contact-form div.container_contact div.container_form form label p.err_email, body main section.section_contact-form div.container_contact div.container_form form label p.err_subject, body main section.section_contact-form div.container_contact div.container_form form label p.err_message {
-  display: none;
+body main section.section_contact-form div.container_contact div.container_form form label p.err_message {
   padding: 0;
   color: var(--danger) !important;
   font-size: 12px;
-}
-
-body main section.section_contact-form div.container_contact div.container_form form label p.display_err {
-  display: block !important;
 }
 
 body main section.section_contact-form div.container_contact div.container_form form label input[type="text"], body main section.section_contact-form div.container_contact div.container_form form label textarea {
@@ -106,11 +101,89 @@ body main section.section_contact-form div.container_contact div.container_form 
 }
 
 body main section.section_contact-form div.container_contact div.container_form form button:hover {
-  background-color: var(--yellow-darken);
+  background-color: var(--yellow-lighten);
 }
 
 body main section.section_contact-form div.container_contact div.container_form form button span {
   margin-right: 8px;
+}
+
+body main section.section_modal-message-success {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-transform: translateY(-50%, -50%);
+          transform: translateY(-50%, -50%);
+  background-color: var(--tertiary-dark);
+  z-index: 5;
+}
+
+body main section.section_modal-message-success div.container_modal-message-success {
+  padding: 30px;
+  margin: auto;
+  max-width: 450px;
+  width: 95%;
+  text-align: center;
+  background-color: var(--secondary-dark);
+  border: 1px solid var(--tertiary-light);
+  border-radius: 5px;
+}
+
+body main section.section_modal-message-success div.container_modal-message-success h1 {
+  font-weight: 400;
+}
+
+body main section.section_modal-message-success div.container_modal-message-success p {
+  color: var(--secondary-light);
+  font-weight: 200;
+  font-size: 12px;
+}
+
+body main section.section_modal-message-success div.container_modal-message-success button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 7px 15px;
+  background-color: var(--yellow);
+  text-shadow: 0 0 5px var(--tertiary-dark);
+}
+
+body main section.section_modal-message-success div.container_modal-message-success button:hover {
+  background-color: var(--yellow-lighten);
+}
+
+body main section.section_modal-message-success div.container_modal-message-success .animation-ctn {
+  margin: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+}
+
+body main section.section_modal-message-success div.container_modal-message-success .inlinesvg .svg svg {
+  display: inline;
+}
+
+body main section.section_modal-message-success div.container_modal-message-success .icon--message-success svg polyline {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  -webkit-animation: checkmark 0.25s ease-in-out 0.7s backwards;
+          animation: checkmark 0.25s ease-in-out 0.7s backwards;
+  stroke-linecap: round;
+}
+
+body main section.section_modal-message-success div.container_modal-message-success .icon--message-success svg circle {
+  -webkit-animation: checkmark-circle 0.6s ease-in-out backwards;
+          animation: checkmark-circle 0.6s ease-in-out backwards;
+}
+
+body main section.section_modal-message-success div.container_modal-message-success .icon--message-success svg circle#colored {
+  -webkit-animation: colored-circle 0.6s ease-in-out 0.7s backwards;
+          animation: colored-circle 0.6s ease-in-out 0.7s backwards;
 }
 
 @media only screen and (max-width: 600px) {
@@ -145,6 +218,60 @@ body main section.section_contact-form div.container_contact div.container_form 
     max-width: 1100px;
     width: 100%;
     height: 200px;
+  }
+}
+
+@-webkit-keyframes checkmark {
+  0% {
+    stroke-dashoffset: 100px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes checkmark {
+  0% {
+    stroke-dashoffset: 100px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@-webkit-keyframes checkmark-circle {
+  0% {
+    stroke-dashoffset: 480px;
+  }
+  100% {
+    stroke-dashoffset: 960px;
+  }
+}
+
+@keyframes checkmark-circle {
+  0% {
+    stroke-dashoffset: 480px;
+  }
+  100% {
+    stroke-dashoffset: 960px;
+  }
+}
+
+@-webkit-keyframes colored-circle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes colored-circle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
   }
 }
 /*# sourceMappingURL=contact.css.map */

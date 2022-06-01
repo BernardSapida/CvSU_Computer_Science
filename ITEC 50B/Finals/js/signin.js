@@ -1,50 +1,11 @@
-document.querySelector("#eye").addEventListener("click", showSigninPassword);
-
-function showSigninPassword() {
-    let eye = document.getElementById("eye");
-    let password = document.getElementById("password");
-
-    if(Array.from(eye.classList).indexOf("fa-eye-slash") != -1) {
-        eye.classList.remove("fa-eye-slash");
-        eye.classList.toggle("fa-eye");
-        password.setAttribute("type", "text");
+$("#eye").click(function() {
+    if(Array.from(this.classList).indexOf("fa-eye-slash") != -1) {
+        this.classList.remove("fa-eye-slash");
+        this.classList.toggle("fa-eye");
+        $("#password").attr("type", "text");
     } else {
-        eye.classList.remove("fa-eye");
-        eye.classList.toggle("fa-eye-slash");
-        password.setAttribute("type", "password");
+        this.classList.remove("fa-eye");
+        this.classList.toggle("fa-eye-slash");
+        $("#password").attr("type", "password");
     }
-}
-
-document.querySelector("#eye-password").addEventListener("click", showSignupPassword);
-
-function showSignupPassword() {
-    let eye = document.getElementById("eye-password");
-    let password = document.getElementById("password");
-
-    if(Array.from(eye.classList).indexOf("fa-eye-slash") != -1) {
-        eye.classList.remove("fa-eye-slash");
-        eye.classList.toggle("fa-eye");
-        password.setAttribute("type", "text");
-    } else {
-        eye.classList.remove("fa-eye");
-        eye.classList.toggle("fa-eye-slash");
-        password.setAttribute("type", "password");
-    }
-}
-
-document.querySelector("#eye-confirm-password").addEventListener("click", showSignupConfirmPassword);
-
-function showSignupConfirmPassword() {
-    let eye = document.getElementById("eye-confirm-password");
-    let password = document.getElementById("confirm-password");
-
-    if(Array.from(eye.classList).indexOf("fa-eye-slash") != -1) {
-        eye.classList.remove("fa-eye-slash");
-        eye.classList.toggle("fa-eye");
-        password.setAttribute("type", "text");
-    } else {
-        eye.classList.remove("fa-eye");
-        eye.classList.toggle("fa-eye-slash");
-        password.setAttribute("type", "password");
-    }
-}
+});

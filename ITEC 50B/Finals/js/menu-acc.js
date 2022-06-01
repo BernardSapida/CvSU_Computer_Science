@@ -22,5 +22,39 @@ $(document).ready(function(){
     #btn_cart-drinks-1, #btn_cart-drinks-2, #btn_cart-drinks-3, #btn_cart-drinks-4, #btn_cart-drinks-5, #btn_cart-drinks-6").click(function(e){
         // console.log($(`#${$(this).attr('id').slice(9,)}`).val());
     });
+
+    $("#btn_added").click(function(){
+        $(".section_modal-added-success").fadeOut();
+    });
+
+    $("#btn_empty").click(function(){
+        $(".section_modal-added-failed").fadeOut();
+    });
+
+    $("button[name='add_to_cart']").click(function(e){
+        let inputQuantity = $("input[type='number']").serializeArray();
+        let total = inputQuantity.reduce((initialValue, value, array) => initialValue += Number(value["value"]), 0);
+
+        if(total != 0) {
+            $.ajax({
+                type: "POST",
+                url: "client_menu.php",
+                data: inputQuantity,
+                cache: false,
+                success: function(data) {
+                    $("#quantity").text(Number($("#quantity").text()) + Number(total));
+                    $(".section_modal-added-success").fadeIn();
+                    $("#modal-quantity").text($("#quantity").text());
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr);
+                }
+            });
+
+            $("input[type='number'").val(0);
+        } else {
+            $(".section_modal-added-failed").fadeIn();
+        }
+    });
 });
   

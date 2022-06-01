@@ -256,7 +256,7 @@ body main section.section_burger-layer div.container_burger-layers div.container
 }
 
 body main section.section_burger-layer div.container_burger-layers div.container_burger-contents button:hover {
-  background-color: var(--yellow-darken);
+  background-color: var(--yellow-lighten);
 }
 
 body main section.section_burger-layer div.container_burger-layers div.container_burger-contents button a {
@@ -291,7 +291,9 @@ body main section.section_menu-types div.container_menu-types div.container_menu
 }
 
 body main section.section_menu-types div.container_menu-types div.container_menu img {
+  max-height: 300px;
   height: 100%;
+  max-width: 450px;
   width: 100%;
   border-radius: 10px;
 }
@@ -338,7 +340,7 @@ body main section.section_menu-types div.container_menu-types div.container_menu
 }
 
 body main section.section_menu-types div.container_menu-types div.container_menu .menu-description button:hover {
-  background-color: var(--yellow-darken);
+  background-color: var(--yellow-lighten);
 }
 
 body main section.section_profiles {
@@ -463,6 +465,19 @@ body main section.section_profiles div.container_profiles div.container_profile-
   font-weight: 300;
 }
 
+body main section.section_profiles div.container_profiles div.container_profile-quotes .our-name {
+  position: relative;
+}
+
+body main section.section_profiles div.container_profiles div.container_profile-quotes .our-name img {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 50px;
+}
+
 body main section.section_profiles div.container_profiles div.container_profile-quotes p.favicon-quote i {
   color: var(--yellow);
   font-size: 48px;
@@ -517,7 +532,7 @@ body main section.section_download-menu div.container_download-menu button {
 }
 
 body main section.section_download-menu div.container_download-menu button:hover {
-  background-color: var(--yellow-darken);
+  background-color: var(--yellow-lighten);
 }
 
 @media only screen and (max-width: 750px) {
@@ -769,7 +784,7 @@ body main section.section_download-menu div.container_download-menu button:hover
     font-size: 34px;
   }
   body main section.section_profiles div.container_profiles div.container_profile-quotes p.our-quote {
-    margin: 10px 0;
+    margin: 30px 0;
   }
   body main section.section_profiles div.container_profiles div.container_profile-quotes h1.our-name {
     font-size: 18px;

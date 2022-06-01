@@ -51,7 +51,7 @@ body main section.section_about-story div.container_story div.container_story-de
 }
 
 body main section.section_about-story div.container_story div.container_story-description button:hover {
-  background-color: var(--yellow-darken);
+  background-color: var(--yellow-lighten);
 }
 
 body main section.section_about-story div.container_story div.container_story-image {
@@ -59,7 +59,7 @@ body main section.section_about-story div.container_story div.container_story-im
 }
 
 body main section.section_about-story div.container_story div.container_story-image img {
-  max-width: 600px;
+  max-width: 450px;
   width: 100%;
   border-radius: 5px;
 }
@@ -120,7 +120,7 @@ body main section.section_mvv div.container_values div.container_values-image, b
 }
 
 body main section.section_mvv div.container_values div.container_values-image img, body main section.section_mvv div.container_values div.container_mission-image img, body main section.section_mvv div.container_values div.container_vision-image img, body main section.section_mvv div.container_mission div.container_values-image img, body main section.section_mvv div.container_mission div.container_mission-image img, body main section.section_mvv div.container_mission div.container_vision-image img, body main section.section_mvv div.container_vision div.container_values-image img, body main section.section_mvv div.container_vision div.container_mission-image img, body main section.section_mvv div.container_vision div.container_vision-image img {
-  max-width: 600px;
+  max-width: 450px;
   width: 100%;
   border-radius: 5px;
 }
@@ -181,7 +181,7 @@ body main section.section_products-services div.container_products div.container
 }
 
 body main section.section_products-services div.container_products div.container_products-image img, body main section.section_products-services div.container_products div.container_restaurant-delivery-image img, body main section.section_products-services div.container_products div.container_quality-service-image img, body main section.section_products-services div.container_restaurant-delivery div.container_products-image img, body main section.section_products-services div.container_restaurant-delivery div.container_restaurant-delivery-image img, body main section.section_products-services div.container_restaurant-delivery div.container_quality-service-image img, body main section.section_products-services div.container_quality-service div.container_products-image img, body main section.section_products-services div.container_quality-service div.container_restaurant-delivery-image img, body main section.section_products-services div.container_quality-service div.container_quality-service-image img {
-  max-width: 600px;
+  max-width: 450px;
   width: 100%;
   border-radius: 5px;
 }

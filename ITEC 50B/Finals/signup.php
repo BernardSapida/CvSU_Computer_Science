@@ -20,6 +20,7 @@
         $errEmail = "";
         $errPassword = "";
         $errConfirmPassword = "";
+      	$signup_success = false;
 
         if(empty($firstname)) $errFirstname = "Firstname is required!";
         if(empty($lastname)) $errLastname = "Lastname is required!";
@@ -39,10 +40,10 @@
             if($password != $confirmPassword) $errConfirmPassword = "Your new password and confirm password didn't matched!";
 
             if(empty($errFirstname) && empty($errLastname) && empty($errEmail) && empty($errPassword) && empty($errConfirmPassword)) {
-                echo $password;
+              	$signup_success = true;
                 $encryptPassword = password_hash($password, PASSWORD_DEFAULT);
 
-                $connect = mysqli_connect("localhost","root","", "burgerhub") or die("ERROR: Could not connect. " .  $connect->connect_error);
+                $connect = mysqli_connect("localhost", "grgpiwqy_burgerhub", "burgerhub30241715", "grgpiwqy_burgerhub") or die("ERROR: Could not connect. " .  $connect->connect_error);
                 $sqlAccounts = "INSERT INTO client_accounts (`clientid`, `image`, `fullname`, `email`, `password`, `type`)
                 VALUES ('$uid', '$image', '$firstname $lastname', '$email', '$encryptPassword', '$type')";
                 mysqli_query($connect, $sqlAccounts);
@@ -50,14 +51,12 @@
                 $sqlInformation = "INSERT INTO client_information (`clientid`, `image`, `firstname`, `lastname`, `email`, `mobile`, `street address`, `city`, `barangay`) 
                 VALUES ('$uid', '$image', '$firstname', '$lastname', '$email', '$mobile', '$street_address', '$city', '$barangay')";
                 mysqli_query($connect, $sqlInformation);
-
+              
                 $firstname = "";
                 $lastname = "";
                 $email = "";
                 $password = "";
                 $confirmPassword = "";
-
-                header("Location: signin.php");
             }
             
         }
@@ -70,11 +69,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="BERNARD V. SAPIDA, JAN MARICHIE Z. MOJICA, ZILDJIAN LEE G. LOREN, JOHN HERSON L. RADONES">
+  	<meta name="description" content="The owners dreamed of creating a burger restaurant in which the customers could not only eat, but one that offered a friendly and healthy environment. The restaurant’s success led them to begin franchising their concept, becoming operating restaurants.">
+  	<meta property="og:title" content="Burgerhub Restaurant | Sign Up">
+    <meta property="og:url" content="https://burgerhub.x10.mx/signup.php">
+    <meta property="og:image" content="images/website-image.jpg">
     <link rel="icon" type="image/any-icon" href="images/burgerhub.ico">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/signup.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>BurgerHub</title>
 </head>
 <body>
@@ -104,7 +107,7 @@
                         </div>
                         <label for="email">
                             <p>Email Address</p>
-                            <input type="text" name="email" id="email" placeholder="Enter your email address" aria-label="Email" autocomplete="email" value="<?php echo isset($_POST["email"]) ? $email : ""?>">
+                            <input type="text" name="email" id="email" placeholder="Email address" aria-label="Email" autocomplete="email" value="<?php echo isset($_POST["email"]) ? $email : ""?>">
                             <?php
                                 if($errEmail == "") {
                                     echo "<p class='reminder'>You can use letters, numbers, & periods</p>";
@@ -117,7 +120,7 @@
                             <label for="password">
                                 <p>Password</p>
                                 <div class="container_password">
-                                    <input type="password" name="password" id="password" placeholder="Enter your password" autocomplete="current-password" value="<?php echo isset($_POST["password"]) ? $password : ""?>">
+                                    <input type="password" name="password" id="password" placeholder="Password" autocomplete="current-password" value="<?php echo isset($_POST["password"]) ? $password : ""?>">
                                     <span class="checkbox_password">
                                         <label for="checkbox_toggle-password">
                                             <input type="checkbox" name="checkbox_toggle-password" id="checkbox_toggle-password" aria-label="Password">
@@ -149,10 +152,30 @@
                 </div>
             </div>
         </section>
+        <?php
+              if($signup_success) echo '<section class="section_modal-signup-success">
+                      <div class="container_modal-signup-success">
+                          <div class="animation-ctn">
+                              <div class="icon icon--signup-success svg">
+                                  <svg width="80px" height="80px">  
+                                      <g fill="none" stroke="#22AE73" stroke-width="5"> 
+                                      <circle cx="40" cy="40" r="36"></circle>
+                                      <circle id="colored" fill="#22AE73" cx="40" cy="40" r="36"></circle>
+                                      <polyline class="st0" stroke="#fff" stroke-width="15" points="48.5, 87.8 67.7, 107.9 112.2, 52.4"/>   
+                                      </g> 
+                                  </svg>
+                              </div>
+                          </div>
+                          <h1>Account successfully created!</h1>
+                          <p>You can signin now and make an order.</p>
+                          <button type="button" aria-label="Account successfully created" id="btn_success">Okay</button>
+                      </div>
+                  </section>';
+          ?>
     </main>
 
     <?php include_once 'global_footer.php' ?>
-
-    <script src="js/signin.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="js/signup.js"></script>
 </body>
 </html>

@@ -39,7 +39,7 @@
                     </div>
                 </div>
             </div>
-            <a href="client_cart.php"><p class="cart"><i class="fa-solid fa-cart-shopping"></i><span class="cart_orders-quantity"><?php echo empty($_SESSION["quantity"]) ? 0 : $_SESSION["quantity"]?></span></p></a>
+            <a href="client_cart.php"><p class="cart"><i class="fa-solid fa-cart-shopping"></i><span class="cart_orders-quantity" id="quantity"><?php echo empty($_SESSION["quantity"]) ? 0 : $_SESSION["quantity"]?></span></p></a>
             <label for="hamburger-menu" class="navigation_responsive" id="navigation_responsive">
                 <input type="checkbox" id="hamburger-menu" aria-label="Hamburger Navigation">
                 <div class="hamburger-menu">

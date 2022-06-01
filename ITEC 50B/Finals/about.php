@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    
+    error_reporting(E_ERROR | E_PARSE);
+
+    if($_SESSION["type"] == "admin") header("Location: admin_dashboard.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +13,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="BERNARD V. SAPIDA, JAN MARICHIE Z. MOJICA, ZILDJIAN LEE G. LOREN, JOHN HERSON L. RADONES">
+  	<meta name="description" content="The owners dreamed of creating a burger restaurant in which the customers could not only eat, but one that offered a friendly and healthy environment. The restaurant’s success led them to begin franchising their concept, becoming operating restaurants.">
     <link rel="icon" type="image/any-icon" href="images/burgerhub.ico">
-    <link rel="stylesheet" href="css/client_header.css">
-    <link rel="stylesheet" href="css/header.css">
+  	<meta property="og:title" content="Burgerhub Restaurant | About Us">
+    <meta property="og:url" content="https://burgerhub.x10.mx/about.php">
+    <meta property="og:image" content="images/image-card.jpg">
+    <?php
+        if(empty($_SESSION["email"])) echo '<link rel="stylesheet" href="css/header.css">'; 
+        if($_SESSION["type"] == "client") echo '<link rel="stylesheet" href="css/client_header.css">'; 
+    ?>
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
@@ -23,7 +37,7 @@
             <div class="container_story">
                 <div class="container_story-description">
                     <h1>About Our Story</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores delectus reiciendis eligendi illo odit quo aliquid quibusdam vitae et minus error eius repellat, incidunt, nostrum eaque atque impedit harum excepturi.</p>
+                    <p>In 2021, a four freshmen college students named Bernard Sapida, Zildjian Lee Loren, Jan Marichie Mojica and John Herson Radones looked to create a restaurant idea of their own in Imus, Cavite. In the same year, they took a risk by founding their own burger restaurant and decided to name it BurgerHub. The owners dreamed of creating a burger restaurant in which the customers could not only eat, but one that offered a friendly and healthy environment. The restaurant’s success led them to begin franchising their concept, becoming operating restaurants.</p>
                     <button class="redirect-menu" type="button">VIEW FULL MENU</button>
                 </div>
                 <div class="container_story-image">
@@ -40,8 +54,8 @@
                     <img src="images/about/about-values.jpg" alt="BurgerHub Values Image">
                 </div>
                 <div class="container_values-description">
-                    <h1>Values</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores delectus reiciendis eligendi illo odit quo aliquid quibusdam vitae et minus error eius repellat, incidunt, nostrum eaque atque impedit harum excepturi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores delectus reiciendis eligendi illo odit quo aliquid quibusdam vitae et minus error eius repellat, incidunt, nostrum eaque atque impedit harum excepturi.Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores delectus reiciendis eligendi illo odit quo aliquid quibusdam vitae et minus error eius repellat, incidunt, nostrum eaque atque impedit harum excepturi.</p>
+                    <h1>Mission</h1>
+                    <p>To provide the highest quality product at the lowest possible price, while becoming a real part of every neighbourhood in which we open.</p>
                 </div>
             </div>
             <hr>
@@ -50,8 +64,8 @@
                     <img src="images/about/about-mission.jpg" alt="BurgerHub Mission Image">
                 </div>
                 <div class="container_mission-description">
-                    <h1>Mission</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores delectus reiciendis eligendi illo odit quo aliquid quibusdam vitae et minus error eius repellat, incidunt, nostrum eaque atque impedit harum excepturi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores delectus reiciendis eligendi illo odit quo aliquid quibusdam vitae et minus error eius repellat, incidunt, nostrum eaque atque impedit harum excepturi.Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores delectus reiciendis eligendi illo odit quo aliquid quibusdam vitae et minus error eius repellat, incidunt, nostrum eaque atque impedit harum excepturi.</p>
+                    <h1>Vision</h1>
+                    <p>To serve high quality products and extraordinary dining experience without compromising the taste and reasonable pricing while working toward the greater good for our employees, community and environment.</p>
                 </div>
             </div>
             <hr>
@@ -61,7 +75,7 @@
                 </div>
                 <div class="container_vision-description">
                     <h1>Values</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores delectus reiciendis eligendi illo odit quo aliquid quibusdam vitae et minus error eius repellat, incidunt, nostrum eaque atque impedit harum excepturi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores delectus reiciendis eligendi illo odit quo aliquid quibusdam vitae et minus error eius repellat, incidunt, nostrum eaque atque impedit harum excepturi.Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores delectus reiciendis eligendi illo odit quo aliquid quibusdam vitae et minus error eius repellat, incidunt, nostrum eaque atque impedit harum excepturi.</p>
+                    <p>BurgerHub is dedicated to providing a quality workplace for all employees. This implies treating people with dignity and respect, demonstrating trust, maintaining an inclusive workplace that values diversity, growth and teamwork, ensuring a productive environment which is free from discrimination and harassment, and providing a safe environment.</p>
                 </div>
             </div>
         </section>

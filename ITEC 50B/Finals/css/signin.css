@@ -45,15 +45,15 @@ body main section.section_signin div.container_signin div.container_title p a {
 }
 
 body main section.section_signin div.container_signin div.container_title p a:hover {
-  color: var(--yellow-darken);
+  color: var(--yellow-lighten);
 }
 
 body main section.section_signin div.container_signin div.container_form form label {
   display: block;
-  margin: 10px 0;
 }
 
-body main section.section_signin div.container_signin div.container_form form label p {
+body main section.section_signin div.container_signin div.container_form form label > p {
+  margin-top: 10px;
   padding: 5px 0;
   font-size: 12px;
   font-weight: 300;
@@ -76,25 +76,23 @@ body main section.section_signin div.container_signin div.container_form form la
 
 body main section.section_signin div.container_signin div.container_form form label .signin_password {
   position: relative;
+  margin: 0;
 }
 
-body main section.section_signin div.container_signin div.container_form form label .signin_password span.checkbox_password {
+body main section.section_signin div.container_signin div.container_form form label .signin_password span.checkbox_password label input[type="checkbox"] {
+  display: none;
+}
+
+body main section.section_signin div.container_signin div.container_form form label .signin_password span.checkbox_password label input[type="checkbox"]:checked + .icon_hide-password {
+  color: var(--primary-light);
+}
+
+body main section.section_signin div.container_signin div.container_form form label .signin_password span.checkbox_password label .icon_hide-password {
   position: absolute;
   right: 15px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-}
-
-body main section.section_signin div.container_signin div.container_form form label .signin_password span.checkbox_password input[type="checkbox"] {
-  display: none;
-}
-
-body main section.section_signin div.container_signin div.container_form form label .signin_password span.checkbox_password input[type="checkbox"]:checked + .icon_hide-password {
-  color: var(--primary-light);
-}
-
-body main section.section_signin div.container_signin div.container_form form label .signin_password span.checkbox_password .icon_hide-password {
   cursor: pointer;
   color: var(--secondary-light);
   font-size: 14px;
@@ -102,16 +100,16 @@ body main section.section_signin div.container_signin div.container_form form la
   transition: all 350ms ease-in-out;
 }
 
-body main section.section_signin div.container_signin div.container_form form label .signin_password span.checkbox_password .icon_hide-password:hover {
+body main section.section_signin div.container_signin div.container_form form label .signin_password span.checkbox_password label .icon_hide-password:hover {
   color: var(--primary-light);
 }
 
-body main section.section_signin div.container_signin div.container_form form label #error_message-required, body main section.section_signin div.container_signin div.container_form form label #error_message-invalid, body main section.section_signin div.container_signin div.container_form form label #error_message-incorrect {
-  display: none;
-  margin: 0;
+body main section.section_signin div.container_signin div.container_form form label > p.err_message {
+  margin-top: 0;
   color: var(--danger);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
+  line-height: 1;
 }
 
 body main section.section_signin div.container_signin div.container_form form button#signin_btn {
@@ -125,7 +123,7 @@ body main section.section_signin div.container_signin div.container_form form bu
 }
 
 body main section.section_signin div.container_signin div.container_form form button#signin_btn:hover {
-  background-color: var(--yellow-darken);
+  background-color: var(--yellow-lighten);
 }
 
 body main section.section_signin div.container_signin div.container_form form div.signin_keep-logged {
@@ -191,7 +189,7 @@ body main section.section_signin div.container_signin div.container_form form di
   body main section.section_signin div.container_signin div.container_title p {
     font-size: 10px;
   }
-  body main section.section_signin div.container_signin .container_form form label #error_message-required, body main section.section_signin div.container_signin .container_form form label #error_message-invalid, body main section.section_signin div.container_signin .container_form form label #error_message-incorrect {
+  body main section.section_signin div.container_signin .container_form form label > p.err_message {
     font-size: 10px !important;
   }
   body main section.section_signin div.container_signin .container_form form div.signin_keep-logged label p {

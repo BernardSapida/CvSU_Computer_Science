@@ -119,7 +119,7 @@ body main section.section_featured-products div.container_featured-products div.
 }
 
 body main section.section_featured-products div.container_featured-products div.container_products div.container_description div.container_price-order button:hover {
-  background-color: var(--yellow-darken);
+  background-color: var(--yellow-lighten);
 }
 
 body main section.section_featured-products div.container_featured-products div.container_products div.container_description div.container_price-order button span {
@@ -245,7 +245,7 @@ body main section.section_burgers-menu div.container_burgers-menu div.container_
 }
 
 body main section.section_burgers-menu div.container_burgers-menu div.container_burgers div.container_description div.container_price-order button:hover {
-  background-color: var(--yellow-darken);
+  background-color: var(--yellow-lighten);
 }
 
 body main section.section_burgers-menu div.container_burgers-menu div.container_burgers div.container_description div.container_price-order button span {
@@ -371,7 +371,7 @@ body main section.section_pizza-menu div.container_pizza-menu div.container_pizz
 }
 
 body main section.section_pizza-menu div.container_pizza-menu div.container_pizza div.container_description div.container_price-order button:hover {
-  background-color: var(--yellow-darken);
+  background-color: var(--yellow-lighten);
 }
 
 body main section.section_pizza-menu div.container_pizza-menu div.container_pizza div.container_description div.container_price-order button span {
@@ -499,7 +499,7 @@ body main section.section_fries-menu div.container_fries-menu div.container_frie
 }
 
 body main section.section_fries-menu div.container_fries-menu div.container_fries div.container_description div.container_price-order button:hover {
-  background-color: var(--yellow-darken);
+  background-color: var(--yellow-lighten);
 }
 
 body main section.section_fries-menu div.container_fries-menu div.container_fries div.container_description div.container_price-order button span {
@@ -627,7 +627,7 @@ body main section.section_drinks-menu div.container_drinks-menu div.container_dr
 }
 
 body main section.section_drinks-menu div.container_drinks-menu div.container_drinks div.container_description div.container_price-order button:hover {
-  background-color: var(--yellow-darken);
+  background-color: var(--yellow-lighten);
 }
 
 body main section.section_drinks-menu div.container_drinks-menu div.container_drinks div.container_description div.container_price-order button span {

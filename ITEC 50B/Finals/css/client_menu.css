@@ -156,7 +156,7 @@ body main form section.section_featured-products div.container_featured-products
 }
 
 body main form section.section_featured-products div.container_featured-products div.container_products div.container_description > button:hover {
-  background-color: var(--yellow-darken);
+  background-color: var(--yellow-lighten);
 }
 
 body main form section.section_featured-products div.container_featured-products div.container_products div.container_description > button span {
@@ -319,7 +319,7 @@ body main form section.section_burgers-menu div.container_burgers-menu div.conta
 }
 
 body main form section.section_burgers-menu div.container_burgers-menu div.container_burgers div.container_description > button:hover {
-  background-color: var(--yellow-darken);
+  background-color: var(--yellow-lighten);
 }
 
 body main form section.section_burgers-menu div.container_burgers-menu div.container_burgers div.container_description > button span {
@@ -482,7 +482,7 @@ body main form section.section_pizza-menu div.container_pizza-menu div.container
 }
 
 body main form section.section_pizza-menu div.container_pizza-menu div.container_pizza div.container_description > button:hover {
-  background-color: var(--yellow-darken);
+  background-color: var(--yellow-lighten);
 }
 
 body main form section.section_pizza-menu div.container_pizza-menu div.container_pizza div.container_description > button span {
@@ -647,7 +647,7 @@ body main form section.section_fries-menu div.container_fries-menu div.container
 }
 
 body main form section.section_fries-menu div.container_fries-menu div.container_fries div.container_description > button:hover {
-  background-color: var(--yellow-darken);
+  background-color: var(--yellow-lighten);
 }
 
 body main form section.section_fries-menu div.container_fries-menu div.container_fries div.container_description > button span {
@@ -812,7 +812,7 @@ body main form section.section_drinks-menu div.container_drinks-menu div.contain
 }
 
 body main form section.section_drinks-menu div.container_drinks-menu div.container_drinks div.container_description > button:hover {
-  background-color: var(--yellow-darken);
+  background-color: var(--yellow-lighten);
 }
 
 body main form section.section_drinks-menu div.container_drinks-menu div.container_drinks div.container_description > button span {
@@ -821,6 +821,91 @@ body main form section.section_drinks-menu div.container_drinks-menu div.contain
 
 body main form section.section_drinks-menu div.container_drinks-menu div.container_drinks div.container_description > button a {
   text-decoration: none;
+}
+
+body main section.section_modal-added-success, body main section.section_modal-added-failed {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(-50%, -50%);
+          transform: translateY(-50%, -50%);
+  background-color: var(--tertiary-dark);
+  z-index: 5;
+}
+
+body main section.section_modal-added-success div.container_modal-added-success, body main section.section_modal-added-success div.container_modal-added-failed, body main section.section_modal-added-failed div.container_modal-added-success, body main section.section_modal-added-failed div.container_modal-added-failed {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 30px;
+  margin: auto;
+  max-width: 450px;
+  width: 95%;
+  text-align: center;
+  background-color: var(--secondary-dark);
+  border: 1px solid var(--tertiary-light);
+  border-radius: 5px;
+}
+
+body main section.section_modal-added-success div.container_modal-added-success h1, body main section.section_modal-added-success div.container_modal-added-failed h1, body main section.section_modal-added-failed div.container_modal-added-success h1, body main section.section_modal-added-failed div.container_modal-added-failed h1 {
+  font-weight: 400;
+}
+
+body main section.section_modal-added-success div.container_modal-added-success p, body main section.section_modal-added-success div.container_modal-added-failed p, body main section.section_modal-added-failed div.container_modal-added-success p, body main section.section_modal-added-failed div.container_modal-added-failed p {
+  color: var(--secondary-light);
+  font-weight: 200;
+  font-size: 14px;
+}
+
+body main section.section_modal-added-success div.container_modal-added-success button, body main section.section_modal-added-success div.container_modal-added-failed button, body main section.section_modal-added-failed div.container_modal-added-success button, body main section.section_modal-added-failed div.container_modal-added-failed button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 7px 15px;
+  background-color: var(--yellow);
+  text-shadow: 0 0 5px var(--tertiary-dark);
+}
+
+body main section.section_modal-added-success div.container_modal-added-success button:hover, body main section.section_modal-added-success div.container_modal-added-failed button:hover, body main section.section_modal-added-failed div.container_modal-added-success button:hover, body main section.section_modal-added-failed div.container_modal-added-failed button:hover {
+  background-color: var(--yellow-lighten);
+}
+
+body main section.section_modal-added-success div.container_modal-added-success .animation-ctn, body main section.section_modal-added-success div.container_modal-added-failed .animation-ctn, body main section.section_modal-added-failed div.container_modal-added-success .animation-ctn, body main section.section_modal-added-failed div.container_modal-added-failed .animation-ctn {
+  margin: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+}
+
+body main section.section_modal-added-success div.container_modal-added-success .inlinesvg .svg svg, body main section.section_modal-added-success div.container_modal-added-failed .inlinesvg .svg svg, body main section.section_modal-added-failed div.container_modal-added-success .inlinesvg .svg svg, body main section.section_modal-added-failed div.container_modal-added-failed .inlinesvg .svg svg {
+  display: inline;
+}
+
+body main section.section_modal-added-success div.container_modal-added-success .icon--added-success svg polyline, body main section.section_modal-added-success div.container_modal-added-failed .icon--added-success svg polyline, body main section.section_modal-added-failed div.container_modal-added-success .icon--added-success svg polyline, body main section.section_modal-added-failed div.container_modal-added-failed .icon--added-success svg polyline {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  -webkit-animation: checkmark 0.25s ease-in-out 0.7s backwards;
+          animation: checkmark 0.25s ease-in-out 0.7s backwards;
+  stroke-linecap: round;
+  stroke-dasharray: 100px,  100px;
+  stroke-linejoin: round;
+}
+
+body main section.section_modal-added-success div.container_modal-added-success .icon--added-success svg circle, body main section.section_modal-added-success div.container_modal-added-failed .icon--added-success svg circle, body main section.section_modal-added-failed div.container_modal-added-success .icon--added-success svg circle, body main section.section_modal-added-failed div.container_modal-added-failed .icon--added-success svg circle {
+  stroke-dasharray: 400px, 400px;
+  stroke-dashoffset: 960px;
+  -webkit-animation: checkmark-circle 0.6s ease-in-out backwards;
+          animation: checkmark-circle 0.6s ease-in-out backwards;
+}
+
+body main section.section_modal-added-success div.container_modal-added-success .icon--added-success svg circle.colored, body main section.section_modal-added-success div.container_modal-added-failed .icon--added-success svg circle.colored, body main section.section_modal-added-failed div.container_modal-added-success .icon--added-success svg circle.colored, body main section.section_modal-added-failed div.container_modal-added-failed .icon--added-success svg circle.colored {
+  -webkit-animation: colored-circle 0.6s ease-in-out 0.7s backwards;
+          animation: colored-circle 0.6s ease-in-out 0.7s backwards;
 }
 
 @media only screen and (max-width: 600px) {
@@ -835,6 +920,60 @@ body main form section.section_drinks-menu div.container_drinks-menu div.contain
   }
   body main section button {
     font-size: 10px !important;
+  }
+}
+
+@-webkit-keyframes checkmark {
+  0% {
+    stroke-dashoffset: 100px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes checkmark {
+  0% {
+    stroke-dashoffset: 100px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@-webkit-keyframes checkmark-circle {
+  0% {
+    stroke-dashoffset: 480px;
+  }
+  100% {
+    stroke-dashoffset: 960px;
+  }
+}
+
+@keyframes checkmark-circle {
+  0% {
+    stroke-dashoffset: 480px;
+  }
+  100% {
+    stroke-dashoffset: 960px;
+  }
+}
+
+@-webkit-keyframes colored-circle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes colored-circle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
   }
 }
 /*# sourceMappingURL=client_menu.css.map */

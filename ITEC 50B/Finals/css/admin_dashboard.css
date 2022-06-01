@@ -1,4 +1,5 @@
 body main {
+  position: relative;
   margin: 100px auto;
   max-width: 1350px;
   width: 96%;
@@ -161,6 +162,34 @@ body main section.section_tabular-orders {
   width: 100%;
 }
 
+body main section.section_tabular-orders div.container_search {
+  position: relative;
+  margin: 20px 0;
+  width: 100%;
+}
+
+body main section.section_tabular-orders div.container_search input[type="text"] {
+  padding: 0 20px;
+  height: 35px;
+  width: 100%;
+  border-radius: 5px;
+  color: var(--primary-dark);
+  border: none;
+}
+
+body main section.section_tabular-orders div.container_search span {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: var(--secondary-dark);
+  border-radius: 0 4px 4px 0;
+}
+
 body main section.section_tabular-orders div.container_tabular-order {
   position: relative;
   height: 414px;
@@ -311,5 +340,121 @@ body main section.section_tabular-orders div.container_tabular-order table tbody
   border: 1px solid var(--primary-light);
   background-color: var(--primary-light);
   color: var(--primary-dark);
+}
+
+body main section.section_modal_client-details {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: var(--tertiary-dark);
+  z-index: 1;
+}
+
+body main section.section_modal_client-details div.container_modal-client-details {
+  position: relative;
+  height: 500px;
+  max-width: 700px;
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #0a0a0a;
+  overflow: scroll;
+  border-radius: 5px;
+  border: 1px solid var(--tertiary-light);
+}
+
+body main section.section_modal_client-details div.container_modal-client-details::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+
+body main section.section_modal_client-details div.container_modal-client-details::-webkit-scrollbar-track {
+  background: var(--tertiary-light);
+}
+
+body main section.section_modal_client-details div.container_modal-client-details::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+  border-radius: 10px;
+}
+
+body main section.section_modal_client-details div.container_modal-client-details div.container_table-header {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #0a0a0a;
+  z-index: 5;
+}
+
+body main section.section_modal_client-details div.container_modal-client-details div.container_table-header h1 {
+  line-height: 1;
+}
+
+body main section.section_modal_client-details div.container_modal-client-details div.container_table-header button {
+  background-color: transparent;
+  height: auto;
+}
+
+body main section.section_modal_client-details div.container_modal-client-details div.container_table-header button i {
+  font-size: 18px;
+}
+
+body main section.section_modal_client-details div.container_modal-client-details table {
+  margin: 0 20px 20px 20px;
+  border-collapse: collapse;
+}
+
+body main section.section_modal_client-details div.container_modal-client-details table tr {
+  position: relative;
+}
+
+body main section.section_modal_client-details div.container_modal-client-details table tr td {
+  padding: 10px;
+  width: 350px;
+  max-width: 100%;
+  font-weight: 300;
+}
+
+body main section.section_modal_client-details div.container_modal-client-details table tr td:nth-child(2) {
+  color: var(--secondary-light);
+}
+
+body main section.section_modal_client-details div.container_modal-client-details table tr td span {
+  color: inherit;
+  font-size: 10px;
+}
+
+body main section.section_modal_client-details div.container_modal-client-details table tr td form select {
+  padding: 7px 15px;
+  background-color: var(--secondary-dark);
+  border: none;
+  border-radius: 5px;
+  border: 1px solid var(--tertiary-light);
+}
+
+body main section.section_modal_client-details div.container_modal-client-details table tr::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: .5px;
+  background-color: var(--table-head);
 }
 /*# sourceMappingURL=admin_dashboard.css.map */

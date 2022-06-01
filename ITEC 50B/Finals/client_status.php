@@ -4,7 +4,7 @@
     if(empty($_SESSION["type"]) || $_SESSION["type"] == "admin") header("Location: index.php");
     if(empty($_GET["status"])) header("Location: client_status.php?status=Pending");
     $clientid = $_SESSION['clientid'];
-    $connect = mysqli_connect("localhost","root","", "burgerhub");
+    $connect = mysqli_connect("localhost", "grgpiwqy_burgerhub", "burgerhub30241715", "grgpiwqy_burgerhub");
     $sql_accounts_pending = mysqli_query($connect,"SELECT * FROM client_orders where status = 'Pending' and clientid = '". $_SESSION['clientid']. "'");
     $sql_accounts_processing = mysqli_query($connect,"SELECT * FROM client_orders where status = 'Processing' and clientid = '". $_SESSION['clientid']. "'");
     $sql_accounts_delivering = mysqli_query($connect,"SELECT * FROM client_orders where status = 'Delivering' and clientid = '". $_SESSION['clientid']. "'");
@@ -18,6 +18,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="BERNARD V. SAPIDA, JAN MARICHIE Z. MOJICA, ZILDJIAN LEE G. LOREN, JOHN HERSON L. RADONES">
+  	<meta name="description" content="The owners dreamed of creating a burger restaurant in which the customers could not only eat, but one that offered a friendly and healthy environment. The restaurant’s success led them to begin franchising their concept, becoming operating restaurants.">
+  	<meta property="og:title" content="Burgerhub Restaurant | Client">
+    <meta property="og:url" content="https://burgerhub.x10.mx/client_status.php">
+    <meta property="og:image" content="images/website-image.jpg">
     <link rel="icon" type="image/any-icon" href="images/burgerhub.ico">
     <link rel="stylesheet" href="css/client_header.css">
     <link rel="stylesheet" href="css/client_status.css">
@@ -61,7 +65,7 @@
                                             <p class='orderNo'>Order No. ".$row["orderNo"]."</p>
                                             <p class='date'>".explode(" ", $row["date"])[0]."</p>
                                         </div>
-                                        <p class='tracking-number'>Tracking number: <span>AN2AS9DAF212SA</span></p>
+                                        <p class='transaction-number'>Transaction number: <span>".$row["transactionNo"]."</span></p>
                                         <p class='status'>Status: <span>".$row["status"]."</span></p>
                                         <div class='container_quantity-amount'>
                                             <p class='quantity'>Quantity: <span>".$row["quantity"]."</span></p>
@@ -84,7 +88,7 @@
                                             <p class='orderNo'>Order No. ".$row["orderNo"]."</p>
                                             <p class='date'>".explode(" ", $row["date"])[0]."</p>
                                         </div>
-                                        <p class='tracking-number'>Tracking number: <span>AN2AS9DAF212SA</span></p>
+                                        <p class='transaction-number'>Transaction number: <span>".$row["transactionNo"]."</span></p>
                                         <p class='status'>Status: <span>".$row["status"]."</span></p>
                                         <div class='container_quantity-amount'>
                                             <p class='quantity'>Quantity: <span>".$row["quantity"]."</span></p>
@@ -108,7 +112,7 @@
                                             <p class='orderNo'>Order No. ".$row["orderNo"]."</p>
                                             <p class='date'>".explode(" ", $row["date"])[0]."</p>
                                         </div>
-                                        <p class='tracking-number'>Tracking number: <span>AN2AS9DAF212SA</span></p>
+                                        <p class='transaction-number'>Transaction number: <span>".$row["transactionNo"]."</span></p>
                                         <p class='status'>Status: <span>".$row["status"]."</span></p>
                                         <div class='container_quantity-amount'>
                                             <p class='quantity'>Quantity: <span>".$row["quantity"]."</span></p>
@@ -131,7 +135,7 @@
                                             <p class='orderNo'>Order No. ".$row["orderNo"]."</p>
                                             <p class='date'>".explode(" ", $row["date"])[0]."</p>
                                         </div>
-                                        <p class='tracking-number'>Tracking number: <span>AN2AS9DAF212SA</span></p>
+                                        <p class='transaction-number'>Transaction number: <span>".$row["transactionNo"]."</span></p>
                                         <p class='status'>Status: <span>".$row["status"]."</span></p>
                                         <div class='container_quantity-amount'>
                                             <p class='quantity'>Quantity: <span>".$row["quantity"]."</span></p>
@@ -142,54 +146,6 @@
                         }
                     }
                 ?>
-                <!-- <div class="container_order-status-entry">
-                    <div class="container_orderNo-Date">
-                        <p class="orderNo">Order No. 1954874974</p>
-                        <p class="date">06-05-2022</p>
-                    </div>
-                    <p class="tracking-number">Tracking number: <span>AN2AS9DAF212SA</span></p>
-                    <p class="status">Status: <span>Pending</span></p>
-                    <div class="container_quantity-amount">
-                        <p class="quantity">Quantity: <span>4</span></p>
-                        <p class="total-amount">Total Amount: <span>₱1,564</span></p>
-                    </div>
-                </div>
-                <div class="container_order-status-entry">
-                    <div class="container_orderNo-Date">
-                        <p class="orderNo">Order No. 1954874974</p>
-                        <p class="date">06-05-2022</p>
-                    </div>
-                    <p class="tracking-number">Tracking number: <span>AN2AS9DAF212SA</span></p>
-                    <p class="status">Status: <span>Pending</span></p>
-                    <div class="container_quantity-amount">
-                        <p class="quantity">Quantity: <span>4</span></p>
-                        <p class="total-amount">Total Amount: <span>₱1,564</span></p>
-                    </div>
-                </div>
-                <div class="container_order-status-entry">
-                    <div class="container_orderNo-Date">
-                        <p class="orderNo">Order No. 1954874974</p>
-                        <p class="date">06-05-2022</p>
-                    </div>
-                    <p class="tracking-number">Tracking number: <span>AN2AS9DAF212SA</span></p>
-                    <p class="status">Status: <span>Pending</span></p>
-                    <div class="container_quantity-amount">
-                        <p class="quantity">Quantity: <span>4</span></p>
-                        <p class="total-amount">Total Amount: <span>₱1,564</span></p>
-                    </div>
-                </div>
-                <div class="container_order-status-entry">
-                    <div class="container_orderNo-Date">
-                        <p class="orderNo">Order No. 1954874974</p>
-                        <p class="date">06-05-2022</p>
-                    </div>
-                    <p class="tracking-number">Tracking number: <span>AN2AS9DAF212SA</span></p>
-                    <p class="status">Status: <span>Pending</span></p>
-                    <div class="container_quantity-amount">
-                        <p class="quantity">Quantity: <span>4</span></p>
-                        <p class="total-amount">Total Amount: <span>₱1,564</span></p>
-                    </div>
-                </div> -->
             </div>
         </section>
     </main>
