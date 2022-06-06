@@ -113,8 +113,35 @@
                 </div>
             </div>
         </section>
+
+        <!-- Burgerhub Members Contribution-->
+        <section class="section_members-participation" id="section_members-participation">
+            <div class="container_members-participation">
+                <div class="container_members-participation-header">
+                    <h1>Members' Contribution</h1>
+                    <hr>
+                </div>
+                <div class="container_members-participation-body">
+                    <div class="members-1">
+                        <h2 class="title">Frontend & Backend Developer: </h2>
+                        <p class="names">SAPIDA, BERNARD V.</p>
+                    </div>
+                    <div class="members-2">
+                        <h2 class="title">UI/UX Design, Contents, & Editing: </h2>
+                        <p class="names">RADONES, JOHN HERSON L.</p>
+                        <p class="names">MOJICA, JAN MARICHIE Z.</p>
+                        <p class="names">LOREN, ZILDJIAN LEE G.</p>
+                    </div>
+                </div>
+                <div class="container_members-participation-footer">
+                    <hr>
+                    <button aria-label="Okay Button" id="btn-participation">Okay</button>
+                </div>
+            </div>
+        </section>
     </main>
     
     <?php include_once 'global_footer.php' ?>
+    <script src="js/about.js"></script>
 </body>
 </html>
