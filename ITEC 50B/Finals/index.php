@@ -151,16 +151,16 @@
             <div class="container_profiles">
                 <div class="container-sphere">
                     <div class="image_centered">
-                        <img src="images/profiles/Profile.png" alt="">
+                        <img src="images/profiles/Sapida.png" alt="Sapida Image">
                     </div>
                     <div class="image_circumference">
-                        <img src="images/profiles/Mojica.jpg" alt="">
+                        <img src="images/profiles/Loren.jpg" alt="Loren Image">
                     </div>
                     <div class="image_circumference">
-                        <img src="images/profiles/Mojica.jpg" alt="">
+                        <img src="images/profiles/Mojica.jpg" alt="Mojica Image">
                     </div>
                     <div class="image_circumference">
-                        <img src="images/profiles/Mojica.jpg" alt="">
+                        <img src="images/profiles/Herson.jpeg" alt="Herson Image">
                     </div>
                 </div>
                 <div class="container_profile-quotes">
