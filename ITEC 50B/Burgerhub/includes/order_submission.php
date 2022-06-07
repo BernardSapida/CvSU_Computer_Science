@@ -3,7 +3,7 @@
 
     if(empty($_SESSION["type"]) || $_SESSION["type"] == "admin") header("Location: index.php");
     
-    //error_reporting(E_ERROR | E_PARSE);
+    error_reporting(E_ERROR | E_PARSE);
     
     $errFirstname = "";
     $errLastname = "";
@@ -79,7 +79,6 @@
             '$quantity','$total','$status')";
 
             mysqli_query($connect, $sql);
-          	echo("Error description: " . mysqli_error($connect));
             
             $_SESSION["featured-product-1"] = 0;
             $_SESSION["featured-product-2"] = 0;

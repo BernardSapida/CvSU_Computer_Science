@@ -10,7 +10,7 @@
                 </div>
                 <div class="container_email-body" style="margin: auto; background-color: rgb(255, 247, 232); border-radius: 5px; display: grid; place-items: center; padding: 0 50px;">
                     <div class="container_email-body-content" style="padding:20px 0 30px 0;">
-                        <h1 style="text-align: center; line-height: 1; margin-bottom: 8px; font-size: 34px; color: hsl(0, 0%, 2%);">Hello, <span style="color: hsl(349, 100%, 54%);">' . empty($_SESSION["firstname"]) && empty($_SESSION["lastname"]) ? "User" : $_SESSION["firstname"] . " " . $_SESSION["lastname"] . '!</span></h1>
+                        <h1 style="text-align: center; line-height: 1; margin-bottom: 8px; font-size: 34px; color: hsl(0, 0%, 2%);">Hello, <span style="color: hsl(349, 100%, 54%);">' . (empty($_SESSION["firstname"]) && empty($_SESSION["lastname"]) ? "User" : $_SESSION["firstname"] . " " . $_SESSION["lastname"]) . '!</span></h1>
                         <p style="text-align: center; line-height: 1; margin-bottom: 4px;font-weight: 700; color: hsl(0, 0%, 2%);">We received your message from Contact Us.</p>
                         <p style="text-align: center; line-height: 1; color: hsl(0, 0%, 2%);">Thank you for reaching us out and we will try out best to respond soonest!</p>
                     </div>

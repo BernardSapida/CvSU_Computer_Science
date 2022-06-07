@@ -39,7 +39,7 @@
               $mail = new PHPMailer(true);
                 
               try {
-                // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                                    	//Display output
+                $mail->SMTPDebug = SMTP::DEBUG_SERVER;                                    	//Display output
                 $mail->isSMTP(); 
                 $mail->Host       = 'smtp.office365.com';                                   //Set the SMTP server to send through
                 $mail->SMTPAuth   = true;                                                   //Enable SMTP authentication

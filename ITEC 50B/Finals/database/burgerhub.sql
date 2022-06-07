@@ -45,7 +45,7 @@ CREATE TABLE `client_orders` (
   `street address` varchar(255) NOT NULL,
   `city` varchar(255) NOT NULL,
   `barangay` varchar(255) NOT NULL,
-  `trackingNo` varchar(255) NOT NULL,
+  `transactionNo` varchar(255) NOT NULL,
   `orderNo` varchar(255) NOT NULL,
   `featured-product-1` int(100) NOT NULL,
   `featured-product-2` int(100) NOT NULL,
